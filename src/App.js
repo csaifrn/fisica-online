@@ -1,11 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-
 import AppNavBar from "./components/AppNavBar";
+import './css/lista01.css';
 
 function App() {
   return (
-    <div className="app">
+    <div id="app">
       <AppNavBar />
     </div>
   );

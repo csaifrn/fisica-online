@@ -1,15 +1,18 @@
+import {Navbar} from 'reactstrap';
 
-const AppNavBar = (props) => {
+const AppNavBar = () => {
+    const linkTermologia = () => {};
+
+    const linkSaibaMais = () => {};
+
     return (
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">               
-                <div class="d-flex">                  
-                    <button class="°-btn-hover" onclick="linkTermologia()">Termologia</button>
-                    <button class="outline-btn-hover" onclick="linkSaibaMais()">Saiba Mais</button>
-                </div>
-		    </div>
-        </nav>
-    );
+        <Navbar expand="lg" container>
+            <div className="d-flex">                  
+                <button className="outline-btn-hover" onClick={linkTermologia}>Termologia</button>
+                <button className="outline-btn-hover" onClick={linkSaibaMais}>Saiba Mais</button>
+            </div>
+        </Navbar>
+    )
 };
 
 export default AppNavBar;
