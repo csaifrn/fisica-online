@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CardCorpoAtividadeExercicio from "./CardCorpoAtividadeExercicio";
 import CardRodapeAtividade from "./CardRodapeAtividade";
+import Image01 from "../assets/01.png"
 
 const CardCorpoAtividade = () => {
     const [exercicios, useExercicios] = useState([
@@ -8,6 +9,7 @@ const CardCorpoAtividade = () => {
             id: 1,
             titulo: 'Exercicio 1',
             descricao: 'Uma fonte térmica transfere 4,5 kcal em um intervalo de tempo de 0,5 min. Calcule a potência térmica desta fonte, em cal/s.',
+            image: Image01
         },
     ])
 

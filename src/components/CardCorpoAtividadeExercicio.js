@@ -12,6 +12,7 @@ const CardCorpoAtividadeExercicio = (props) => {
             <h1>{props["content"]["titulo"]}</h1>
             <p className="esp10">{props["content"]["descricao"]}</p>
             <div className="iframe">
+                <img src={props["content"]["image"]} />
                 <form name="formulario">
                     <input className="button button1 bptn" type="button" id="btnC" onClick={confirmar} value="Confirmar" />
                     <input className="button button1 bptn" type="button" id="btnR" onClick={refazer} value="Tente novamente" hidden />
