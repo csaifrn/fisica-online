@@ -19,14 +19,15 @@
   
   /* NÃO ALTERAR -------------------------- */
 
-  .iframe {
-      padding-top: 20px;
-      text-align: center;
-      width: 320px;
-      height: 160px;
-  }
+.iframe {
+	position: relative;
+    padding-top: 20px;
+    text-align: center;
+    width: 320px;
+    height: 160px;
+}
   
-  .caixatxt {
+.caixatxt {
 	position:absolute;	
 	width: 75px;
 	height:30px;
