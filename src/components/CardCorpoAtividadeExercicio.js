@@ -35,7 +35,9 @@ const CardCorpoAtividadeExercicio = (props) => {
     return (
         <div>
             <h1>{props.content.titulo}</h1>
-            <p className="esp10">{props.content.descricao}</p>
+            {props.content.descricao.map(({tipo, dado}, index) => 
+                tipo==='texto' ? <p key={index} className="esp10" >{dado}</p> : <img key={index} className="esp10 imagem" src={dado} alt=""/>
+            )}
             <div className="iframe">
                 <img style={{position: "absolute", left: "0px", top: "10px"}} src={props.content.image} alt="formula" />
                 <form name="formulario">
