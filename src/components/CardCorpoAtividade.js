@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CardCorpoAtividadeExercicio from "./CardCorpoAtividadeExercicio";
 import CardRodapeAtividade from "./CardRodapeAtividade";
-import {Image01, Image02, Image03, Image04, Image05, Image06} from "../assets";
+import {Image01, Image02, Image03, Image04, Image05, Image06, Formula1, Formula2} from "../assets";
 
 const Descricao = (tipo, dado) => ({ tipo, dado });
 
@@ -49,7 +49,7 @@ const CardCorpoAtividade = () => {
             titulo: 'Exercicio 5',
             descricao: [
                 Descricao('texto', 'O gráfico abaixo mostra a quantidade de calor fornecida por uma fonte térmica em função do tempo.'),
-                Descricao('imagem', Image05),
+                Descricao('imagem', Formula1),
                 Descricao('texto', 'Calcule a potência térmica desta fonte.')
             ],
             image: Image05,
@@ -60,6 +60,7 @@ const CardCorpoAtividade = () => {
             titulo: 'Exercicio 6',
             descricao: [
                 Descricao('texto', 'O gráfico abaixo mostra a quantidade de calor fornecida por uma fonte térmica em função do tempo.'),
+                Descricao('imagem', Formula2),
                 Descricao('texto', 'Calcule a quantidade de calor disponibilizada por esta fonte após um intervalo de tempo de 10min:30s.')
             ],
             image: Image06,
