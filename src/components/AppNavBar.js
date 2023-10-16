@@ -1,6 +1,6 @@
 import {Navbar} from 'reactstrap';
 
-const AppNavBar = () => {
+const AppNavBar = ({ topico }) => {
     const linkTermologia = () => {};
 
     const linkSaibaMais = () => {};
@@ -8,7 +8,7 @@ const AppNavBar = () => {
     return (
         <Navbar expand="lg" container>
             <div className="d-flex">                  
-                <button className="outline-btn-hover" onClick={linkTermologia}>Termologia</button>
+                <button className="outline-btn-hover" onClick={linkTermologia}>{topico}</button>
                 <button className="outline-btn-hover" onClick={linkSaibaMais}>Saiba Mais</button>
             </div>
         </Navbar>
