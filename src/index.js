@@ -13,6 +13,7 @@ root.render(
     <Router basename="/atividade">
       <Routes>
         <Route path='/' element={<App />} />
+        <Route path="/:displina/:topico/" element={<App/>}/>
         <Route path="/:displina/:topico/:subtopico/:idTarefa" element={<App/>}/>
       </Routes>
     </Router>
