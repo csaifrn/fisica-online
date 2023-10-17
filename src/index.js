@@ -15,7 +15,7 @@ root.render(
       <Routes>
         <Route path='/' element={<App />} />
         <Route path="/:disciplina/:topico/" element={<App/>}/>
-        <Route path="/:disciplina/:topico/:subtopico/:idTarefa" element={<PageAtividade/>}/>
+        <Route path="/:disciplina/:topico/:subtopico/:idAtividade" element={<PageAtividade/>}/>
       </Routes>
     </Router>
   </React.StrictMode>

@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import CardCorpoAtividadeExercicio from "./CardCorpoAtividadeExercicio";
 import CardRodapeAtividade from "./CardRodapeAtividade";
 import {Image01, Image02, Image03, Image04, Image05, Image06, Formula1, Formula2} from "../assets";
 
 const Descricao = (tipo, dado) => ({ tipo, dado });
 
-const CardCorpoAtividade = () => {
+const CardCorpoAtividade = ({content}) => {
     const [exercicios] = useState([
         {
             id: 1,
@@ -70,14 +71,16 @@ const CardCorpoAtividade = () => {
 
     return (
         <div className="aula-body">
-            <button className="btnImprimir">Nota de aula</button>
-            <p className="esp10"><b>Termologia - Calorimetria 01 - Lista 02</b></p>
+            <Link to={content.nota_de_aula}>
+                <button className="btnImprimir">Nota de aula</button>
+            </Link>
+            <p className="esp10"><b>{content.descricao}</b></p>
             { exercicios.map(exercicio => <CardCorpoAtividadeExercicio key={exercicio.id} content={exercicio} />) }
             <br/>
             <nav className="nav-fim-aula">
-                <a href="#top"><span className="seta seta-anterior"></span></a>
-                <a href="#top"><span className="seta seta-top"></span></a>
-                <a href="#top"><span className="seta seta-prox"></span></a>
+                { content.atividade.anterior !== null ? <Link to={`../${content.atividade.anterior}`} relative="path"><span className="seta seta-anterior"></span></Link> : "" }
+                <Link to="" onClick={() => {window.scrollTo(0, 0)}}><span className="seta seta-top"></span></Link>
+                { content.atividade.proxima !== null ? <Link to={`../${content.atividade.proxima}`} relative="path"><span className="seta seta-prox"></span></Link> : "" }
             </nav>
             <hr/>
             <CardRodapeAtividade />
