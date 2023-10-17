@@ -1,4 +1,5 @@
 import {Navbar} from 'reactstrap';
+import {Capitalize} from '../utils';
 
 const AppNavBar = ({ topico }) => {
     const linkTermologia = () => {};
@@ -8,7 +9,7 @@ const AppNavBar = ({ topico }) => {
     return (
         <Navbar expand="lg" container>
             <div className="d-flex">                  
-                <button className="outline-btn-hover" onClick={linkTermologia}>{topico}</button>
+                <button className="outline-btn-hover" onClick={linkTermologia}>{Capitalize(topico)}</button>
                 <button className="outline-btn-hover" onClick={linkSaibaMais}>Saiba Mais</button>
             </div>
         </Navbar>
