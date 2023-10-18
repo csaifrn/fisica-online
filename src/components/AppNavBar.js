@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {Navbar} from 'reactstrap';
 import { AtividadeContext } from '../contexts';
 
-const AppNavBar = () => {
+const AppNavBar = ({isAtHome}) => {
     const navigate = useNavigate();
     const {disciplina, topico} = useContext(AtividadeContext);
 
@@ -16,7 +16,7 @@ const AppNavBar = () => {
     return (
         <Navbar expand="lg" container>
             <div className="d-flex">                  
-                <button className="outline-btn-hover" onClick={linkTopico}>{topico}</button>
+                { !isAtHome && <button className="outline-btn-hover" onClick={linkTopico}>{topico}</button> }
                 <button className="outline-btn-hover" onClick={linkSaibaMais}>Saiba Mais</button>
             </div>
         </Navbar>

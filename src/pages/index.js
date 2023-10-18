@@ -1,3 +1,4 @@
-import PageAtividade from './PageAtividade'
+import PageAtividade from './PageAtividade';
+import PageTopico from './PageTopico';
 
-export { PageAtividade };
+export { PageAtividade, PageTopico };
