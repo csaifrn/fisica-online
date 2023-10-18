@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { Certo, Errado } from "../assets";
-import "../css/exercicio.css";
+import "../styles/exercicio.css";
 
 const CardCorpoAtividadeExercicio = (props) => {
     const [answer, setAnswer] = useState('');
