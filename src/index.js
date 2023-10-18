@@ -1,23 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css';
 import './css/main.css';
 import './css/texto.css';
-import { PageAtividade } from './pages';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router basename="/atividade">
-      <Routes>
-        <Route path='/' element={<App />} />
-        <Route path="/:disciplina/:topico/" element={<App/>}/>
-        <Route path="/:disciplina/:topico/:subtopico/:idAtividade" element={<PageAtividade/>}/>
-      </Routes>
-    </Router>
+    <App />
   </React.StrictMode>
 );
 

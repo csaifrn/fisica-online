@@ -24,10 +24,10 @@ function PageAtividade() {
   };
 
   return (
-    <div id="app">
+    <>
       <AppNavBar topico={atividade.topico} />
       <CardAtividade atividade={atividade}  navigate={{previous: anterior_ativ, next: proxima_ativ}} />
-    </div>
+    </>
   );
 }
 
