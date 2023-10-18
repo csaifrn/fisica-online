@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const CardAtividade = ({atividade, navigate}) => (
         <div className="content">
-            <CardMenuAtividade disciplina={atividade.disciplina} navigate={navigate} />
+            <CardMenuAtividade atividade={atividade} navigate={navigate} />
             <CardCorpoAtividade content={atividade} navigate={navigate} />
             <Footer />
         </div>
