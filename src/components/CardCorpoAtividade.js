@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import CardCorpoAtividadeExercicio from "./CardCorpoAtividadeExercicio";
 import CardRodapeAtividade from "./CardRodapeAtividade";
 import {Image01, Image02, Image03, Image04, Image05, Image06, Formula1, Formula2} from "../assets";
+import { AtividadeContext } from "../contexts";
 
 const Descricao = (tipo, dado) => ({ tipo, dado });
 
-const CardCorpoAtividade = ({content,navigate}) => {
+const CardCorpoAtividade = ({navigate}) => {
+    const { nota_de_aula, descricao, atividade } = useContext(AtividadeContext);
     const [exercicios] = useState([
         {
             id: 1,
@@ -71,16 +73,16 @@ const CardCorpoAtividade = ({content,navigate}) => {
 
     return (
         <div className="aula-body">
-            <Link to={content.nota_de_aula}>
+            <Link to={nota_de_aula}>
                 <button className="btnImprimir">Nota de aula</button>
             </Link>
-            <p className="esp10"><b>{content.descricao}</b></p>
+            <p className="esp10"><b>{descricao}</b></p>
             { exercicios.map(exercicio => <CardCorpoAtividadeExercicio key={exercicio.id} content={exercicio} />) }
             <br/>
             <nav className="nav-fim-aula">
-                { content.atividade.anterior !== null && <span tabIndex={0} className="seta seta-anterior" onClick={navigate.previous}></span> }
+                { atividade.anterior !== null && <span tabIndex={0} className="seta seta-anterior" onClick={navigate.previous}></span> }
                 <span tabIndex={0} className="seta seta-top" onClick={() => {window.scrollTo(0, 0)}}></span>
-                { content.atividade.proxima !== null && <span tabIndex={0} className="seta seta-prox" onClick={navigate.next}></span> }
+                { atividade.proxima !== null && <span tabIndex={0} className="seta seta-prox" onClick={navigate.next}></span> }
             </nav>
             <hr/>
             <CardRodapeAtividade />

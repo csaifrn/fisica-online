@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import { AppNavBar, CardAtividade } from "../components";
+import { AtividadeContext } from '../contexts';
 import dados from '../data/disciplina';
 
 
@@ -24,10 +25,10 @@ function PageAtividade() {
   };
 
   return (
-    <>
-      <AppNavBar topico={atividade.topico} />
-      <CardAtividade atividade={atividade}  navigate={{previous: anterior_ativ, next: proxima_ativ}} />
-    </>
+    <AtividadeContext.Provider value={atividade}>
+      <AppNavBar />
+      <CardAtividade navigate={{previous: anterior_ativ, next: proxima_ativ}} />
+    </AtividadeContext.Provider>
   );
 }
 
