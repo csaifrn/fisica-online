@@ -6,7 +6,7 @@ import {Image01, Image02, Image03, Image04, Image05, Image06, Formula1, Formula2
 
 const Descricao = (tipo, dado) => ({ tipo, dado });
 
-const CardCorpoAtividade = ({content}) => {
+const CardCorpoAtividade = ({content,navigate}) => {
     const [exercicios] = useState([
         {
             id: 1,
@@ -78,9 +78,9 @@ const CardCorpoAtividade = ({content}) => {
             { exercicios.map(exercicio => <CardCorpoAtividadeExercicio key={exercicio.id} content={exercicio} />) }
             <br/>
             <nav className="nav-fim-aula">
-                { content.atividade.anterior !== null ? <Link to={`../${content.atividade.anterior}`} relative="path"><span className="seta seta-anterior"></span></Link> : "" }
-                <Link to="" onClick={() => {window.scrollTo(0, 0)}}><span className="seta seta-top"></span></Link>
-                { content.atividade.proxima !== null ? <Link to={`../${content.atividade.proxima}`} relative="path"><span className="seta seta-prox"></span></Link> : "" }
+                { content.atividade.anterior !== null && <span tabIndex={0} className="seta seta-anterior" onClick={navigate.previous}></span> }
+                <span tabIndex={0} className="seta seta-top" onClick={() => {window.scrollTo(0, 0)}}></span>
+                { content.atividade.proxima !== null && <span tabIndex={0} className="seta seta-prox" onClick={navigate.next}></span> }
             </nav>
             <hr/>
             <CardRodapeAtividade />

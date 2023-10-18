@@ -4,19 +4,24 @@ import { AppNavBar, CardAtividade } from "../components";
 import dados from '../data/disciplina';
 
 
-function App() {
+function PageAtividade() {
   const {disciplina, topico, subtopico, idAtividade} = useParams();
   const id = parseInt(idAtividade);
-  const [atividade] = useState(dados[disciplina][topico][subtopico][id]);
+  const [atividade, setAtividade] = useState(dados[disciplina][topico][subtopico][id]);
   const navigate = useNavigate();
 
+  const atualizarAtividade = (novaAtividadeId) => {
+    setAtividade(dados[disciplina][topico][subtopico][novaAtividadeId]);
+    navigate(`../${disciplina}/${topico}/${subtopico}/${novaAtividadeId}`);
+  };
+  
   const anterior_ativ = () => {
-    navigate(`../${disciplina}/${topico}/${subtopico}/${atividade.atividade.anterior}`)
-  }
-
+    atualizarAtividade(atividade.atividade.anterior);
+  };
+  
   const proxima_ativ = () => {
-    navigate(`../${disciplina}/${topico}/${subtopico}/${atividade.atividade.proxima}`)
-  }
+    atualizarAtividade(atividade.atividade.proxima);
+  };
 
   return (
     <div id="app">
@@ -26,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default PageAtividade;
