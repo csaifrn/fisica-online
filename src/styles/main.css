@@ -6,18 +6,18 @@ body {
 }
 
 #app .aula-body h1 {
-	background-color: #55688e;
+    background-color: #55688e;
     color: #fff;
     padding: 10px;
     font-weight: bold;
     margin-top: 40px;
-	font-size:1em;
+    font-size:1em;
 }
 
 #app .aula-body h2 {	
     font-weight: bold;   
-	font-size:1em;
-	margin-top: 20px;
+    font-size:1em;
+    margin-top: 20px;
 }
 
 a {
@@ -25,12 +25,14 @@ a {
 }
 
 /* Bootstrap modificacoes */
-/*.container {
+
+/* .container {
     max-width: 900px;
-}*/
+} */
 
 /* Botões no cabeçalho superior */
-/*.outline-btn-hover {
+
+/* .outline-btn-hover {
     border: none;
     box-shadow: none;
     background-color: #fff;
@@ -56,8 +58,8 @@ a {
 .outline-btn-hover:hover {    
     box-shadow: none;
     background-color: #2980b9;
-	border-radius:5px;
-	color: white;
+    border-radius:5px;
+    color: white;
     padding: 0 10px;
 }
 
@@ -98,7 +100,7 @@ a {
 
 .btnQ5:hover {
     color: #fff;
-    background-color: rgb(0,200,120);
+    background-color: rgb(0 200 120);
 }
 
 /* Botão Acessar, na página principal */
@@ -112,7 +114,7 @@ a {
     background-color: #607D8B;
     transition: 0.5s all;
     color: #fff;
-	font-size:16px;
+    font-size:16px;
 }
 
 #app .btnAc:hover {   
@@ -163,6 +165,10 @@ a {
     color: #fff;
 }
 
+#app .content .turma-banner h3, p {
+    margin: 0;
+}
+
 #app .footer p {
     font-size: 15px;
     color: #e0e0e0;
@@ -171,6 +177,10 @@ a {
 
 #app .footer .hightlight {
     color: lightblue;
+}
+
+#app .aula-menu p {
+    font-size: 15px;
 }
 
 #app .footer .d-flex p {
@@ -203,7 +213,7 @@ a {
     color: #fff;
 }
 
-#app .list li:before {
+#app .list li::before {
     content: "";
     margin: 0 5px;
 }
@@ -237,12 +247,9 @@ a {
     transform: translate(-50%, -50%);
 }
 
-/*  */
 #app .content .media img {
     width: 80%;
 }
-
-
 
 #app .content .turma-card {
     margin: 0 10px;
@@ -252,9 +259,23 @@ a {
     height: 250px;
     padding: 50px;
     border-radius: 5px;
-    background-image: url(../assets/doodles.png);
+    background-image: url("../assets/doodles.png");
     background-size: 500px;
     cursor: pointer;
+}
+
+#app .content .turma-banner img {
+    width: 50px;
+}
+
+#app .content .turma-aulas img {
+    width: 15px;
+}
+
+#app .aula-menu .items img {
+    width: 30px;
+    cursor: pointer;
+    margin: 0 10px;
 }
 
 #app .content .turma-card .thumb img {
@@ -266,15 +287,7 @@ a {
     padding: 20px;
     border-radius: 5px;
     margin-top: 50px;
-    background-image: url(../assets/doodles.png);
-}
-
-#app .content .turma-banner img {
-    width: 50px;
-}
-
-#app .content .turma-banner h3, p {
-    margin: 0;
+    background-image: url("../assets/doodles.png");
 }
 
 #app .content .turma-aulas {
@@ -286,21 +299,17 @@ a {
     cursor: pointer;
 }
 
-#app .content .turma-aulas img {
-    width: 15px;
-}
-
 #app .aula-body {
     max-width: 720px;
     width: 100%;
     padding: 20px;
-    margin: 0 auto 50px auto;
-    box-shadow: 0 0px 7px rgb(0 0 0 / 20%);
+    margin: 0 auto 50px;
+    box-shadow: 0 0 7px rgb(0 0 0 / 20%);
     background-color: #fff;
 }
 
 #app .back-turmas {   
-     background-color: #ecf0f1;
+    background-color: #ecf0f1;
 }
 
 #app .aula-menu {
@@ -308,25 +317,17 @@ a {
     max-width: 720px;
     width: 100%;
     padding: 20px;
-    margin: 30px auto 0 auto;
+    margin: 30px auto 0;
     border-top-left-radius: 5px; 
     border-top-right-radius: 5px;
-    background-image: url(../assets/doodles.png);
+    background-image: url("../assets/doodles.png");
     color: #fff;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
 
-#app .aula-menu .items img {
-    width: 30px;
-    cursor: pointer;
-    margin: 0 10px;
-}
 
-#app .aula-menu p {
-    font-size: 15px;
-}
 
 #app .aula-body .topico {
     background-color: #55688e;
@@ -359,8 +360,8 @@ a {
 }
 
 #app .aula-body .video-frame video {
-    box-shadow: 0px 3px 8px rgb(0 0 0 / 25%);
-    border-radius: 0px 0px 0 0;
+    box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
+    border-radius: 0;
     display: block;
     margin: auto;
 }
@@ -390,6 +391,7 @@ a {
     border-radius: 5px;
     background-color: #fff;
 }
+
 #app .aula-body .video-frame .controls .timer .fill {
     height: 100%;
     width: 50%;
@@ -432,10 +434,14 @@ a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    box-shadow: 0 0px 7px rgb(0 0 0 / 20%);
+    box-shadow: 0 0 7px rgb(0 0 0 / 20%);
     border: 1px solid #c7c7c7;
     font-weight: bold;
     cursor: pointer;
+}
+
+#app #menu-acessibilidade .item img {
+    margin: 0 10px 0 0;
 }
 
 #app #menu-acessibilidade #close img {
@@ -467,12 +473,7 @@ a {
     margin: 0;
 }
 
-#app #menu-acessibilidade .item img {
-    margin: 0 10px 0 0;
-}
-
 #app #menu-acessibilidade .item .options {
-    margin: 10px;
     text-align: center;
     width: 230px;
     border: 1px solid #c7c7c7;
@@ -496,7 +497,7 @@ a {
 /* - - - CLASSES GERALDO FELIPE - - - */
 
 #app .borda {
-    box-shadow: 0px 3px 8px rgb(0 0 0 / 25%);
+    box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
     border-radius: 5px;
     user-select: none;
 }
@@ -521,51 +522,51 @@ a {
 /* Comentários */
 
 #app .comentario1 {
-  max-width: 450px;
-  display: block;
-  margin: 20px auto;  
-  text-align: left;   
+    max-width: 450px;
+    display: block;
+    margin: 20px auto;  
+    text-align: left;   
 }
 
 #app .round {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 #app .azul {
-  padding: 20px;
-  background: #3498db;
-  color: white;
+    padding: 20px;
+    background: #3498db;
+    color: white;
 }
 
 #app .verde {
-  padding: 20px;
-  color: white;
-  background: #008080;
+    padding: 20px;
+    color: white;
+    background: #008080;
 }
 
 #app .verdeclaro {
-  padding: 20px;
-  color: white;
-  background: #00b386;
+    padding: 20px;
+    color: white;
+    background: #00b386;
 }
 
 #app .vermelho {
-  padding: 20px;
-  background: #c0392b;
-  color: white;
+    padding: 20px;
+    background: #c0392b;
+    color: white;
 }
 
 #app .laranja {
-  padding: 20px;
-  background: #ff5d00;
-  color: white;  
+    padding: 20px;
+    background: #ff5d00;
+    color: white;  
 }
 
 #app .coracessar {  
-  background: #607D8B;
-  color: white;  
+    background: #607D8B;
+    color: white;  
 }
 
 

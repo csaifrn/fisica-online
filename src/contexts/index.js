@@ -1,3 +1,3 @@
-import AtividadeContext from "./AtividadeContext";
+import AtividadeContext from './AtividadeContext';
 
 export { AtividadeContext };

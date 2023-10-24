@@ -1,8 +1,8 @@
-import { useState, useRef } from "react";
-import { Certo, Errado } from "../assets";
-import "../styles/exercicio.css";
+import { useState, useRef } from 'react';
+import { Certo, Errado } from '../assets';
+import '../styles/exercicio.css';
 
-const CardCorpoAtividadeExercicio = (props) => {
+const CardCorpoAtividadeExercicio = props => {
     const [answer, setAnswer] = useState('');
     const r1Ref = useRef(null);
     const btnCRef = useRef(null);
@@ -15,7 +15,7 @@ const CardCorpoAtividadeExercicio = (props) => {
         r1Ref.current.disabled = true;
         btnCRef.current.hidden = true;
 
-        if (answer===props.content.answer) {
+        if (answer === props.content.answer) {
             acertouRef.current.hidden = false;
             img1aRef.current.hidden = false;
         } else {
@@ -35,22 +35,65 @@ const CardCorpoAtividadeExercicio = (props) => {
     return (
         <div>
             <h1>{props.content.titulo}</h1>
-            {props.content.descricao.map(({tipo, dado}, index) => 
-                tipo==='texto' ? <p key={index} className="esp10" >{dado}</p> : <img key={index} className="esp10 imagem" src={dado} alt=""/>
+            {props.content.descricao.map(({ tipo, dado }, index) =>
+                tipo === 'texto' ? (
+                    <p key={index} className="esp10">
+                        {dado}
+                    </p>
+                ) : (
+                    <img
+                        key={index}
+                        className="esp10 imagem"
+                        src={dado}
+                        alt=""
+                    />
+                )
             )}
             <div className="iframe">
-                <img style={{position: "absolute", left: "0px", top: "10px"}} src={props.content.image} alt="formula" />
+                <img
+                    style={{ position: 'absolute', left: '0px', top: '10px' }}
+                    src={props.content.image}
+                    alt="formula"
+                />
                 <form name="formulario">
-                    <input autoComplete="off" className="caixatxt p1" type={"text"} ref={r1Ref} name="r1" maxLength={3} value={answer} onChange={e => setAnswer(e.target.value)} />
-                    <input className="button button1 pbtn" type={"button"} ref={btnCRef} onClick={confirmar} value="Confirmar" />
-                    <input className="button button2 pbtn" type={"button"} ref={btnRRef} onClick={refazer} value="Tente novamente" hidden />
-                    <p className="mensagem pMensagem" ref={acertouRef} hidden>Parabéns!!</p>
+                    <input
+                        autoComplete="off"
+                        className="caixatxt p1"
+                        type={'text'}
+                        ref={r1Ref}
+                        name="r1"
+                        maxLength={3}
+                        value={answer}
+                        onChange={e => setAnswer(e.target.value)}
+                    />
+                    <input
+                        className="button button1 pbtn"
+                        type={'button'}
+                        ref={btnCRef}
+                        onClick={confirmar}
+                        value="Confirmar"
+                    />
+                    <input
+                        className="button button2 pbtn"
+                        type={'button'}
+                        ref={btnRRef}
+                        onClick={refazer}
+                        value="Tente novamente"
+                        hidden
+                    />
+                    <p className="mensagem pMensagem" ref={acertouRef} hidden>
+                        Parabéns!!
+                    </p>
                 </form>
-                <span ref={img1aRef} className="imagem1" hidden><img src={Certo} height={20} alt="certo"/></span>
-                <span ref={img1bRef} className="imagem1" hidden><img src={Errado} height={20} alt="errado"/></span>
+                <span ref={img1aRef} className="imagem1" hidden>
+                    <img src={Certo} height={20} alt="certo" />
+                </span>
+                <span ref={img1bRef} className="imagem1" hidden>
+                    <img src={Errado} height={20} alt="errado" />
+                </span>
             </div>
         </div>
     );
-}
+};
 
 export default CardCorpoAtividadeExercicio;
