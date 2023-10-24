@@ -1,6 +1,6 @@
 import CardMenuAtividade from './CardMenuAtividade';
 import CardCorpoAtividade from './CardCorpoAtividade';
-import Footer from './Footer';
+import Footer from '../Footer';
 
 const CardAtividade = ({ navigate }) => (
     <div className="content">

@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import CardCorpoAtividadeExercicio from './CardCorpoAtividadeExercicio';
 import CardRodapeAtividade from './CardRodapeAtividade';
-import { AtividadeContext } from '../contexts';
+import { AtividadeContext } from '../../contexts';
 import {
     Image01,
     Image02,
@@ -12,7 +12,7 @@ import {
     Image06,
     Formula1,
     Formula2
-} from '../assets';
+} from '../../assets';
 
 const Descricao = (tipo, dado) => ({ tipo, dado });
 

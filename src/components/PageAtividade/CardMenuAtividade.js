@@ -1,9 +1,9 @@
 import { useContext } from 'react';
-import { AtividadeContext } from '../contexts';
-import IconPrevious from '../assets/icon-previous.png';
-import IconNext from '../assets/icon-next.png';
-import IconLib from '../assets/icon-lib.png';
-import IconAcess from '../assets/icon-acess.png';
+import { AtividadeContext } from '../../contexts';
+import IconPrevious from '../../assets/icon-previous.png';
+import IconNext from '../../assets/icon-next.png';
+import IconLib from '../../assets/icon-lib.png';
+import IconAcess from '../../assets/icon-acess.png';
 
 const CardMenuAtividade = ({ navigate }) => {
     const { disciplina, atividade } = useContext(AtividadeContext);
