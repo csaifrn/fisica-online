@@ -2,40 +2,60 @@ import { useState, useRef } from 'react';
 import { Certo, Errado } from '../../assets';
 import '../../styles/exercicio.css';
 
-const CardCorpoAtividadeExercicio = props => {
+/**
+ * Renders a card for an exercise activity.
+ *
+ * @param {Object} content - The content of the card.
+ * @returns {JSX.Element} - The rendered card component.
+ */
+const CardCorpoAtividadeExercicio = ({ content }) => {
     const [answer, setAnswer] = useState('');
-    const r1Ref = useRef(null);
-    const btnCRef = useRef(null);
-    const btnRRef = useRef(null);
-    const acertouRef = useRef(null);
-    const img1aRef = useRef(null);
-    const img1bRef = useRef(null);
+    const refs = {
+        r1: useRef(null),
+        btnC: useRef(null),
+        btnR: useRef(null),
+        acertou: useRef(null),
+        img1a: useRef(null),
+        img1b: useRef(null)
+    };
 
+    /**
+     * Handles the confirm button click.
+     * Disables the input field and hides the confirm button.
+     * Shows the correct or incorrect message based on the answer.
+     */
     const confirmar = () => {
-        r1Ref.current.disabled = true;
-        btnCRef.current.hidden = true;
+        const { r1, btnC, btnR, acertou, img1a, img1b } = refs;
+        r1.current.disabled = true;
+        btnC.current.hidden = true;
 
-        if (answer === props.content.answer) {
-            acertouRef.current.hidden = false;
-            img1aRef.current.hidden = false;
+        if (answer === content.answer) {
+            acertou.current.hidden = false;
+            img1a.current.hidden = false;
         } else {
-            btnRRef.current.hidden = false;
-            img1bRef.current.hidden = false;
+            btnR.current.hidden = false;
+            img1b.current.hidden = false;
         }
     };
 
+    /**
+     * Handles the try again button click.
+     * Resets the input field and shows the confirm button.
+     * Enables the input field and hides the incorrect message.
+     */
     const refazer = () => {
-        btnCRef.current.hidden = false;
-        btnRRef.current.hidden = true;
+        const { r1, btnC, btnR, img1b } = refs;
+        btnC.current.hidden = false;
+        btnR.current.hidden = true;
         setAnswer('');
-        r1Ref.current.disabled = false;
-        img1bRef.current.hidden = true;
+        r1.current.disabled = false;
+        img1b.current.hidden = true;
     };
 
     return (
         <div>
-            <h1>{props.content.titulo}</h1>
-            {props.content.descricao.map(({ tipo, dado }, index) =>
+            <h1>{content.titulo}</h1>
+            {content.descricao.map(({ tipo, dado }, index) =>
                 tipo === 'texto' ? (
                     <p key={index} className="esp10">
                         {dado}
@@ -52,16 +72,15 @@ const CardCorpoAtividadeExercicio = props => {
             <div className="iframe">
                 <img
                     style={{ position: 'absolute', left: '0px', top: '10px' }}
-                    src={props.content.image}
+                    src={content.image}
                     alt="formula"
                 />
-                <form name="formulario">
+                <form>
                     <input
                         autoComplete="off"
                         className="caixatxt p1"
                         type={'text'}
-                        ref={r1Ref}
-                        name="r1"
+                        ref={refs.r1}
                         maxLength={3}
                         value={answer}
                         onChange={e => setAnswer(e.target.value)}
@@ -69,26 +88,26 @@ const CardCorpoAtividadeExercicio = props => {
                     <input
                         className="button button1 pbtn"
                         type={'button'}
-                        ref={btnCRef}
+                        ref={refs.btnC}
                         onClick={confirmar}
                         value="Confirmar"
                     />
                     <input
                         className="button button2 pbtn"
                         type={'button'}
-                        ref={btnRRef}
+                        ref={refs.btnR}
                         onClick={refazer}
                         value="Tente novamente"
                         hidden
                     />
-                    <p className="mensagem pMensagem" ref={acertouRef} hidden>
+                    <p className="mensagem pMensagem" ref={refs.acertou} hidden>
                         Parabéns!!
                     </p>
                 </form>
-                <span ref={img1aRef} className="imagem1" hidden>
+                <span ref={refs.img1a} className="imagem1" hidden>
                     <img src={Certo} height={20} alt="certo" />
                 </span>
-                <span ref={img1bRef} className="imagem1" hidden>
+                <span ref={refs.img1b} className="imagem1" hidden>
                     <img src={Errado} height={20} alt="errado" />
                 </span>
             </div>
