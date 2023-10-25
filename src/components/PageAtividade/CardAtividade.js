@@ -1,12 +1,12 @@
 import CardMenuAtividade from './CardMenuAtividade';
 import CardCorpoAtividade from './CardCorpoAtividade';
-import Footer from '../Footer';
+import AppFooter from '../AppFooter';
 
 const CardAtividade = ({ navigate }) => (
     <div className="content">
         <CardMenuAtividade navigate={navigate} />
         <CardCorpoAtividade navigate={navigate} />
-        <Footer />
+        <AppFooter />
     </div>
 );
 

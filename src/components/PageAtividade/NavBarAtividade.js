@@ -5,10 +5,10 @@ import { AtividadeContext } from '../../contexts';
 
 const NavBarAtividade = () => {
     const navigate = useNavigate();
-    const { disciplina, topico } = useContext(AtividadeContext);
+    const { topico } = useContext(AtividadeContext);
 
     const linkTopico = () => {
-        navigate(`../${disciplina}/${topico}`);
+        navigate('../..', { relative: 'path' });
     };
 
     return (

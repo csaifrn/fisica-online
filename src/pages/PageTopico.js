@@ -1,11 +1,7 @@
-import { AppNavBar, CardAtividade } from '../components';
+import { CardCorpoTopico } from '../components/PageTopico';
 
 const PageTopico = () => {
-    return (
-        <>
-            <AppNavBar isAtHome />
-        </>
-    );
+    return <CardCorpoTopico />;
 };
 
 export default PageTopico;
