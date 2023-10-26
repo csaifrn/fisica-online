@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const CardCorpoTopico = () => {
@@ -79,29 +79,21 @@ const CardCorpoTopico = () => {
                 </b>
             </p>
             <hr />
-            <p className="tamanho3">
-                <span style={{ color: '#0059b3' }}>
-                    <b>Notas de Aula</b>
-                </span>
-            </p>
+            <p className="tamanho3">Notas de Aula</p>
             <ul className="list">
                 {notas_de_aula.map((subtopico, id) => (
-                    <>
+                    <Fragment key={id}>
                         {subtopico.map(nota => (
                             <li key={nota.id}>
                                 <Link to={nota.link}>{nota.nome}</Link>
                             </li>
                         ))}
-                        <hr key={id} />
-                    </>
+                        {id !== notas_de_aula.length - 1 && <hr />}
+                    </Fragment>
                 ))}
             </ul>
             <hr />
-            <p className="tamanho3">
-                <span style={{ color: '#0059b3' }}>
-                    <b>Slides</b>
-                </span>
-            </p>
+            <p className="tamanho3">Slides</p>
             <ul className="list">
                 {slides.map(slide => (
                     <li key={slide.id}>

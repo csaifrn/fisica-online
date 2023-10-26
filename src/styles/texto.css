@@ -50,29 +50,24 @@
 	font-style:italic;		
 }
 
-.esq60{
-	padding-left:60px;	
-}
-
 .esquerda{
 	text-align:left;	
 }
 
-/*   */
 .imagem {
-  display: block;
-  margin: 10px auto;
-  max-width: calc(100% - 0px);
-  padding: 5px;
+	display: block;
+	margin: 10px auto;
+	max-width: calc(100% - 0px);
+	padding: 5px;
 }
 
 .sombra {
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 3px 8px rgba(0 0  0 / 25%);
 }
 
 .sombravideoaula {
 	border: 1.5px solid #95a5a6;		
-	box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 3px 8px rgba(0 0 0 / 25%);
 }
 
 audio{  	
@@ -92,47 +87,41 @@ div#alinhamento audio{
 /*  - setas - */
 
 .nav-fim-aula {
-  margin-top: 40px;
-  text-align: right;
+	margin-top: 40px;
+	text-align: right;
 }
 
 .seta {
-  -webkit-transition: all 0.2s linear;
-          transition: all 0.2s linear;
-  opacity: 0.7;
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  background: url(../../public/seta.svg) center no-repeat;
-  background-size: 50px 50px;
+	transition: all 0.2s linear;
+	opacity: 0.7;
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	background: url("../../public/seta.svg") center no-repeat;
+	background-size: 50px 50px;
 }
+
 .seta:hover {
-  opacity: 1;
+	opacity: 1;
 }
 
 .seta-anterior {
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 .seta-prox {
-  -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+	transform: rotate(0deg);
 }
 
 .seta-top {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+	transform: rotate(-90deg);
 }
 
 /* -------------------- */
 #app .borda {
-    box-shadow: 0px 3px 8px rgb(0 0 0 / 25%);
-    border-radius: 5px;
-    user-select: none;
+	box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
+	border-radius: 5px;
+	user-select: none;
 }
 
 
@@ -143,91 +132,91 @@ div#alinhamento audio{
 /* Comentários */
 
 #app .comentario1 {
-  max-width: 450px;
-  display: block;
-  margin: 20px auto;  
-  text-align: left;   
+	max-width: 450px;
+	display: block;
+	margin: 20px auto;  
+	text-align: left;   
 }
 
 #app .comentario2 {
-  max-width: 600px;
-  display: block;
-  margin: 20px auto;  
-  text-align: left;   
+	max-width: 600px;
+	display: block;
+	margin: 20px auto;  
+	text-align: left;   
 }
 
 #app .agendaFisica {
-  max-width: 600px;  
-  text-align: left;  
-  padding: 5px 10px 5px 10px;
-  background: #3498db;
-  color: white;  
+	max-width: 600px;  
+	text-align: left;  
+	padding: 5px 10px;
+	background: #3498db;
+	color: white;  
 }
 
 #app .agendaEntregar {
-  max-width: 600px;  
-  text-align: left;  
-  padding: 5px 10px 5px 10px;
-  background: #f94306;
-  color: white;  
+	max-width: 600px;  
+	text-align: left;  
+	padding: 5px 10px;
+	background: #f94306;
+	color: white;  
 }
 
 #app .agendaMatematica {
-  max-width: 600px;  
-  text-align: left;  
-  padding: 5px 10px 5px 10px;
-  background: #008080;
-  color: white;  
+	max-width: 600px;  
+	text-align: left;  
+	padding: 5px 10px;
+	background: #008080;
+	color: white;  
 }
 
 #app .round {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 20px;
 }
 
 #app .azul {
-  padding: 20px;
-  background: #3498db;
-  color: white;
+	padding: 20px;
+	background: #3498db;
+	color: white;
 }
 
 #app .verde {
-  padding: 20px;
-  color: white;
-  background: #008080;
+	padding: 20px;
+	color: white;
+	background: #008080;
 }
 
 #app .cinza {
-  padding: 20px;
-  color: white;
-  font-weight:700;
-  background: #5c8a8a;
+	padding: 20px;
+	color: white;
+	font-weight:700;
+	background: #5c8a8a;
 }
 
 #app .cinza2 {
-  padding: 20px;
-  color: #34495e;
-  font-weight:700;
-  background: #e6e6ff;
+	padding: 20px;
+	color: #34495e;
+	font-weight:700;
+	background: #e6e6ff;
 }
 
 #app .verdeclaro {
-  padding: 20px;
-  color: white;
-  background: #00b386;
+	padding: 20px;
+	color: white;
+	background: #00b386;
 }
 
 #app .vermelho {
-  padding: 20px;
-  background: #c0392b;
-  color: white;
+	padding: 20px;
+	background: #c0392b;
+	color: white;
 }
 
 #app .laranja {
-  padding: 20px;
-  background: #ff5d00;
-  color: white;  
+	padding: 20px;
+	background: #ff5d00;
+	color: white;  
 }
 
 #app .corAzulEscuro{
@@ -236,24 +225,26 @@ div#alinhamento audio{
 
 /* ------------------ */
 #app .aula-body .paragrafo {
-    margin: 20px 15px;
-    font-size: 17px;
-    line-height: 1.6;
-    text-align: left;
-    letter-spacing: 1px;
-    color: black;
+	margin: 20px 15px;
+	font-size: 17px;
+	line-height: 1.6;
+	text-align: left;
+	letter-spacing: 1px;
+	color: black;
 }
 
 #app .aula-body .tamanho1 {
-    font-size: 14px;
+	font-size: 14px;
 }
 
 #app .aula-body .tamanho2 {
-    font-size: 19px;
+	font-size: 19px;
 }
 
 #app .aula-body .tamanho3 {
-    font-size: 23px;
+	font-size: 23px;
+	color: #0059b3;
+	font-weight: bolder;
 }
 
 /* ------------------ */
@@ -276,7 +267,7 @@ div#alinhamento audio{
 
 #app .aula-body .btnLimpar {
 	color:white;
-	background-color:#ff6600;
+	background-color:#f60;
 	border: none;
 	border-radius:5px;
 	padding: 5px 8px;
@@ -294,29 +285,29 @@ div#alinhamento audio{
 /* BOTÃO VER RESPOSTA ----------------------------------------------- */
 
 .botaoResposta {
-  -webkit-transition: all 150ms ease-out;
-          transition: all 150ms ease-out;
-  display: inline-block;
-  padding: 7px 10px;
-  background: white;
-  border-radius: 5px;
-  margin: 5px;
-  outline: none;
-  font-family: "Open Sans", sans-serif;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 700;
-  color: #2c3e50;
-  border: 2px solid #0083b3;
+	transition: all 150ms ease-out;
+	display: inline-block;
+	padding: 7px 10px;
+	background: white;
+	border-radius: 5px;
+	margin: 5px;
+	outline: none;
+	font-family: "Open Sans", sans-serif;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 700;
+	color: #2c3e50;
+	border: 2px solid #0083b3;
 }
+
 .botaoResposta:hover {
-  background: white;
-  color: #0096cc;
+	background: white;
+	color: #0096cc;
 }
 
 
 .botaoResposta-padrao:hover {
-  border: 1px solid gray;
+	border: 1px solid gray;
 }
 
 
@@ -327,15 +318,16 @@ div#alinhamento audio{
 	background-color: transparent;
 	border: 2px solid #2980b9;
 	border-radius: 4px;
-    padding: 3px;
-    font-weight: bold;   
-    margin-right: 2px;
+	padding: 3px;
+	font-weight: bold;   
+	margin-right: 2px;
 }
 
-/*nnnnnnnnnnnnnnnnnnnnnn  DESATIVAR TOUCH  NNNNNNNNNNNNNNNNNNN*/
-/*nnnnnnnnnnnnnnnnnnnnnn Inserir no <body> NNNNNNNNNNNNNNNNN*/
+/* nnnnnnnnnnnnnnnnnnnnnn  DESATIVAR TOUCH  NNNNNNNNNNNNNNNNNNN */
+
+/* nnnnnnnnnnnnnnnnnnnnnn Inserir no <body> NNNNNNNNNNNNNNNNN */
 .desativar {
-	 touch-action:none;
+	touch-action:none;
 }
 
 /* ATIVIDADE VERDADEIRO OU FALSO */
@@ -374,7 +366,7 @@ div#alinhamento audio{
 
 
 
-/*--------- BOTÃO IMPRIMIR -------------*/
+/* --------- BOTÃO IMPRIMIR ------------- */
 
 #app .btnImprimir{
 	background-color: white;
@@ -385,11 +377,11 @@ div#alinhamento audio{
 	font-size:16px;
 }
 
-/*#app .btnImprimir:hover{
+/* #app .btnImprimir:hover{
 	background-color: #ecf0f1;
 	border: 2px solid #2980b9;
 	border-radius:5px;
-}*/
+} */
 
 #app .btnImprimir:hover{
 	background-color: #2980b9;
@@ -419,7 +411,7 @@ div#alinhamento audio{
 
 
 #app .btn_palavra:hover{
-	background-color: rgb(245,245,245);
+	background-color: rgb(245 245 245);
 	padding:5px;
 	border: 2px solid #2980b9;
 	border-radius:5px;
@@ -427,7 +419,7 @@ div#alinhamento audio{
 }
 
 #app .btn_palavra:focus{
-	background-color: rgb(245,245,245);
+	background-color: rgb(245 245 245);
 	padding:5px;
 	border: 2px solid #2980b9;
 	border-radius:5px;
@@ -441,13 +433,13 @@ div#alinhamento audio{
 }
 
 #app .btn_palavra2:hover{
-	background-color: rgb(245,245,245);
+	background-color: rgb(245 245 245);
 	padding:3px;	
 	cursor:pointer;	
 }
 
 #app .btn_palavra2:focus{
-	background-color: rgb(245,245,245);
+	background-color: rgb(245 245 245);
 	padding:3px;	
 	cursor:pointer;		
 }
@@ -478,8 +470,8 @@ div#alinhamento audio{
 /* -- */
 
 #app .btntopicos2 {
-	color:#003366;	
-	border: 2px solid #003366;
+	color:#036;	
+	border: 2px solid #036;
 	border-radius:5px;
 	padding: 5px 8px;
 	transition-duration: 0.4s;
@@ -496,7 +488,7 @@ div#alinhamento audio{
 	min-height:360px;
 	padding: 15px;
 	margin: 1em auto;
-	border: 2px solid rgb(41, 41, 61);
+	border: 2px solid rgb(41 41 61);
 	font-size: 20px;
 	font-weight:700;
 	line-height: 1.5;
@@ -509,26 +501,26 @@ div#alinhamento audio{
 /* BOTÃO EXIBIR BLOCO ----------------------------------------------- */
 
 .exibirBloco {
-  -webkit-transition: all 150ms ease-out;
-          transition: all 150ms ease-out;
-  display: inline-block;
-  padding: 7px 10px;
-  background: white;
-  border-radius: 5px;
-  margin: 5px;
-  outline: none;
-  font-family: "Open Sans", sans-serif;
-  cursor: pointer;
-  font-size: 22px;
-  font-weight: 700;
-  color: #2c3e50;
-  border: 2px solid #0083b3;
-  width:200px;
-  text-align:left;
+	transition: all 150ms ease-out;
+	display: inline-block;
+	padding: 7px 10px;
+	background: white;
+	border-radius: 5px;
+	margin: 5px;
+	outline: none;
+	font-family: "Open Sans", sans-serif;
+	cursor: pointer;
+	font-size: 22px;
+	font-weight: 700;
+	color: #2c3e50;
+	border: 2px solid #0083b3;
+	width:200px;
+	text-align:left;
 }
+
 .exibirBloco:hover {
-  background: white;
-  color: #0096cc;
+	background: white;
+	color: #0096cc;
 }
 
 

@@ -1,3 +1,4 @@
+import DataContext from './DataContext';
 import AtividadeContext from './AtividadeContext';
 
-export { AtividadeContext };
+export { DataContext, AtividadeContext };
