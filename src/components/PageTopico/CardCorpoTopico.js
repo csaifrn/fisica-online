@@ -1,7 +1,9 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { PageContext } from '../../contexts';
 
 const CardCorpoTopico = () => {
+    const dados = useContext(PageContext);
     const [notas_de_aula] = useState([
         [
             {
@@ -75,7 +77,7 @@ const CardCorpoTopico = () => {
         <>
             <p>
                 <b>
-                    Termologia - <small>IFRN/CNAT (2023)</small>
+                    {dados.page.titulo} - <small>IFRN/CNAT (2023)</small>
                 </b>
             </p>
             <hr />

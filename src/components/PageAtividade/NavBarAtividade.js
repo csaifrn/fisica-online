@@ -11,12 +11,17 @@ const NavBarAtividade = () => {
         navigate('../..', { relative: 'path' });
     };
 
+    const linkSaibaMais = () => {};
+
     return (
-        <AppNavBar>
+        <div className="d-flex">
             <button className="outline-btn-hover" onClick={linkTopico}>
                 {topico}
             </button>
-        </AppNavBar>
+            <button className="outline-btn-hover" onClick={linkSaibaMais}>
+                Saiba Mais
+            </button>
+        </div>
     );
 };
 
