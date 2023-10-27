@@ -1,4 +1,4 @@
-import DataContext from './DataContext';
+import PageContext from './PageContext';
 import AtividadeContext from './AtividadeContext';
 
-export { DataContext, AtividadeContext };
+export { PageContext, AtividadeContext };

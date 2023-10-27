@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { PageAtividade, PageTopico } from './pages';
-import { PageLayout } from './pages';
+import { PageLayout, PageAtividade, PageTopico } from './pages';
 
 function App() {
     return (

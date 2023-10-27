@@ -2,20 +2,28 @@ import IconPrevious from '../assets/icon-previous.png';
 import IconNext from '../assets/icon-next.png';
 import IconLib from '../assets/icon-lib.png';
 import IconAcess from '../assets/icon-acess.png';
+import { useContext, useEffect } from 'react';
+import { PageContext } from '../contexts';
 
 const AppCardMenu = () => {
+    const dados = useContext(PageContext);
+
     return (
         <div className="aula-menu d-flex">
             <div>
-                <h4 tabIndex={0}>Aula</h4>
+                <h4 tabIndex={0}>{dados.page.disciplina}</h4>
             </div>
             <div className="items d-flex">
-                <div tabIndex={0}>
-                    <img src={IconPrevious} alt="Página Anterior" />
-                </div>
-                <div tabIndex={0}>
-                    <img src={IconNext} alt="Próxima Página" />
-                </div>
+                {dados.page.notas_de_aula != undefined && (
+                    <>
+                        <div tabIndex={0}>
+                            <img src={IconPrevious} alt="Página Anterior" />
+                        </div>
+                        <div tabIndex={0}>
+                            <img src={IconNext} alt="Próxima Página" />
+                        </div>
+                    </>
+                )}
                 <div tabIndex={0}>
                     <img src={IconLib} alt="ativar VLibras" />
                 </div>
