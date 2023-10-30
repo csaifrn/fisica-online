@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { PageContext } from '../contexts';
 import IconPrevious from '../assets/icon-previous.png';
 import IconNext from '../assets/icon-next.png';
@@ -14,14 +14,18 @@ const AppCardMenu = () => {
                 <h4 tabIndex={0}>{dados.page.disciplina}</h4>
             </div>
             <div className="items d-flex">
-                {dados.page.notas_de_aula && (
+                {dados.page.pagina && (
                     <>
-                        <div tabIndex={0}>
-                            <img src={IconPrevious} alt="Página Anterior" />
-                        </div>
-                        <div tabIndex={0}>
-                            <img src={IconNext} alt="Próxima Página" />
-                        </div>
+                        {dados.page.pagina.anterior != null && (
+                            <div tabIndex={0} onClick={dados.previous}>
+                                <img src={IconPrevious} alt="Página Anterior" />
+                            </div>
+                        )}
+                        {dados.page.pagina.proxima != null && (
+                            <div tabIndex={0} onClick={dados.next}>
+                                <img src={IconNext} alt="Próxima Página" />
+                            </div>
+                        )}
                     </>
                 )}
                 <div tabIndex={0}>

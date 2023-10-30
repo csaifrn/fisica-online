@@ -9,7 +9,7 @@ export default {
                 {
                     id: 3,
                     nome: 'Calorimetria',
-                    notas_de_aula: { proxima: null, anterior: null },
+                    pagina: { proxima: null, anterior: null },
                     listas: [
                         {
                             id: 4,
@@ -17,7 +17,7 @@ export default {
                                 nome: 'Geraldo',
                                 data: '2023'
                             },
-                            atividade: { proxima: null, anterior: null }
+                            pagina: { proxima: 5, anterior: null }
                         },
                         {
                             id: 5,
@@ -25,7 +25,7 @@ export default {
                                 nome: 'Geraldo',
                                 data: '2023'
                             },
-                            atividade: { proxima: null, anterior: null }
+                            pagina: { proxima: null, anterior: 4 }
                         }
                     ]
                 }

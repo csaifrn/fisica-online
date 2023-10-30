@@ -1,14 +1,15 @@
 import { useContext } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Navbar } from 'reactstrap';
 import { PageContext } from '../contexts/';
 
 const AppNavBar = () => {
     const dados = useContext(PageContext);
-    const { disciplina, topico } = useParams();
     const navigate = useNavigate();
 
-    const linkTopico = () => {};
+    const linkTopico = () => {
+        dados.page = [dados.page.disciplina, dados.page.topico];
+    };
 
     const linkSaibaMais = () => {};
 
