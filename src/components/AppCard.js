@@ -1,12 +1,12 @@
+import { Outlet } from 'react-router-dom';
 import AppCardMenu from './AppCardMenu';
-import AppCardCorpo from './AppCardCorpo';
 import AppFooter from './AppFooter';
 
 const AppCard = () => {
     return (
         <div className="content">
             <AppCardMenu />
-            <AppCardCorpo />
+            <Outlet />
             <AppFooter />
         </div>
     );

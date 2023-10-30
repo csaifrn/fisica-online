@@ -1,42 +1,23 @@
-import { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { NavBarAtividade, CardAtividade } from '../components/PageAtividade';
-import { AtividadeContext } from '../contexts';
-import dados from '../data/disciplina';
-
-const getAtividade = (disciplina, topico, subtopico, id) =>
-    dados[disciplina][topico][subtopico][parseInt(id)];
+import { useContext, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { CardCorpoAtividade } from '../components/PageAtividade';
+import { PageContext } from '../contexts';
 
 function PageAtividade() {
-    const { disciplina, topico, subtopico, idAtividade } = useParams();
-    const [atividade, setAtividade] = useState(
-        getAtividade(disciplina, topico, subtopico, idAtividade)
-    );
-    const navigate = useNavigate();
+    const { disciplina, topico, subtopico, idTexto, idAtividade } = useParams();
+    const dados = useContext(PageContext);
 
-    const updateAtividade = novaAtividadeId => {
-        setAtividade(
-            getAtividade(disciplina, topico, subtopico, novaAtividadeId)
-        );
-        navigate(`../${disciplina}/${topico}/${subtopico}/${novaAtividadeId}`);
-    };
+    useEffect(() => {
+        dados.page = [
+            disciplina,
+            topico,
+            subtopico,
+            parseInt(idTexto),
+            parseInt(idAtividade)
+        ];
+    }, []);
 
-    const previousAtividade = () => {
-        updateAtividade(atividade.atividade.anterior);
-    };
-
-    const nextAtividade = () => {
-        updateAtividade(atividade.atividade.proxima);
-    };
-
-    return (
-        <AtividadeContext.Provider value={atividade}>
-            <NavBarAtividade />
-            <CardAtividade
-                navigate={{ previous: previousAtividade, next: nextAtividade }}
-            />
-        </AtividadeContext.Provider>
-    );
+    return <CardCorpoAtividade />;
 }
 
 export default PageAtividade;

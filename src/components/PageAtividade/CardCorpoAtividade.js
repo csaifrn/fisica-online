@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import CardCorpoAtividadeExercicio from './CardCorpoAtividadeExercicio';
 import CardRodapeAtividade from './CardRodapeAtividade';
-import { AtividadeContext } from '../../contexts';
+import { PageContext } from '../../contexts';
 import {
     Image01,
     Image02,
@@ -16,12 +16,12 @@ import {
 
 const Descricao = (tipo, dado) => ({ tipo, dado });
 
-const CardCorpoAtividade = ({ navigate }) => {
-    const { nota_de_aula, descricao, atividade } = useContext(AtividadeContext);
+const CardCorpoAtividade = () => {
+    const dados = useContext(PageContext);
     const [exercicios] = useState([
         {
             id: 1,
-            titulo: 'Exercicio 1',
+            titulo: 'Exercicio 01',
             descricao: [
                 Descricao(
                     'texto',
@@ -33,7 +33,7 @@ const CardCorpoAtividade = ({ navigate }) => {
         },
         {
             id: 2,
-            titulo: 'Exercicio 2',
+            titulo: 'Exercicio 02',
             descricao: [
                 Descricao(
                     'texto',
@@ -45,7 +45,7 @@ const CardCorpoAtividade = ({ navigate }) => {
         },
         {
             id: 3,
-            titulo: 'Exercicio 3',
+            titulo: 'Exercicio 03',
             descricao: [
                 Descricao(
                     'texto',
@@ -57,7 +57,7 @@ const CardCorpoAtividade = ({ navigate }) => {
         },
         {
             id: 4,
-            titulo: 'Exercicio 4',
+            titulo: 'Exercicio 04',
             descricao: [
                 Descricao(
                     'texto',
@@ -73,7 +73,7 @@ const CardCorpoAtividade = ({ navigate }) => {
         },
         {
             id: 5,
-            titulo: 'Exercicio 5',
+            titulo: 'Exercicio 05',
             descricao: [
                 Descricao(
                     'texto',
@@ -87,7 +87,7 @@ const CardCorpoAtividade = ({ navigate }) => {
         },
         {
             id: 6,
-            titulo: 'Exercicio 6',
+            titulo: 'Exercicio 06',
             descricao: [
                 Descricao(
                     'texto',
@@ -114,35 +114,40 @@ const CardCorpoAtividade = ({ navigate }) => {
 
     return (
         <div className="aula-body">
-            <Link to={nota_de_aula}>
-                <button className="btnImprimir">Nota de aula</button>
+            <Link to="../">
+                <button className="btnImprimir">Nota de Aula</button>
             </Link>
             <p className="esp10">
-                <b>{descricao}</b>
+                <b>
+                    {dados.page.topico} - {dados.page.texto} -{' '}
+                    {dados.page.titulo}
+                </b>
             </p>
             {exercicios.map(renderExercicio)}
             <br />
-            <nav className="nav-fim-aula">
-                {atividade.anterior !== null && (
+            {dados.page.pagina && (
+                <nav className="nav-fim-aula">
+                    {dados.page.pagina.anterior !== null && (
+                        <span
+                            tabIndex={0}
+                            className="seta seta-anterior"
+                            onClick={dados.previous}
+                        ></span>
+                    )}
                     <span
                         tabIndex={0}
-                        className="seta seta-anterior"
-                        onClick={navigate.previous}
+                        className="seta seta-top"
+                        onClick={scrollToTop}
                     ></span>
-                )}
-                <span
-                    tabIndex={0}
-                    className="seta seta-top"
-                    onClick={scrollToTop}
-                ></span>
-                {atividade.proxima !== null && (
-                    <span
-                        tabIndex={0}
-                        className="seta seta-prox"
-                        onClick={navigate.next}
-                    ></span>
-                )}
-            </nav>
+                    {dados.page.pagina.proxima !== null && (
+                        <span
+                            tabIndex={0}
+                            className="seta seta-prox"
+                            onClick={dados.next}
+                        ></span>
+                    )}
+                </nav>
+            )}
             <hr />
             <CardRodapeAtividade />
         </div>

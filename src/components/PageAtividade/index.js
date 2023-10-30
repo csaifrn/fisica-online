@@ -1,4 +1,3 @@
-import NavBarAtividade from './NavBarAtividade';
-import CardAtividade from './CardAtividade';
+import CardCorpoAtividade from './CardCorpoAtividade';
 
-export { NavBarAtividade, CardAtividade };
+export { CardCorpoAtividade };

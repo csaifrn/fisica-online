@@ -1,4 +1,9 @@
+import { useContext } from 'react';
+import { PageContext } from '../../contexts';
+
 const CardRodapeAtividade = () => {
+    const dados = useContext(PageContext);
+
     const imprimir = () => {
         window.print();
     };
@@ -13,7 +18,12 @@ const CardRodapeAtividade = () => {
             <p className="esp10 tamanho1">
                 <b>Créditos da aula:</b>
             </p>
-            <p className="esp10 tamanho1">Geraldo Felipe - IFRN/CNAT (2023)</p>
+            {dados.page.autor && (
+                <p className="esp10 tamanho1">
+                    {dados.page.autor.nome} - IFRN/CNAT ({dados.page.autor.data}
+                    )
+                </p>
+            )}
         </div>
     );
 };

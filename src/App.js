@@ -11,11 +11,11 @@ function App() {
                             path="/:disciplina/:topico/"
                             element={<PageTopico />}
                         />
+                        <Route
+                            path="/:disciplina/:topico/:subtopico/:idTexto/:idAtividade/"
+                            element={<PageAtividade />}
+                        />
                     </Route>
-                    <Route
-                        path="/:disciplina/:topico/:subtopico/:idAtividade"
-                        element={<PageAtividade />}
-                    />
                 </Routes>
             </BrowserRouter>
         </div>

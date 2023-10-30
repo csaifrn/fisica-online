@@ -70,17 +70,14 @@ const CardCorpoAtividadeExercicio = ({ content }) => {
                 )
             )}
             <div className="iframe">
-                <img
-                    style={{ position: 'absolute', left: '0px', top: '10px' }}
-                    src={content.image}
-                    alt="formula"
-                />
+                <img className="formula" src={content.image} alt="formula" />
                 <form>
                     <input
                         autoComplete="off"
                         className="caixatxt p1"
                         type={'text'}
                         ref={refs.r1}
+                        id={`r${content.id}`}
                         maxLength={3}
                         value={answer}
                         onChange={e => setAnswer(e.target.value)}

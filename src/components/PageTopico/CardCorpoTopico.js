@@ -74,7 +74,7 @@ const CardCorpoTopico = () => {
     ]);
 
     return (
-        <>
+        <div className="aula-body">
             <p>
                 <b>
                     {dados.page.titulo} - <small>IFRN/CNAT (2023)</small>
@@ -104,7 +104,7 @@ const CardCorpoTopico = () => {
                 ))}
             </ul>
             <div style={{ minHeight: '200px' }}></div>
-        </>
+        </div>
     );
 };
 
