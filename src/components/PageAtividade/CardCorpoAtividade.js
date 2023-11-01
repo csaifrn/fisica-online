@@ -16,8 +16,10 @@ import {
 
 const Descricao = (tipo, dado) => ({ tipo, dado });
 
-const CardCorpoAtividade = () => {
+const CardCorpoAtividade = ({ onHandleClick }) => {
     const dados = useContext(PageContext);
+    const { anteriorAtividade, proximaAtividade } = onHandleClick;
+
     const [exercicios] = useState([
         {
             id: 1,
@@ -131,7 +133,7 @@ const CardCorpoAtividade = () => {
                         <span
                             tabIndex={0}
                             className="seta seta-anterior"
-                            onClick={dados.previous}
+                            onClick={anteriorAtividade}
                         ></span>
                     )}
                     <span
@@ -143,7 +145,7 @@ const CardCorpoAtividade = () => {
                         <span
                             tabIndex={0}
                             className="seta seta-prox"
-                            onClick={dados.next}
+                            onClick={proximaAtividade}
                         ></span>
                     )}
                 </nav>

@@ -1,32 +1,38 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { AppNavBar, AppCard } from '../components';
 import { PageContext } from '../contexts';
 import sitemap from '../data/sitemap';
 
 const PageLayout = () => {
     const [page, setPage] = useState({});
-    const navigate = useNavigate();
 
     const getPage = (params = []) => {
         const pathIds = ['disciplina', 'topico', 'subtopico', 'texto', 'lista'];
-        const pageData = {};
-        let currentNode = sitemap;
 
-        params.forEach((param, index) => {
-            if (index < params.length - 1) {
-                if (index < 3) {
-                    pageData[pathIds[index]] = currentNode[param].titulo;
-                }
-                if (index === 3) {
-                    pageData[pathIds[index]] = currentNode.textos[param].titulo;
-                }
-                if (index === 4) {
-                    pageData[pathIds[index]] = currentNode.listas[param].titulo;
+        let currentNode = sitemap;
+        const pageData = {};
+
+        for (let i = 0; i < params.length; i++) {
+            const param = params[i];
+            if (i < params.length - 1) {
+                switch (i) {
+                    case 0:
+                    case 1:
+                    case 2:
+                        pageData[pathIds[i]] = currentNode[param].titulo;
+                        break;
+                    case 3:
+                        pageData[pathIds[i]] = currentNode.textos[param].titulo;
+                        break;
+                    case 4:
+                        pageData[pathIds[i]] = currentNode.listas[param].titulo;
+                        break;
+                    default:
+                        break;
                 }
             }
 
-            switch (index) {
+            switch (i) {
                 case 3:
                     currentNode = currentNode.textos[param];
                     break;
@@ -37,7 +43,7 @@ const PageLayout = () => {
                     currentNode = currentNode[param];
                     break;
             }
-        });
+        }
 
         return { ...pageData, ...currentNode };
     };
@@ -52,29 +58,8 @@ const PageLayout = () => {
         set page(value) {
             const newPage = getPage(value);
             setPage(newPage);
-            let path = '..';
-            for (let i = 0; i < value.length; i++) {
-                path += `/${value[i]}`;
-            }
-            navigate(path);
-        },
-
-        next: () => {
-            setPage({
-                ...this._page,
-                id: this._page.pagina.proxima
-            });
-        },
-
-        previous: () => {
-            setPage({
-                ...this._page,
-                id: this._page.pagina.anterior
-            });
         }
     };
-
-    myPage.next.bind(myPage);
 
     return (
         <PageContext.Provider value={myPage}>

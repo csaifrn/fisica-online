@@ -9,7 +9,7 @@ const AppNavBar = () => {
     const navigate = useNavigate();
 
     const linkTopico = () => {
-        dados.page = [disciplina, topico];
+        navigate(`/${disciplina}/${topico}`);
     };
 
     const linkSaibaMais = () => {};
