@@ -1,5 +1,6 @@
 import PageLayout from './PageLayout';
 import PageAtividade from './PageAtividade';
+import PageSubtopico from './PageSubtopico';
 import PageTopico from './PageTopico';
 
-export { PageAtividade, PageTopico, PageLayout };
+export { PageAtividade, PageSubtopico, PageTopico, PageLayout };

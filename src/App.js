@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { PageLayout, PageAtividade, PageTopico } from './pages';
+import { PageLayout, PageAtividade, PageTopico, PageSubtopico } from './pages';
 
 function App() {
     return (
@@ -10,6 +10,10 @@ function App() {
                         <Route
                             path="/:disciplina/:topico/"
                             element={<PageTopico />}
+                        />
+                        <Route
+                            path="/:disciplina/:topico/:subtopico/:idTexto"
+                            element={<PageSubtopico />}
                         />
                         <Route
                             path="/:disciplina/:topico/:subtopico/:idTexto/:idAtividade/"

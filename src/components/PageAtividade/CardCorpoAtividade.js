@@ -2,6 +2,7 @@ import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import CardCorpoAtividadeExercicio from './CardCorpoAtividadeExercicio';
 import CardRodapeAtividade from './CardRodapeAtividade';
+import AppNavEnd from '../AppNavEnd';
 import { PageContext } from '../../contexts';
 import {
     Image01,
@@ -16,9 +17,8 @@ import {
 
 const Descricao = (tipo, dado) => ({ tipo, dado });
 
-const CardCorpoAtividade = ({ onHandleClick }) => {
+const CardCorpoAtividade = ({ linkNotaDeAula }) => {
     const dados = useContext(PageContext);
-    const { anteriorAtividade, proximaAtividade } = onHandleClick;
 
     const [exercicios] = useState([
         {
@@ -110,46 +110,20 @@ const CardCorpoAtividade = ({ onHandleClick }) => {
         <CardCorpoAtividadeExercicio key={exercicio.id} content={exercicio} />
     );
 
-    const scrollToTop = () => {
-        window.scrollTo(0, 0);
-    };
-
     return (
         <div className="aula-body">
-            <Link to="../">
-                <button className="btnImprimir">Nota de Aula</button>
-            </Link>
+            <button className="btnImprimir" onClick={linkNotaDeAula}>
+                Nota de Aula
+            </button>
             <p className="esp10">
                 <b>
-                    {dados.page.topico} - {dados.page.texto} -{' '}
-                    {dados.page.titulo}
+                    {dados.page.topico} - {dados.page.subtopico}{' '}
+                    {dados.page.texto} - {dados.page.titulo}
                 </b>
             </p>
             {exercicios.map(renderExercicio)}
             <br />
-            {dados.page.pagina && (
-                <nav className="nav-fim-aula">
-                    {dados.page.pagina.anterior !== null && (
-                        <span
-                            tabIndex={0}
-                            className="seta seta-anterior"
-                            onClick={anteriorAtividade}
-                        ></span>
-                    )}
-                    <span
-                        tabIndex={0}
-                        className="seta seta-top"
-                        onClick={scrollToTop}
-                    ></span>
-                    {dados.page.pagina.proxima !== null && (
-                        <span
-                            tabIndex={0}
-                            className="seta seta-prox"
-                            onClick={proximaAtividade}
-                        ></span>
-                    )}
-                </nav>
-            )}
+            <AppNavEnd />
             <hr />
             <CardRodapeAtividade />
         </div>
