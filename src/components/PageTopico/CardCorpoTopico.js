@@ -1,15 +1,9 @@
-import { Fragment, useState, useContext, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Fragment, useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { PageContext } from '../../contexts';
 
 const CardCorpoTopico = () => {
-    const { disciplina, topico } = useParams();
     const dados = useContext(PageContext);
-
-    useEffect(() => {
-        dados.page = [disciplina, topico];
-    }, []);
-
     const [notas_de_aula] = useState([
         [
             {

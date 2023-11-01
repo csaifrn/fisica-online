@@ -1,4 +1,4 @@
-export default {
+const dados = {
     fisica: {
         id: 1,
         titulo: 'Física',
@@ -39,3 +39,5 @@ export default {
         }
     }
 };
+
+export default dados;
