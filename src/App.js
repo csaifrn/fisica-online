@@ -6,7 +6,7 @@ function App() {
         <div id="app">
             <BrowserRouter>
                 <Routes>
-                    <Route path="/:disciplina" element={<PageLayout />}>
+                    <Route path="/:disciplina/:topico" element={<PageLayout />}>
                         <Route
                             path="/:disciplina/:topico/"
                             element={<TopicoPage />}

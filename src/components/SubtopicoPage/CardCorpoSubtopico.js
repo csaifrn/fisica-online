@@ -1,15 +1,14 @@
-import { render } from '@testing-library/react';
 import { useContext, useState } from 'react';
 import PageContext from '../../contexts/PageContext';
 import AppNavEnd from '../AppNavEnd';
-import CardCorpoSubtopicoTexto from './CardCorpoSubtopicoTexto';
+import CardCorpoSubtopicoConteudo from './CardCorpoSubtopicoConteudo';
 
 const Descricao = (tipo, dado) => ({ tipo, dado });
 
 const CardCorpoSubtopico = () => {
     const dados = useContext(PageContext);
 
-    const [texto] = useState([
+    const [conteudos] = useState([
         {
             id: 1,
             titulo: '1. Caloria',
@@ -38,8 +37,8 @@ const CardCorpoSubtopico = () => {
         }
     ]);
 
-    const renderTexto = texto => {
-        <CardCorpoSubtopicoTexto key={texto.id} conteudo={texto} />;
+    const renderConteudo = conteudo => {
+        <CardCorpoSubtopicoConteudo key={conteudo.id} content={conteudo} />;
     };
 
     return (
@@ -50,7 +49,7 @@ const CardCorpoSubtopico = () => {
                     {dados.page.titulo}
                 </b>
             </p>
-            {texto.map(renderTexto)}
+            {conteudos.map(renderConteudo)}
             <AppNavEnd />
         </div>
     );

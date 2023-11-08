@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { PageContext } from '../../contexts';
 
-const CardRodapeAtividade = () => {
+const CardCorpoAtividadeRodape = () => {
     const dados = useContext(PageContext);
 
     const imprimir = () => {
@@ -28,4 +28,4 @@ const CardRodapeAtividade = () => {
     );
 };
 
-export default CardRodapeAtividade;
+export default CardCorpoAtividadeRodape;

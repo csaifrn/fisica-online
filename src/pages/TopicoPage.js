@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { PageContext } from '../contexts';
 import { CardCorpoTopico } from '../components/TopicoPage';
 
-const PageTopico = () => {
+const TopicoPage = () => {
     const { disciplina, topico } = useParams();
     const dados = useContext(PageContext);
 
@@ -14,4 +14,4 @@ const PageTopico = () => {
     return <CardCorpoTopico />;
 };
 
-export default PageTopico;
+export default TopicoPage;

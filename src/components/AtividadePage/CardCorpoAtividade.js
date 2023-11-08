@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import CardCorpoAtividadeExercicio from './CardCorpoAtividadeExercicio';
-import CardRodapeAtividade from './CardRodapeAtividade';
+import CardCorpoAtividadeRodape from './CardCorpoAtividadeRodape';
 import AppNavEnd from '../AppNavEnd';
 import { PageContext } from '../../contexts';
 import {
@@ -125,7 +125,7 @@ const CardCorpoAtividade = ({ linkNotaDeAula }) => {
             <br />
             <AppNavEnd />
             <hr />
-            <CardRodapeAtividade />
+            <CardCorpoAtividadeRodape />
         </div>
     );
 };

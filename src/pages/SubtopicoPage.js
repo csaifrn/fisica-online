@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import PageContext from '../contexts/PageContext';
 import CardCorpoSubtopico from '../components/SubtopicoPage';
 
-const PageSubtopico = () => {
+const SubtopicoPage = () => {
     const dados = useContext(PageContext);
     const { disciplina, topico, subtopico, idTexto } = useParams();
 
@@ -14,4 +14,4 @@ const PageSubtopico = () => {
     return <CardCorpoSubtopico />;
 };
 
-export default PageSubtopico;
+export default SubtopicoPage;

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { PageContext } from '../contexts';
 import { CardCorpoAtividade } from '../components/AtividadePage';
 
-function PageAtividade() {
+function AtividadePage() {
     const { disciplina, topico, subtopico, idTexto, idAtividade } = useParams();
     const dados = useContext(PageContext);
     const navigate = useNavigate();
@@ -25,4 +25,4 @@ function PageAtividade() {
     return <CardCorpoAtividade linkNotaDeAula={linkNotaDeAula} />;
 }
 
-export default PageAtividade;
+export default AtividadePage;
