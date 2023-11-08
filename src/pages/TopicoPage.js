@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { PageContext } from '../contexts';
-import { CardCorpoTopico } from '../components/PageTopico';
+import { CardCorpoTopico } from '../components/TopicoPage';
 
 const PageTopico = () => {
     const { disciplina, topico } = useParams();

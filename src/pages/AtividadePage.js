@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { PageContext } from '../contexts';
-import { CardCorpoAtividade } from '../components/PageAtividade';
+import { CardCorpoAtividade } from '../components/AtividadePage';
 
 function PageAtividade() {
     const { disciplina, topico, subtopico, idTexto, idAtividade } = useParams();
