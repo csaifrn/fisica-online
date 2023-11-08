@@ -197,10 +197,7 @@ a {
 }
 
 #app .list a {
-    text-decoration: none;
-}
-
-#app .list li {
+    display: block;
     margin: 10px 0;
     padding: 5px;
     border: 1px solid #999;
@@ -208,14 +205,15 @@ a {
     cursor: pointer;
     background-color: #fff;
     transition: 0.2s all;
+    text-decoration: none;
 }
 
-#app .list li:hover {
+#app .list a:hover {
     background-color: #4c7de0;
     color: #fff;
 }
 
-#app .list li::before {
+#app .list a::before {
     content: "";
     margin: 0 5px;
 }

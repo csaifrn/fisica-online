@@ -1,7 +1,8 @@
 import { useContext, useState } from 'react';
-import PageContext from '../../contexts/PageContext';
 import AppNavEnd from '../AppNavEnd';
 import CardCorpoSubtopicoConteudo from './CardCorpoSubtopicoConteudo';
+import PageContext from '../../contexts/PageContext';
+import { Link } from 'react-router-dom';
 
 const Descricao = (tipo, dado) => ({ tipo, dado });
 
@@ -37,9 +38,9 @@ const CardCorpoSubtopico = () => {
         }
     ]);
 
-    const renderConteudo = conteudo => {
-        <CardCorpoSubtopicoConteudo key={conteudo.id} content={conteudo} />;
-    };
+    const renderConteudo = conteudo => (
+        <CardCorpoSubtopicoConteudo key={conteudo.id} content={conteudo} />
+    );
 
     return (
         <div className="aula-body">
@@ -50,6 +51,20 @@ const CardCorpoSubtopico = () => {
                 </b>
             </p>
             {conteudos.map(renderConteudo)}
+            <br />
+            <h1>Listas</h1>
+            <ul className="list">
+                <li key={0}>
+                    <Link to="/fisica/termologia/calorimetria/0/0">
+                        Lista 01
+                    </Link>
+                </li>
+                <li key={1}>
+                    <Link to="/fisica/termologia/calorimetria/0/1">
+                        Lista 02
+                    </Link>
+                </li>
+            </ul>
             <AppNavEnd />
         </div>
     );

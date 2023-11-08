@@ -1,22 +1,26 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { PageLayout, AtividadePage, TopicoPage, SubtopicoPage } from './pages';
+import {
+    PageLayout,
+    AtividadePage,
+    TopicoPage,
+    SubtopicoPage,
+    HomePage
+} from './pages';
 
 function App() {
     return (
         <div id="app">
             <BrowserRouter>
                 <Routes>
+                    <Route index element={<HomePage />} />
                     <Route path="/:disciplina/:topico" element={<PageLayout />}>
+                        <Route index element={<TopicoPage />} />
                         <Route
-                            path="/:disciplina/:topico/"
-                            element={<TopicoPage />}
-                        />
-                        <Route
-                            path="/:disciplina/:topico/:subtopico/:idTexto"
+                            path=":subtopico/:idTexto"
                             element={<SubtopicoPage />}
                         />
                         <Route
-                            path="/:disciplina/:topico/:subtopico/:idTexto/:idAtividade/"
+                            path=":subtopico/:idTexto/:idAtividade"
                             element={<AtividadePage />}
                         />
                     </Route>
