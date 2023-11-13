@@ -55,20 +55,18 @@ const CardCorpoAtividadeExercicio = ({ content }) => {
     return (
         <div>
             <h1>{content.titulo}</h1>
-            {content.descricao.map(({ tipo, dado }, index) =>
-                tipo === 'texto' ? (
-                    <p key={index} className="esp10">
-                        {dado}
-                    </p>
-                ) : (
-                    <img
-                        key={index}
-                        className="esp10 imagem"
-                        src={dado}
-                        alt=""
-                    />
-                )
-            )}
+            {content.descricao.map(({ tipo, dado }, index) => {
+                switch (tipo) {
+                    case 'texto':
+                        return (
+                            <p key={index} className="esp10">
+                                {dado}
+                            </p>
+                        );
+                    case 'imagem':
+                        return <img key={index} src={dado} alt="imagem" />;
+                }
+            })}
             <div className="iframe">
                 <img className="formula" src={content.image} alt="formula" />
                 <form>

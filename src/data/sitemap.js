@@ -36,6 +36,41 @@ const dados = {
                     }
                 ]
             }
+        },
+        mecanica: {
+            id: 7,
+            titulo: 'Mecânica',
+            dinamica: {
+                id: 8,
+                titulo: 'Dinâmica',
+                textos: [
+                    {
+                        id: 9,
+                        titulo: '01',
+                        pagina: { proxima: null, anterior: null },
+                        listas: [
+                            {
+                                id: 10,
+                                titulo: 'Lista 01',
+                                autor: {
+                                    nome: 'Geraldo Felipe',
+                                    data: '2023'
+                                },
+                                pagina: { proxima: 11, anterior: null }
+                            },
+                            {
+                                id: 11,
+                                titulo: 'Lista 02',
+                                autor: {
+                                    nome: 'Geraldo Felipe',
+                                    data: '2023'
+                                },
+                                pagina: { proxima: null, anterior: 10 }
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 };

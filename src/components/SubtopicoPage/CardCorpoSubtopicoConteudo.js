@@ -9,7 +9,14 @@ const CardCorpoSubtopicoConteudo = ({ content }) => (
                     </p>
                 );
             } else if (tipo === 'imagem') {
-                return <img key={index} src={dado} alt="imagem" />;
+                return (
+                    <img
+                        className="imagem"
+                        key={index}
+                        src={dado}
+                        alt="imagem"
+                    />
+                );
             } else if (tipo === 'comentario') {
                 return (
                     <p key={index} className="verde round comentario1">
