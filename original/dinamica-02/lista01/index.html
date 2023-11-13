@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Dinâmica | A02 | L01</title>
+	<link rel="shortcut icon" href="https://napalmadamao.ifrn.edu.br/images/icone.png">
+	<link rel="stylesheet" type="text/css" href="https://napalmadamao.ifrn.edu.br/styles/fonts.css">
+	<link rel="stylesheet" type="text/css" href="https://napalmadamao.ifrn.edu.br/styles/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="https://napalmadamao.ifrn.edu.br/styles/main.css">		
+	<link rel="stylesheet" type="text/css" href="https://napalmadamao.ifrn.edu.br/styles/texto.css">		
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />	
+</head>
+
+<body>
+    <span id="app">  
+	<!-- ** -->	
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">               
+			<div class="d-flex">                  
+				<button class="outline-btn-hover" onclick="linkDinamica()">Dinâmica</button>
+				<button class="outline-btn-hover" onclick="linkSaibaMais()">Saiba Mais</button>
+			</div>
+		</div>
+	</nav>
+	<!-- ** -->
+
+    <div class="content">
+
+            <div class="aula-menu d-flex">
+                <div class="aula-header">
+                    <!-- Título do Projeto -->                  
+                    <h4>Física Básica</h4>   
+                </div>
+
+                <div class="items d-flex">
+					<!--<div tabindex="0" class="item">
+						<a tabindex="0" href=''> 
+						<img src="http://napalmadamao.ifrn.edu.br/images/icon-previous.png"></a>
+                    </div>-->
+					<div tabindex="0" class="item">
+						<a tabindex="0" href='../lista02/index.html'>
+						<img src="http://napalmadamao.ifrn.edu.br/images/icon-next.png"></a>
+                    </div>   
+					
+					<!-- **************** -->
+					                 
+                    <div tabindex="0" class="item" id="vlibras-status">
+                        <img src="http://napalmadamao.ifrn.edu.br/images/icon-lib.png">
+                    </div>
+                    
+                    <div tabindex="0" class="item" id="acessibilidade">
+                        <img src="http://napalmadamao.ifrn.edu.br/images/icon-acess.png">
+                    </div>                   
+                </div>
+            </div>
+
+        <div class="aula-body">
+		
+		<!-- INÍCIO DA AULA -->	
+		
+		<button class="btnImprimir" onclick="notadeaula()">Nota de Aula</button>		
+		
+		<p class="esp10"><b>Dinâmica - Texto 02 - Lista 01</b></p>	
+		
+		<!-- 01 -->
+            
+		<div class="topico">Exercício 01</div>				
+				
+		<p tabindex="0" class="esp10">A força resultante sobre um corpo é a soma vetorial de todas as forças que atuam no corpo. A força resultante pode ser nula, mesmo que várias forças atuem sobre o corpo. </p>
+                    
+        <div class="centralizar esp20">
+			<img id="01a1" tabindex="0" class="duasopcoes"  src="figuras/01a.png" onclick="v1()" >
+			<img id="01b1" tabindex="0" class=""  src="figuras/01b.png" hidden>
+			<img id="01c1" tabindex="0" class=""  src="figuras/01c.png" hidden>
+			<img id="02a1" tabindex="0" class="duasopcoes"  src="figuras/02a.png" onclick="f1()" >
+			<img id="02b1" tabindex="0" class=""  src="figuras/02b.png" hidden>	
+			<img id="02c1" tabindex="0" class=""  src="figuras/02c.png" hidden>
+		</div>
+				
+		<p id="acertou1" class="comentario1 azul" hidden>A afirmação é verdadeira! <br> Como já vimos no curso de vetores, é possível que uma soma vetorial apresente, como resultante, um vetor nulo.</p> 
+		<p id="errou1" class="comentario1 laranja" hidden>Ops! A afirmação é verdadeira!</p>	
+		
+		
+		<!-- 02 -->
+				
+		<h1>Exercício 02</h1>				
+				
+		<p tabindex="0" class="esp10">Se a força resultante sobre um corpo é nula, então nenhuma força atua sobre o corpo.</p>				 
+        <div class="centralizar esp20">
+			<img id="01a2" tabindex="0" class="duasopcoes"  src="figuras/01a.png" onclick="v2()" >
+			<img id="01b2" tabindex="0" class=""  src="figuras/01b.png" hidden>
+			<img id="01c2" tabindex="0" class=""  src="figuras/01c.png" hidden>
+			<img id="02a2" tabindex="0" class="duasopcoes"  src="figuras/02a.png" onclick="f2()" >
+			<img id="02b2" tabindex="0" class=""  src="figuras/02b.png" hidden>	
+			<img id="02c2" tabindex="0" class=""  src="figuras/02c.png" hidden>
+		</div>
+				
+		<p id="acertou2" class="comentario1 azul" hidden>A afirmação é falsa. <br> Neste caso, várias forças atuam sobre o corpo, porém a soma vetorial destas forças é um vetor nulo.</p> 
+
+		<p id="errou2" class="comentario1 laranja" hidden>Ops! A afirmação é falsa!</p>	
+				
+		<!-- 03 -->
+				
+		<h1>Exercício 03</h1>				
+				
+		<p tabindex="0" class="esp10">Se a força resultante sobre um corpo é nula, o corpo está em repouso.</p> 				
+                    
+        <div class="centralizar esp20">
+			<img id="01a3" tabindex="0" class="duasopcoes"  src="figuras/01a.png" onclick="v3()" >
+			<img id="01b3" tabindex="0" class=""  src="figuras/01b.png" hidden>
+			<img id="01c3" tabindex="0" class=""  src="figuras/01c.png" hidden>
+			<img id="02a3" tabindex="0" class="duasopcoes"  src="figuras/02a.png" onclick="f3()" >
+			<img id="02b3" tabindex="0" class=""  src="figuras/02b.png" hidden>	
+			<img id="02c3" tabindex="0" class=""  src="figuras/02c.png" hidden>
+		</div>
+				
+		<p id="acertou3" class="comentario1 azul" hidden>A afirmação é falsa, pois se a força resultante sobre um corpo é nula, a velocidade do corpo não varia. Logo, o corpo pode estar em repouso ou em MRU.</p> 
+		<p id="errou3" class="comentario1 laranja" hidden>Ops! Erro clássico... </p>			
+		
+		
+		<!-- 04 -->
+				
+		<h1>Exercício 04</h1>			
+				
+		<p tabindex="0" class="esp10">Se um corpo se move com velocidade constante (MRU), então a força resultante sobre o corpo é nula.</p> 				
+                    
+		<div class="centralizar esp20">
+			<img id="01a4" tabindex="0" class="duasopcoes"  src="figuras/01a.png" onclick="v4()" >
+			<img id="01b4" tabindex="0" class=""  src="figuras/01b.png" hidden>
+			<img id="01c4" tabindex="0" class=""  src="figuras/01c.png" hidden>
+			<img id="02a4" tabindex="0" class="duasopcoes"  src="figuras/02a.png" onclick="f4()" >
+			<img id="02b4" tabindex="0" class=""  src="figuras/02b.png" hidden>	
+			<img id="02c4" tabindex="0" class=""  src="figuras/02c.png" hidden>
+		</div>
+				
+		<p id="acertou4" class="comentario1 azul" hidden> A afirmação é verdadeira, pois uma força resultante nula indica que a velocidade do corpo não muda, o que pode caracterizar o repouso ou MRU.</p> 
+		<p id="errou4" class="comentario1 laranja" hidden> Errado! Não é preciso a existência de uma força para ocorrer movimento!!!!!</p>			
+		<!-- 05 -->
+				
+		<h1>Exercício 05</h1>				
+				
+		<p tabindex="0" class="esp10">Se um corpo está em movimento, certamente a força resultante é não nula.</p> 				
+                    
+        <div class="centralizar esp20">
+			<img id="01a5" tabindex="0" class="duasopcoes"  src="figuras/01a.png" onclick="v5()" >
+			<img id="01b5" tabindex="0" class=""  src="figuras/01b.png" hidden>
+			<img id="01c5" tabindex="0" class=""  src="figuras/01c.png" hidden>
+			<img id="02a5" tabindex="0" class="duasopcoes"  src="figuras/02a.png" onclick="f5()" >
+			<img id="02b5" tabindex="0" class=""  src="figuras/02b.png" hidden>	
+			<img id="02c5" tabindex="0" class=""  src="figuras/02c.png" hidden>
+		</div>
+				
+		<p id="acertou5" class="comentario1 azul" hidden> A afirmação é falsa. Não é necessária a ação de uma força resultante não nula para um corpo permanecer em movimento (o corpo pode estar em MRU).</p> 
+		<p id="errou5" class="comentario1 laranja" hidden> Erro clássico... Lei o conteúdo novamente!</p>	  	
+				
+		<!-- FIM DA AULA -->	
+				
+		<!-- NAVEGAÇÃO -->	
+					
+			<nav class="nav-fim-aula">
+				<a tabindex="0" href=''><span class='seta seta-anterior'></span></a>
+				<a tabindex="0" href='#'><span class='seta seta-top'></span></a>
+				<a tabindex="0" href='../lista02/index.html'><span class='seta seta-prox'></span></a>
+			</nav>
+				
+		<!-- ** -->					
+		<hr>				
+		<p class="esp10 tamanho1"><b>Créditos</b></p> 
+		<p class="esp10 tamanho1">Prof. Geraldo Felipe / IFRN-CNAT (2023)</p>
+		<hr>
+		<p class="esp10 tamanho1"> Utilizamos: <br> &bull; Freepik Premium <br>&bull; Ilustrator <br>&bull; MovAvi </p>
+		<!-- ** -->				
+		</div> 
+		<footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>©www.napalmadamao.ifrn.edu.br<br>2020/2023</h5>
+                            <p>Democratizando o Conhecimento</p>
+                            <p>Email: <span class="hightlight">geraldo.felipe@ifrn.edu.br</span></p>
+                        </div>
+                        <!--<div class="col-md-6">
+                            <h6>Páginas</h6>
+                            <div class="d-flex">
+                                <a href="#"><p>Principal</p></a>
+                                <a href="#"><p>Saiba mais</p></a>
+                            </div>
+                        </div>
+						-->
+                    </div>
+                </div>
+        </footer>		
+	</div>
+    </span>
+
+    <!-- vlibras -->
+    <div id="vlibras" vw class="">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <!-- vlibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <!-- ** -->
+    <script src="http://napalmadamao.ifrn.edu.br/scripts/jquery.js"></script>
+    <script src="http://napalmadamao.ifrn.edu.br/scripts/main.js"></script>
+    <script src="http://napalmadamao.ifrn.edu.br/scripts/hotkey.js"></script>
+    <script src="http://napalmadamao.ifrn.edu.br/scripts/aula.js"></script>
+	<script src="http://napalmadamao.ifrn.edu.br/scripts/links.js"></script>
+	<script src="auxiliar.js"></script>    
+	<script>
+		function notadeaula(){
+			window.open('../index.html', '_blank');		
+		}	
+	</script>
+</body>
+</html>
