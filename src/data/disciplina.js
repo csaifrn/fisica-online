@@ -1,6 +1,7 @@
 const disciplinas = [];
 const fisica = [];
 const termologia = [];
+const dinamica = [];
 const calorimetria = [
     {
         id: 0,
@@ -34,8 +35,12 @@ const calorimetria = [
     }
 ];
 
+// fixme
+// incluir conteúdo de dinamica que esta em original/dinamica-02/index.html
+
 termologia['calorimetria'] = calorimetria;
 fisica['termologia'] = termologia;
+fisica['dinamica'] = dinamica;
 disciplinas['fisica'] = fisica;
 
 export default disciplinas;
