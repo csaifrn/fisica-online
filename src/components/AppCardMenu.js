@@ -5,39 +5,17 @@ import IconNext from '../assets/icon-next.png';
 import IconLib from '../assets/icon-lib.png';
 import IconAcess from '../assets/icon-acess.png';
 import { useNavigate } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
 
 const AppCardMenu = () => {
     const dados = useContext(PageContext);
-    const { disciplina, topico, subtopico, idTexto, idAtividade } = useParams();
     const navigate = useNavigate();
 
     const anteriorPagina = () => {
-        if (idAtividade !== undefined) {
-            navigate(
-                `/${disciplina}/${topico}/${subtopico}/${idTexto}/${
-                    parseInt(idAtividade) - 1
-                }`
-            );
-        } else {
-            navigate(
-                `/${disciplina}/${topico}/${subtopico}/${parseInt(idTexto) - 1}`
-            );
-        }
+        navigate(dados.link(dados.page.pagina.anterior));
     };
 
     const proximaPagina = () => {
-        if (idAtividade !== undefined) {
-            navigate(
-                `/${disciplina}/${topico}/${subtopico}/${idTexto}/${
-                    parseInt(idAtividade) + 1
-                }`
-            );
-        } else {
-            navigate(
-                `/${disciplina}/${topico}/${subtopico}/${parseInt(idTexto) + 1}`
-            );
-        }
+        navigate(dados.link(dados.page.pagina.proxima));
     };
 
     return (

@@ -14,18 +14,17 @@ const HomePage = () => {
             <div className="aula-body">
                 <ul className="list">
                     <li>
-                        <Link to="/fisica/termologia/calorimetria/0">
+                        <Link to="/fisica/termologia/calorimetria/texto01">
                             Calorimetria I
                         </Link>
                     </li>
                     <li>
-                        <Link to="/fisica/termologia/calorimetria/0/0">
+                        <Link to="/fisica/termologia/calorimetria/texto01/lista01">
                             Lista 01
                         </Link>
                     </li>
                 </ul>
             </div>
-            <AppFooter />
         </>
     );
 };

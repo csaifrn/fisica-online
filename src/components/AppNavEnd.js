@@ -1,10 +1,9 @@
 import { useContext } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { PageContext } from '../contexts';
 
 const AppNavEnd = () => {
     const dados = useContext(PageContext);
-    const { disciplina, topico, subtopico, idTexto, idAtividade } = useParams();
     const navigate = useNavigate();
 
     const scrollToTop = () => {
@@ -12,31 +11,11 @@ const AppNavEnd = () => {
     };
 
     const anteriorPagina = () => {
-        if (idAtividade !== undefined) {
-            navigate(
-                `/${disciplina}/${topico}/${subtopico}/${idTexto}/${
-                    parseInt(idAtividade) - 1
-                }`
-            );
-        } else {
-            navigate(
-                `/${disciplina}/${topico}/${subtopico}/${parseInt(idTexto) - 1}`
-            );
-        }
+        navigate(dados.link(dados.page.pagina.anterior));
     };
 
     const proximaPagina = () => {
-        if (idAtividade !== undefined) {
-            navigate(
-                `/${disciplina}/${topico}/${subtopico}/${idTexto}/${
-                    parseInt(idAtividade) + 1
-                }`
-            );
-        } else {
-            navigate(
-                `/${disciplina}/${topico}/${subtopico}/${parseInt(idTexto) + 1}`
-            );
-        }
+        navigate(dados.link(dados.page.pagina.proxima));
     };
 
     return (

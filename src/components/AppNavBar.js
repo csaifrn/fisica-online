@@ -1,15 +1,20 @@
 import { useContext } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Navbar } from 'reactstrap';
 import { PageContext } from '../contexts/';
 
 const AppNavBar = () => {
     const dados = useContext(PageContext);
-    const { disciplina, topico } = useParams();
     const navigate = useNavigate();
 
     const linkTopico = () => {
-        navigate(`/${disciplina}/${topico}`);
+        let id = dados.page.parentPageId;
+        let node = {};
+        while (node.titulo !== dados.page.topico) {
+            node = dados.sitemap.find(node => node.id === id);
+            id = node.parentPageId;
+        }
+        navigate(dados.link(node.id));
     };
 
     const linkSaibaMais = () => {};
@@ -17,7 +22,7 @@ const AppNavBar = () => {
     return (
         <Navbar expand="lg" container>
             <div className="d-flex">
-                {dados.page.topico && (
+                {dados.page && (
                     <button className="outline-btn-hover" onClick={linkTopico}>
                         {dados.page.topico}
                     </button>

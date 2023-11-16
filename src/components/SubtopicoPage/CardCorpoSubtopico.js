@@ -5,12 +5,14 @@ import CardCorpoSubtopicoConteudo from './CardCorpoSubtopicoConteudo';
 import PageContext from '../../contexts/PageContext';
 import notas_de_aula from '../../data/notas_de_aula';
 
-const Descricao = (tipo, dado) => ({ tipo, dado });
-
 const CardCorpoSubtopico = () => {
     const dados = useContext(PageContext);
 
     const [conteudos] = useState(notas_de_aula['calorimetria'][0].conteudos);
+
+    const listas = dados.sitemap.filter(
+        lista => lista.parentPageId === dados.page.id
+    );
 
     const renderConteudo = conteudo => (
         <CardCorpoSubtopicoConteudo key={conteudo.id} content={conteudo} />
@@ -20,7 +22,7 @@ const CardCorpoSubtopico = () => {
         <div className="aula-body">
             <p className="esp10">
                 <b>
-                    {dados.page.topico} - {dados.page.subtopico} - Aula{' '}
+                    {dados.page.topico} - {dados.page.subtopico} -{' '}
                     {dados.page.titulo}
                 </b>
             </p>
@@ -28,16 +30,11 @@ const CardCorpoSubtopico = () => {
             <br />
             <h1>Listas</h1>
             <ul className="list">
-                <li key={0}>
-                    <Link to="/fisica/termologia/calorimetria/0/0">
-                        Lista 01
-                    </Link>
-                </li>
-                <li key={1}>
-                    <Link to="/fisica/termologia/calorimetria/0/1">
-                        Lista 02
-                    </Link>
-                </li>
+                {listas.map(lista => (
+                    <li key={lista.id}>
+                        <Link to={dados.link(lista.id)}>{lista.titulo}</Link>
+                    </li>
+                ))}
             </ul>
             <AppNavEnd />
         </div>
