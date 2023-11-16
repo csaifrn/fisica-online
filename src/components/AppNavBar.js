@@ -22,7 +22,7 @@ const AppNavBar = () => {
     return (
         <Navbar expand="lg" container>
             <div className="d-flex">
-                {dados.page && (
+                {dados.page.topico && (
                     <button className="outline-btn-hover" onClick={linkTopico}>
                         {dados.page.topico}
                     </button>

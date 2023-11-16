@@ -32,7 +32,9 @@ const PageLayout = () => {
                         node.segmento === param &&
                         node.parentPageId === currentNode.id
                 );
-                pageData[pathIds[i]] = currentNode.titulo;
+                if (i < params.length - 1) {
+                    pageData[pathIds[i]] = currentNode.titulo;
+                }
             }
 
             setPage({ ...pageData, ...currentNode });
