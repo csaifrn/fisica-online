@@ -5,8 +5,6 @@ import CardCorpoSubtopicoConteudo from './CardCorpoSubtopicoConteudo';
 import PageContext from '../../contexts/PageContext';
 import notas_de_aula from '../../data/notas_de_aula';
 
-const Descricao = (tipo, dado) => ({ tipo, dado });
-
 const CardCorpoSubtopico = () => {
     const dados = useContext(PageContext);
 
