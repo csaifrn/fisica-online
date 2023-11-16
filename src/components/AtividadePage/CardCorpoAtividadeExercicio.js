@@ -64,7 +64,14 @@ const CardCorpoAtividadeExercicio = ({ content }) => {
                             </p>
                         );
                     case 'imagem':
-                        return <img key={index} src={dado} alt="imagem" />;
+                        return (
+                            <img
+                                key={index}
+                                className="imagem"
+                                src={dado}
+                                alt="imagem"
+                            />
+                        );
                 }
             })}
             <div className="iframe">
