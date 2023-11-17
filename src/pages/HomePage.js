@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { Navbar } from 'reactstrap';
-import AppFooter from '../components/AppFooter';
 
 const HomePage = () => {
     return (
