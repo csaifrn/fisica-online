@@ -6,7 +6,7 @@ import sitemap from '../data/sitemap';
 const PageLayout = () => {
     const [page, setPage] = useState({});
 
-    const myPage = {
+    const pageContext = {
         _page: page,
 
         get page() {
@@ -25,39 +25,42 @@ const PageLayout = () => {
             let currentNode = {};
             let pageData = {};
 
-            for (let i = 0; i < params.length; i++) {
-                const param = params[i];
-                currentNode = sitemap.find(
-                    node =>
-                        node.segmento === param &&
-                        node.parentPageId === currentNode.id
-                );
+            params.forEach((param, i) => {
+                const isSegmento = node =>
+                    node.segmento === param &&
+                    node.parentPageId === currentNode.id;
+                currentNode = sitemap.find(isSegmento);
                 if (i < params.length - 1) {
                     pageData[pathIds[i]] = currentNode.titulo;
                 }
-            }
+            });
 
             setPage({ ...pageData, ...currentNode });
         },
+
         get sitemap() {
             return sitemap;
         },
 
-        link: id => {
-            let currentNode = sitemap.find(node => node.id === id);
-            let link = '/';
-            while (currentNode.parentPageId !== undefined) {
-                link = '/' + currentNode.segmento + link;
-                currentNode = sitemap.find(
-                    node => node.id === currentNode.parentPageId
+        getLink: id => {
+            const currentNode = sitemap.find(node => node.id === id);
+            const linkSegments = [currentNode.segmento];
+
+            let parentPageId = currentNode.parentPageId;
+            while (parentPageId !== undefined) {
+                const parentNode = sitemap.find(
+                    node => node.id === parentPageId
                 );
+                linkSegments.unshift(parentNode.segmento);
+                parentPageId = parentNode.parentPageId;
             }
-            return '/' + currentNode.segmento + link;
+
+            return '/' + linkSegments.join('/');
         }
     };
 
     return (
-        <PageContext.Provider value={myPage}>
+        <PageContext.Provider value={pageContext}>
             <AppNavBar />
             <AppCard />
         </PageContext.Provider>

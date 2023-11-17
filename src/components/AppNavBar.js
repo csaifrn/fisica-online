@@ -14,7 +14,7 @@ const AppNavBar = () => {
             node = dados.sitemap.find(node => node.id === id);
             id = node.parentPageId;
         }
-        navigate(dados.link(node.id));
+        navigate(dados.getLink(node.id));
     };
 
     const linkSaibaMais = () => {};

@@ -38,6 +38,8 @@ const CardCorpoSubtopicoConteudo = ({ content }) => (
                             {dado}
                         </p>
                     );
+                default:
+                    return null;
             }
         })}
     </div>

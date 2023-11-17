@@ -9,7 +9,7 @@ const CardCorpoTopico = () => {
             {
                 id: 0,
                 nome: '01. Calorimetria I',
-                link: '/fisica/termologia/calorimetria/0/'
+                link: '/fisica/termologia/calorimetria/texto01/'
             },
             {
                 id: 1,

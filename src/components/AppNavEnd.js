@@ -11,11 +11,11 @@ const AppNavEnd = () => {
     };
 
     const anteriorPagina = () => {
-        navigate(dados.link(dados.page.pagina.anterior));
+        navigate(dados.getLink(dados.page.pagina.anterior));
     };
 
     const proximaPagina = () => {
-        navigate(dados.link(dados.page.pagina.proxima));
+        navigate(dados.getLink(dados.page.pagina.proxima));
     };
 
     return (

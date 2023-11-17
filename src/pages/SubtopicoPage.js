@@ -9,6 +9,8 @@ const SubtopicoPage = () => {
 
     useEffect(() => {
         dados.page = [disciplina, topico, subtopico, idTexto];
+
+        // eslint-disable-next-line
     }, [disciplina, topico, subtopico, idTexto]);
 
     return <CardCorpoSubtopico />;

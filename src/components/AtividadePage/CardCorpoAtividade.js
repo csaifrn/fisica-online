@@ -17,7 +17,7 @@ const CardCorpoAtividade = () => {
     );
 
     const linkNotaDeAula = () => {
-        navigate(dados.link(dados.page.parentPageId));
+        navigate(dados.getLink(dados.page.parentPageId));
     };
 
     return (

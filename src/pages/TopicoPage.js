@@ -9,6 +9,8 @@ const TopicoPage = () => {
 
     useEffect(() => {
         dados.page = [disciplina, topico];
+
+        // eslint-disable-next-line
     }, [disciplina, topico]);
 
     return <CardCorpoTopico />;

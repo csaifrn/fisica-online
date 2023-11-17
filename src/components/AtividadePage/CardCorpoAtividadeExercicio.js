@@ -72,6 +72,8 @@ const CardCorpoAtividadeExercicio = ({ content }) => {
                                 alt="imagem"
                             />
                         );
+                    default:
+                        return null;
                 }
             })}
             <div className="iframe">

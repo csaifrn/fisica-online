@@ -32,7 +32,7 @@ const CardCorpoSubtopico = () => {
             <ul className="list">
                 {listas.map(lista => (
                     <li key={lista.id}>
-                        <Link to={dados.link(lista.id)}>{lista.titulo}</Link>
+                        <Link to={dados.getLink(lista.id)}>{lista.titulo}</Link>
                     </li>
                 ))}
             </ul>
