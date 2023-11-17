@@ -32,9 +32,18 @@ const CardCorpoSubtopicoConteudo = ({ content }) => (
                             {dado}
                         </p>
                     );
-                case 'comentario':
+                case 'comentario verde':
                     return (
-                        <p key={index} className="verde round comentario1">
+                        <p
+                            key={index}
+                            className="esp10 comentario2 verde round"
+                        >
+                            {dado}
+                        </p>
+                    );
+                case 'comentario azul':
+                    return (
+                        <p key={index} className="esp10 comentario2 azul round">
                             {dado}
                         </p>
                     );
