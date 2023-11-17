@@ -9,19 +9,18 @@ import {
     Formula2
 } from '../assets/calorimetria01/lista01';
 
-const atividades = [];
+const Element = (tipo, dado) => ({ tipo, dado });
 
-const Descricao = (tipo, dado) => ({ tipo, dado });
-
-atividades['calorimetria'] = [
+const atividades = [
     {
-        id: 0,
+        id: 6,
+        tipo: 'quantidade',
         exercicios: [
             {
                 id: 1,
                 titulo: 'Exercicio 01',
                 descricao: [
-                    Descricao(
+                    Element(
                         'texto',
                         'Uma fonte térmica transfere 4,5 kcal em um intervalo de tempo de 0,5 min. Calcule a potência térmica desta fonte, em cal/s.'
                     )
@@ -33,7 +32,7 @@ atividades['calorimetria'] = [
                 id: 2,
                 titulo: 'Exercicio 02',
                 descricao: [
-                    Descricao(
+                    Element(
                         'texto',
                         'Uma fonte de potência térmica 600 kcal/h funcional durante 45 minutos. Calcule a quantidade de calor liberada durante este intervalo de tempo.'
                     )
@@ -45,7 +44,7 @@ atividades['calorimetria'] = [
                 id: 3,
                 titulo: 'Exercicio 03',
                 descricao: [
-                    Descricao(
+                    Element(
                         'texto',
                         'Uma determinada fonte térmica apresenta potência térmica de 1200 cal/s. Determine o intervalo de tempo necessário para que esta fonte forneça 30 kcal.'
                     )
@@ -57,11 +56,11 @@ atividades['calorimetria'] = [
                 id: 4,
                 titulo: 'Exercicio 04',
                 descricao: [
-                    Descricao(
+                    Element(
                         'texto',
                         'O corpo humano, em seu estado basal, cede calor para o ambiente a uma taxa média de aproximadamente 100 W (varia de pessoa para pessoa e das condições ambientes).'
                     ),
-                    Descricao(
+                    Element(
                         'texto',
                         'Nestas condições, qual o gasto calórico mínimo de uma pessoa, em um dia?'
                     )
@@ -73,15 +72,12 @@ atividades['calorimetria'] = [
                 id: 5,
                 titulo: 'Exercicio 05',
                 descricao: [
-                    Descricao(
+                    Element(
                         'texto',
                         'O gráfico abaixo mostra a quantidade de calor fornecida por uma fonte térmica em função do tempo.'
                     ),
-                    Descricao('imagem', Formula1),
-                    Descricao(
-                        'texto',
-                        'Calcule a potência térmica desta fonte.'
-                    )
+                    Element('imagem', Formula1),
+                    Element('texto', 'Calcule a potência térmica desta fonte.')
                 ],
                 image: Image05,
                 answer: '3000'
@@ -90,18 +86,74 @@ atividades['calorimetria'] = [
                 id: 6,
                 titulo: 'Exercicio 06',
                 descricao: [
-                    Descricao(
+                    Element(
                         'texto',
                         'O gráfico abaixo mostra a quantidade de calor fornecida por uma fonte térmica em função do tempo.'
                     ),
-                    Descricao('imagem', Formula2),
-                    Descricao(
+                    Element('imagem', Formula2),
+                    Element(
                         'texto',
                         'Calcule a quantidade de calor disponibilizada por esta fonte após um intervalo de tempo de 10min:30s.'
                     )
                 ],
                 image: Image06,
                 answer: '60'
+            }
+        ]
+    },
+    {
+        id: 11,
+        tipo: 'falso/verdadeiro',
+        exercicios: [
+            {
+                id: 0,
+                titulo: 'Exercicio 01',
+                descricao: [
+                    Element(
+                        'texto',
+                        'A força resultante sobre um corpo é a soma vetorial de todas as forças que atuam no corpo. A força resultante pode ser nula, mesmo que várias forças atuem sobre o corpo.'
+                    )
+                ]
+            },
+            {
+                id: 1,
+                titulo: 'Exercicio 02',
+                descricao: [
+                    Element(
+                        'texto',
+                        'Se a força resultante sobre um corpo é nula, então nenhuma força atua sobre o corpo.'
+                    )
+                ]
+            },
+            {
+                id: 2,
+                titulo: 'Exercicio 03',
+                descricao: [
+                    Element(
+                        'texto',
+                        'Se a força resultante sobre um corpo é nula, o corpo está em repouso.'
+                    )
+                ]
+            },
+            {
+                id: 3,
+                titulo: 'Exercicio 04',
+                descricao: [
+                    Element(
+                        'texto',
+                        'Se um corpo se move com velocidade constante (MRU), então a força resultante sobre o corpo é nula.'
+                    )
+                ]
+            },
+            {
+                id: 4,
+                titulo: 'Exercicio 05',
+                descricao: [
+                    Element(
+                        'texto',
+                        'Se um corpo está em movimento, certamente a força resultante é não nula.'
+                    )
+                ]
             }
         ]
     }

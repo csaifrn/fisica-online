@@ -18,8 +18,8 @@ const HomePage = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/fisica/termologia/calorimetria/texto01/lista01">
-                            Lista 01
+                        <Link to="/fisica/termologia/calorimetria/texto01/lista02">
+                            Lista 02
                         </Link>
                     </li>
                     <li>

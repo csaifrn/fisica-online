@@ -10,7 +10,9 @@ const CardCorpoAtividade = () => {
     const dados = useContext(PageContext);
     const navigate = useNavigate();
 
-    const [exercicios] = useState(atividades['calorimetria'][0].exercicios);
+    const exercicios = atividades.find(
+        atividade => atividade.id === dados.page.id
+    );
 
     const renderExercicio = exercicio => (
         <CardCorpoAtividadeExercicio key={exercicio.id} content={exercicio} />
@@ -31,7 +33,7 @@ const CardCorpoAtividade = () => {
                     {dados.page.titulo}
                 </b>
             </p>
-            {exercicios.map(renderExercicio)}
+            {exercicios && exercicios.exercicios.map(renderExercicio)}
             <br />
             <AppNavEnd />
             <hr />
