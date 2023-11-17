@@ -19,16 +19,15 @@ import {
     Image18
 } from '../assets/dinamica02';
 
-const notas_de_aula = [];
-
 const Element = (tipo, dado = null) => ({ tipo, dado });
 
-notas_de_aula['calorimetria'] = [
+const notas_de_aula = [
     {
-        id: 0,
+        id: 4,
+        titulo: 'Calorimetria 01',
         conteudos: [
             {
-                id: 1,
+                id: 0,
                 titulo: '1. Caloria',
                 descricao: [
                     Element(
@@ -54,13 +53,10 @@ notas_de_aula['calorimetria'] = [
                 ]
             }
         ]
-    }
-];
-
-notas_de_aula['dinamica'] = [
-    {},
+    },
     {
-        id: 1,
+        id: 10,
+        titulo: 'Dinâmica 02',
         conteudos: [
             {
                 id: 2,

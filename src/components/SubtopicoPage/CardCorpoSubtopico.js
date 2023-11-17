@@ -8,7 +8,7 @@ import notas_de_aula from '../../data/notas_de_aula';
 const CardCorpoSubtopico = () => {
     const dados = useContext(PageContext);
 
-    const [conteudos] = useState(notas_de_aula['dinamica'][1].conteudos);
+    const conteudos = notas_de_aula.find(nota => nota.id === dados.page.id);
 
     const listas = dados.sitemap.filter(
         lista => lista.parentPageId === dados.page.id
@@ -26,7 +26,7 @@ const CardCorpoSubtopico = () => {
                     {dados.page.titulo}
                 </b>
             </p>
-            {conteudos.map(renderConteudo)}
+            {conteudos && conteudos.conteudos.map(renderConteudo)}
             <br />
             <h1>Atividades</h1>
             <ul className="list">
