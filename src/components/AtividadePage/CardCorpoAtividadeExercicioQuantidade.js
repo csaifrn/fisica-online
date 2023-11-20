@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { Certo, Errado } from '../../assets';
-import '../../styles/exercicio.css';
+import '../../styles/exercicioQuantidade.css';
 
 const CardCorpoAtividadeExercicioQuantidade = ({ id, imagem, resposta }) => {
     const [answer, setAnswer] = useState('');

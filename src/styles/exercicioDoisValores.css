@@ -1,0 +1,174 @@
+:root {
+    --dy:55px;	
+    --x1:75px;	  
+    --y1:27px;
+    --x2:215px;	  
+    --y2:27px;
+    --xbtn:60px;	  
+    --ybtn:90px;
+    --xM:110px;	  
+    --yM:80px;    
+    --x1a:120px;
+    --y1a:10px;
+    --x2a:260px;
+    --y2a:10px;
+}
+  
+/* NÃƒO ALTERAR -------------------------- */
+
+.iframe {
+    position: relative;
+    padding-top: 20px;
+    text-align: center;
+    width: 320px;
+    height: 160px;
+}
+
+.formula {
+    position:absolute;
+    left: 0;
+    top: 10px;
+}
+  
+.caixatxt {
+    position:absolute;	
+    width: 45px;
+    height:30px;
+    font-size:25px;	
+    font-family: "Open Sans", sans-serif;
+    font-weight:700;
+    text-align:center;	
+    color:#34495e;
+    border: 2px solid #008CBA;
+    border-radius: 5px;
+}
+  
+.caixatxt:focus {	
+    border: 3px solid #E9E9E9;
+    background-color:rgba(236 242 248 / 20%);
+}
+  
+.button {
+    position:absolute;	  
+    border: none;
+    color: white;
+    width:190px;
+    height:50px;
+    text-align: center;	
+    letter-spacing:1px;
+    font-family: "Open Sans", sans-serif;
+    font-weight:700;	
+    font-size: 18px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+  
+.button1 {
+    background-color: white; 
+    color: #34495e; 
+    border: 2px solid #008CBA;
+}
+  
+.button1:hover {
+    background-color: #00ace6;
+    color: white;
+}
+  
+.button1:focus {
+    background-color: #008CBA;
+    color: white;
+}
+  
+/* -- */
+  
+.button2 {
+    background-color: white; 
+    color: #34495e; 
+    border: 2px solid #FF4000;
+}
+  
+.button2:hover {
+    background-color: white;
+    color:#205671;
+}
+  
+.button2:focus {
+    background-color: white;
+    color: #2c3e50;
+}
+  
+/* ------ */
+  
+.imagem1{
+    position:absolute;
+    left:var(--x1a);
+    top:var(--y1a);
+}
+  
+.imagem2{
+    position:absolute;
+    left:var(--x2a);
+    top:var(--y2a);
+}
+  
+.imagem3{
+    position:absolute;
+    left:var(--x3a);
+    top:var(--y3a);
+}
+  
+.imagem4{
+    position:absolute;
+    left:var(--x4a);
+    top:var(--y4a);
+}
+  
+.imagem5{
+    position:absolute;
+    left:var(--x5a);
+    top:var(--y5a);
+}
+  
+/* ------ */
+  
+.mensagem{
+    font-size:20px;	
+    font-family: "Open Sans", sans-serif;
+    font-weight:700;
+    position:absolute;	
+    color:#009688;
+}
+  
+/* ------ */
+.pontos{
+    font-size:20px;	
+    font-family: "Open Sans", sans-serif;
+    font-weight:700;
+    color:#009688;
+    position:absolute;	
+    left:var(--xpontos);
+    top:var(--ypontos);	
+}
+  
+/* ------ */
+  
+.p1 {		
+    left:var(--x1);
+    top:var(--y1);
+}
+  
+.p2 {	
+    left:var(--x2);
+    top:var(--y2);
+}
+  
+.pbtn {	
+    left:var(--xbtn);
+    top:var(--ybtn);
+}
+  
+.pMensagem {	
+    left:var(--xM);
+    top:var(--yM);
+}

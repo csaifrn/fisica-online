@@ -1,13 +1,5 @@
-import {
-    Image01,
-    Image02,
-    Image03,
-    Image04,
-    Image05,
-    Image06,
-    Formula1,
-    Formula2
-} from '../assets/calorimetria01/lista01';
+import * as Calorimetria0101 from '../assets/calorimetria01/lista01';
+import * as Dinamica0202 from '../assets/dinamica02/lista02';
 
 const Element = (tipo, dado) => ({ tipo, dado });
 
@@ -25,7 +17,7 @@ const atividades = [
                         'Uma fonte térmica transfere 4,5 kcal em um intervalo de tempo de 0,5 min. Calcule a potência térmica desta fonte, em cal/s.'
                     )
                 ],
-                imagem: Image01,
+                imagem: Calorimetria0101.Image01,
                 resposta: '150'
             },
             {
@@ -37,7 +29,7 @@ const atividades = [
                         'Uma fonte de potência térmica 600 kcal/h funcional durante 45 minutos. Calcule a quantidade de calor liberada durante este intervalo de tempo.'
                     )
                 ],
-                imagem: Image02,
+                imagem: Calorimetria0101.Image02,
                 resposta: '450'
             },
             {
@@ -49,7 +41,7 @@ const atividades = [
                         'Uma determinada fonte térmica apresenta potência térmica de 1200 cal/s. Determine o intervalo de tempo necessário para que esta fonte forneça 30 kcal.'
                     )
                 ],
-                imagem: Image03,
+                imagem: Calorimetria0101.Image03,
                 resposta: '25'
             },
             {
@@ -65,7 +57,7 @@ const atividades = [
                         'Nestas condições, qual o gasto calórico mínimo de uma pessoa, em um dia?'
                     )
                 ],
-                imagem: Image04,
+                imagem: Calorimetria0101.Image04,
                 resposta: '2067'
             },
             {
@@ -76,10 +68,10 @@ const atividades = [
                         'texto',
                         'O gráfico abaixo mostra a quantidade de calor fornecida por uma fonte térmica em função do tempo.'
                     ),
-                    Element('imagem', Formula1),
+                    Element('imagem', Calorimetria0101.Formula1),
                     Element('texto', 'Calcule a potência térmica desta fonte.')
                 ],
-                imagem: Image05,
+                imagem: Calorimetria0101.Image05,
                 resposta: '3000'
             },
             {
@@ -90,13 +82,13 @@ const atividades = [
                         'texto',
                         'O gráfico abaixo mostra a quantidade de calor fornecida por uma fonte térmica em função do tempo.'
                     ),
-                    Element('imagem', Formula2),
+                    Element('imagem', Calorimetria0101.Formula2),
                     Element(
                         'texto',
                         'Calcule a quantidade de calor disponibilizada por esta fonte após um intervalo de tempo de 10min:30s.'
                     )
                 ],
-                imagem: Image06,
+                imagem: Calorimetria0101.Image06,
                 resposta: '60'
             }
         ]
@@ -182,7 +174,25 @@ const atividades = [
             }
         ]
     },
-    {}
+    {
+        id: 12,
+        tipo: 'dois valores',
+        exercicios: [
+            {
+                id: 0,
+                titulo: 'Exercicio 01',
+                descricao: [
+                    Element(
+                        'texto',
+                        'A figura mostra um corpo sujeito a ação de duas forças. Determine, em notação vetorial, a força resultante sobre o corpo.'
+                    ),
+                    Element('imagem', Dinamica0202.Formula1)
+                ],
+                imagem: Dinamica0202.Image01,
+                respostas: [0, 0]
+            }
+        ]
+    }
 ];
 
 atividades['dinamica'] = [

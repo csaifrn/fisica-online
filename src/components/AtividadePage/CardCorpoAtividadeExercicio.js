@@ -1,5 +1,6 @@
-import CardCorpoAtividadeExercicioDicotomica from './CardCorpoAtividadeExercicioDicotomica';
 import CardCorpoAtividadeExercicioQuantidade from './CardCorpoAtividadeExercicioQuantidade';
+import CardCorpoAtividadeExercicioDicotomica from './CardCorpoAtividadeExercicioDicotomica';
+import CardCorpoAtividadeExercicioDoisValores from './CardCorpoAtividadeExercicioDoisValores';
 
 /**
  * Renders a card for an exercise activity.
@@ -23,6 +24,14 @@ const CardCorpoAtividadeExercicio = ({ content, tipo }) => {
                     <CardCorpoAtividadeExercicioDicotomica
                         resposta={content.resposta}
                         comentarios={content.comentarios}
+                    />
+                );
+            case 'dois valores':
+                return (
+                    <CardCorpoAtividadeExercicioDoisValores
+                        id={content.id}
+                        imagem={content.imagem}
+                        respostas={content.respostas}
                     />
                 );
             default:

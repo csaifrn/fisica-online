@@ -22,7 +22,7 @@ const CardCorpoAtividadeExercicioDicotomica = ({ resposta, comentarios }) => {
 
     const v1 = () => {
         const { r01a, r01b, r01c, r02a, r02b, r02c, acertou, errou } = refs;
-        if (resposta == true) {
+        if (resposta === true) {
             r01a.current.hidden = true;
             r01b.current.hidden = false;
 
@@ -42,7 +42,7 @@ const CardCorpoAtividadeExercicioDicotomica = ({ resposta, comentarios }) => {
 
     const f1 = () => {
         const { r01a, r01b, r01c, r02a, r02b, r02c, acertou, errou } = refs;
-        if (resposta == false) {
+        if (resposta === false) {
             r02a.current.hidden = true;
             r02b.current.hidden = false;
 
