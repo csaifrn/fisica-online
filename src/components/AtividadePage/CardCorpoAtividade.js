@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CardCorpoAtividadeExercicio from './CardCorpoAtividadeExercicio';
 import CardCorpoAtividadeRodape from './CardCorpoAtividadeRodape';
@@ -10,12 +10,16 @@ const CardCorpoAtividade = () => {
     const dados = useContext(PageContext);
     const navigate = useNavigate();
 
-    const exercicios = atividades.find(
+    const atividade = atividades.find(
         atividade => atividade.id === dados.page.id
     );
 
     const renderExercicio = exercicio => (
-        <CardCorpoAtividadeExercicio key={exercicio.id} content={exercicio} />
+        <CardCorpoAtividadeExercicio
+            key={exercicio.id}
+            content={exercicio}
+            tipo={atividade?.tipo}
+        />
     );
 
     const linkNotaDeAula = () => {
@@ -33,7 +37,7 @@ const CardCorpoAtividade = () => {
                     {dados.page.titulo}
                 </b>
             </p>
-            {exercicios && exercicios.exercicios.map(renderExercicio)}
+            {atividade?.exercicios.map(renderExercicio)}
             <br />
             <AppNavEnd />
             <hr />

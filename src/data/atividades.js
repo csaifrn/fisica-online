@@ -25,8 +25,8 @@ const atividades = [
                         'Uma fonte térmica transfere 4,5 kcal em um intervalo de tempo de 0,5 min. Calcule a potência térmica desta fonte, em cal/s.'
                     )
                 ],
-                image: Image01,
-                answer: '150'
+                imagem: Image01,
+                resposta: '150'
             },
             {
                 id: 2,
@@ -37,8 +37,8 @@ const atividades = [
                         'Uma fonte de potência térmica 600 kcal/h funcional durante 45 minutos. Calcule a quantidade de calor liberada durante este intervalo de tempo.'
                     )
                 ],
-                image: Image02,
-                answer: '450'
+                imagem: Image02,
+                resposta: '450'
             },
             {
                 id: 3,
@@ -49,8 +49,8 @@ const atividades = [
                         'Uma determinada fonte térmica apresenta potência térmica de 1200 cal/s. Determine o intervalo de tempo necessário para que esta fonte forneça 30 kcal.'
                     )
                 ],
-                image: Image03,
-                answer: '25'
+                imagem: Image03,
+                resposta: '25'
             },
             {
                 id: 4,
@@ -65,8 +65,8 @@ const atividades = [
                         'Nestas condições, qual o gasto calórico mínimo de uma pessoa, em um dia?'
                     )
                 ],
-                image: Image04,
-                answer: '2067'
+                imagem: Image04,
+                resposta: '2067'
             },
             {
                 id: 5,
@@ -79,8 +79,8 @@ const atividades = [
                     Element('imagem', Formula1),
                     Element('texto', 'Calcule a potência térmica desta fonte.')
                 ],
-                image: Image05,
-                answer: '3000'
+                imagem: Image05,
+                resposta: '3000'
             },
             {
                 id: 6,
@@ -96,14 +96,14 @@ const atividades = [
                         'Calcule a quantidade de calor disponibilizada por esta fonte após um intervalo de tempo de 10min:30s.'
                     )
                 ],
-                image: Image06,
-                answer: '60'
+                imagem: Image06,
+                resposta: '60'
             }
         ]
     },
     {
         id: 11,
-        tipo: 'falso/verdadeiro',
+        tipo: 'dicotomica',
         exercicios: [
             {
                 id: 0,
@@ -113,7 +113,12 @@ const atividades = [
                         'texto',
                         'A força resultante sobre um corpo é a soma vetorial de todas as forças que atuam no corpo. A força resultante pode ser nula, mesmo que várias forças atuem sobre o corpo.'
                     )
-                ]
+                ],
+                comentarios: [
+                    'Ops! A afirmação é verdadeira!',
+                    'A afirmação é verdadeira! \n  Como já vimos no curso de vetores, é possível que uma soma vetorial apresente, como resultante, um vetor nulo.'
+                ],
+                resposta: true
             },
             {
                 id: 1,
@@ -123,7 +128,12 @@ const atividades = [
                         'texto',
                         'Se a força resultante sobre um corpo é nula, então nenhuma força atua sobre o corpo.'
                     )
-                ]
+                ],
+                comentarios: [
+                    'Ops! A afirmação é falsa!',
+                    'A afirmação é falsa! \n Neste caso, várias forças atuam sobre o corpo, porém a soma vetorial destas forças é um vetor nulo.'
+                ],
+                resposta: false
             },
             {
                 id: 2,
@@ -133,7 +143,12 @@ const atividades = [
                         'texto',
                         'Se a força resultante sobre um corpo é nula, o corpo está em repouso.'
                     )
-                ]
+                ],
+                comentarios: [
+                    'Ops! Erro clássico... ',
+                    'A afirmação é falsa, pois se a força resultante sobre um corpo é nula, a velocidade do corpo não varia. Logo, o corpo pode estar em repouso ou em MRU.'
+                ],
+                resposta: false
             },
             {
                 id: 3,
@@ -143,7 +158,12 @@ const atividades = [
                         'texto',
                         'Se um corpo se move com velocidade constante (MRU), então a força resultante sobre o corpo é nula.'
                     )
-                ]
+                ],
+                comentarios: [
+                    'Errado! Não é preciso a existência de uma força para ocorrer movimento!!!!!',
+                    'A afirmação é verdadeira, pois uma força resultante nula indica que a velocidade do corpo não muda, o que pode caracterizar o repouso ou MRU.'
+                ],
+                resposta: true
             },
             {
                 id: 4,
@@ -153,10 +173,16 @@ const atividades = [
                         'texto',
                         'Se um corpo está em movimento, certamente a força resultante é não nula.'
                     )
-                ]
+                ],
+                comentarios: [
+                    'Erro clássico... Leia o conteúdo novamente!',
+                    ' A afirmação é falsa. Não é necessária a ação de uma força resultante não nula para um corpo permanecer em movimento (o corpo pode estar em MRU).'
+                ],
+                resposta: false
             }
         ]
-    }
+    },
+    {}
 ];
 
 atividades['dinamica'] = [
@@ -191,8 +217,8 @@ atividades['dinamica'] = [
                     }
                 ],
                 respostas: {
-                    image: ['url', 'url', 'url'],
-                    answer: [150, 510, 120]
+                    imagem: ['url', 'url', 'url'],
+                    resposta: [150, 510, 120]
                 }
             }
         ]

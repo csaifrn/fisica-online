@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AppNavEnd from '../AppNavEnd';
 import CardCorpoSubtopicoConteudo from './CardCorpoSubtopicoConteudo';
@@ -26,7 +26,7 @@ const CardCorpoSubtopico = () => {
                     {dados.page.titulo}
                 </b>
             </p>
-            {conteudos && conteudos.conteudos.map(renderConteudo)}
+            {conteudos?.conteudos.map(renderConteudo)}
             <br />
             <h1>Atividades</h1>
             <ul className="list">

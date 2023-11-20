@@ -19,12 +19,17 @@ const HomePage = () => {
                     </li>
                     <li>
                         <Link to="/fisica/termologia/calorimetria/texto01/lista02">
-                            Lista 02
+                            Calorimetria 01 - Lista 02
                         </Link>
                     </li>
                     <li>
                         <Link to="/fisica/mecanica/dinamica/texto02">
                             Dinâmica 02
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/fisica/mecanica/dinamica/texto02/lista01">
+                            Dinâmica 02 - Lista 01
                         </Link>
                     </li>
                 </ul>
