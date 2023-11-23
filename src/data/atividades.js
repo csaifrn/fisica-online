@@ -190,6 +190,32 @@ const atividades = [
                 ],
                 imagem: Dinamica0202.Image01,
                 respostas: [0, 0]
+            },
+            {
+                id: 1,
+                titulo: 'Exercicio 02',
+                descricao: [
+                    Element(
+                        'texto',
+                        'A figura mostra um corpo sujeito a ação de duas forças. Determine, em notação vetorial, a força resultante sobre o corpo.'
+                    ),
+                    Element('imagem', Dinamica0202.Formula2)
+                ],
+                imagem: Dinamica0202.Image02,
+                respostas: [0, 0]
+            },
+            {
+                id: 2,
+                titulo: 'Exercicio 03',
+                descricao: [
+                    Element(
+                        'texto',
+                        'A figura mostra um corpo sujeito a ação de duas forças. Determine, em notação vetorial, a força resultante sobre o corpo.'
+                    ),
+                    Element('imagem', Dinamica0202.Formula3)
+                ],
+                imagem: Dinamica0202.Image03,
+                respostas: [0, 0]
             }
         ]
     }

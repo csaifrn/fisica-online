@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { Certo, Errado } from '../../assets';
-import '../../styles/exercicioDoisValores.css';
+import styles from '../../styles/exercicioDoisValores.module.css';
 
 const CardCorpoAtividadeExercicioDoisValores = ({ id, imagem, respostas }) => {
     const [valor1, setValor1] = useState(0);
@@ -65,7 +65,7 @@ const CardCorpoAtividadeExercicioDoisValores = ({ id, imagem, respostas }) => {
             <img className="formula" src={imagem} alt="Imagem" />
             <form autoComplete="off">
                 <input
-                    className="caixatxt p1"
+                    className={`${styles.caixatxt} ${styles.p1}`}
                     type="text"
                     ref={ref.r1}
                     id={`r${id}a1`}
@@ -73,7 +73,7 @@ const CardCorpoAtividadeExercicioDoisValores = ({ id, imagem, respostas }) => {
                     onChange={e => setValor1(parseInt(e.target.value))}
                 />
                 <input
-                    className="caixatxt p2"
+                    className={`${styles.caixatxt} ${styles.p2}`}
                     type="text"
                     ref={ref.r2}
                     id={`r${id}a2`}
@@ -81,34 +81,38 @@ const CardCorpoAtividadeExercicioDoisValores = ({ id, imagem, respostas }) => {
                     onChange={e => setValor2(parseInt(e.target.value))}
                 />
                 <input
-                    className="button button1 pbtn"
+                    className={`button button1 ${styles.pbtn}`}
                     type="button"
                     ref={ref.btnC}
                     onClick={confirmar}
                     value="Confirmar"
                 />
                 <input
-                    className="button button2 pbtn"
+                    className={`button button2 ${styles.pbtn}`}
                     type="button"
                     ref={ref.btnR}
                     onClick={refazer}
                     value="Tente novamente"
                     hidden
                 />
-                <p className="mensagem pMensagem" ref={ref.acertou} hidden>
+                <p
+                    className={`mensagem ${styles.pMensagem}`}
+                    ref={ref.acertou}
+                    hidden
+                >
                     Parabéns!!
                 </p>
             </form>
-            <span ref={ref.img1a} className="imagem1" hidden>
+            <span ref={ref.img1a} className={styles.imagem1} hidden>
                 <img src={Certo} alt="Certo" height={20} />
             </span>
-            <span ref={ref.img2a} className="imagem2" hidden>
+            <span ref={ref.img2a} className={styles.imagem2} hidden>
                 <img src={Errado} alt="Errado" height={20} />
             </span>
-            <span ref={ref.img1b} className="imagem1" hidden>
+            <span ref={ref.img1b} className={styles.imagem1} hidden>
                 <img src={Certo} alt="Certo" height={20} />
             </span>
-            <span ref={ref.img2b} className="imagem2" hidden>
+            <span ref={ref.img2b} className={styles.imagem2} hidden>
                 <img src={Errado} alt="Errado" height={20} />
             </span>
         </div>

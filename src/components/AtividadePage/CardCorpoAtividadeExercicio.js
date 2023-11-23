@@ -1,3 +1,4 @@
+import '../../styles/exercicio.css';
 import CardCorpoAtividadeExercicioQuantidade from './CardCorpoAtividadeExercicioQuantidade';
 import CardCorpoAtividadeExercicioDicotomica from './CardCorpoAtividadeExercicioDicotomica';
 import CardCorpoAtividadeExercicioDoisValores from './CardCorpoAtividadeExercicioDoisValores';
@@ -9,29 +10,29 @@ import CardCorpoAtividadeExercicioDoisValores from './CardCorpoAtividadeExercici
  * @returns {JSX.Element} - The rendered card component.
  */
 const CardCorpoAtividadeExercicio = ({ content, tipo }) => {
-    const choice = () => {
+    const choice = iframe => {
         switch (tipo) {
             case 'quantidade':
                 return (
                     <CardCorpoAtividadeExercicioQuantidade
-                        id={content.id}
-                        imagem={content.imagem}
-                        resposta={content.resposta}
+                        id={iframe.id}
+                        imagem={iframe.imagem}
+                        resposta={iframe.resposta}
                     />
                 );
             case 'dicotomica':
                 return (
                     <CardCorpoAtividadeExercicioDicotomica
-                        resposta={content.resposta}
-                        comentarios={content.comentarios}
+                        resposta={iframe.resposta}
+                        comentarios={iframe.comentarios}
                     />
                 );
             case 'dois valores':
                 return (
                     <CardCorpoAtividadeExercicioDoisValores
-                        id={content.id}
-                        imagem={content.imagem}
-                        respostas={content.respostas}
+                        id={iframe.id}
+                        imagem={iframe.imagem}
+                        respostas={iframe.respostas}
                     />
                 );
             default:
@@ -63,7 +64,33 @@ const CardCorpoAtividadeExercicio = ({ content, tipo }) => {
                         return null;
                 }
             })}
-            {choice()}
+            {content.questoes ? <hr /> : choice(content)}
+            {content.questoes?.map(questao => {
+                return (
+                    questao.descricao.map(({ tipo, dado }, index) => {
+                        switch (tipo) {
+                            case 'texto':
+                                return (
+                                    <p key={index} className="esp10">
+                                        {dado}
+                                    </p>
+                                );
+                            case 'imagem':
+                                return (
+                                    <img
+                                        key={index}
+                                        className="imagem"
+                                        src={dado}
+                                        alt="imagem"
+                                    />
+                                );
+                            default:
+                                return null;
+                        }
+                    })
+                    choice(questao.iframe);
+                )
+            })}
         </div>
     );
 };
