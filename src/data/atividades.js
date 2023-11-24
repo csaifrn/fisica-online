@@ -189,7 +189,7 @@ const atividades = [
                     Element('imagem', Dinamica0202.Formula1)
                 ],
                 imagem: Dinamica0202.Image01,
-                respostas: [0, 0]
+                respostas: [140, 0]
             },
             {
                 id: 1,
@@ -202,7 +202,7 @@ const atividades = [
                     Element('imagem', Dinamica0202.Formula2)
                 ],
                 imagem: Dinamica0202.Image02,
-                respostas: [0, 0]
+                respostas: [20, 0]
             },
             {
                 id: 2,
@@ -215,7 +215,99 @@ const atividades = [
                     Element('imagem', Dinamica0202.Formula3)
                 ],
                 imagem: Dinamica0202.Image03,
-                respostas: [0, 0]
+                respostas: [0, -25]
+            },
+            {
+                id: 3,
+                titulo: 'Exercicio 04',
+                descricao: [
+                    Element(
+                        'texto',
+                        'A figura mostra um corpo sujeito a ação de três forças.'
+                    ),
+                    Element('imagem', Dinamica0202.Formula4)
+                ],
+                questoes: [
+                    {
+                        id: 4,
+                        descricao: [
+                            Element(
+                                'texto',
+                                'a) Determine, em notação vetorial, a força resultante sobre o corpo, apenas em relação ao eixo x.'
+                            )
+                        ],
+                        imagem: Dinamica0202.Image04a,
+                        respostas: [60, 0]
+                    },
+                    {
+                        id: 5,
+                        descricao: [
+                            Element(
+                                'texto',
+                                'b) Determine, em notação vetorial, a força resultante sobre o corpo, apenas em relação ao eixo y.'
+                            )
+                        ],
+                        imagem: Dinamica0202.Image04b,
+                        respostas: [0, 0]
+                    },
+                    {
+                        id: 6,
+                        descricao: [
+                            Element(
+                                'texto',
+                                'c) Determine, em notação vetorial, a força resultante sobre o corpo.'
+                            )
+                        ],
+                        imagem: Dinamica0202.Image04c,
+                        respostas: [60, 0]
+                    }
+                ]
+            },
+            {
+                id: 7,
+                titulo: 'Exercicio 05',
+                descricao: [
+                    Element(
+                        'texto',
+                        'A figura mostra um corpo sujeito a ação de um conjunto de forças.'
+                    ),
+                    Element('imagem', Dinamica0202.Formula5)
+                ],
+                questoes: [
+                    {
+                        id: 8,
+                        descricao: [
+                            Element(
+                                'texto',
+                                'a) Determine, em notação vetorial, a força resultante sobre o corpo, apenas em relação ao eixo x.'
+                            )
+                        ],
+                        imagem: Dinamica0202.Image05a,
+                        respostas: [-15, 0]
+                    },
+                    {
+                        id: 9,
+                        descricao: [
+                            Element(
+                                'texto',
+                                'b) Determine, em notação vetorial, a força resultante sobre o corpo, apenas em relação ao eixo y.'
+                            )
+                        ],
+                        imagem: Dinamica0202.Image05b,
+                        respostas: [0, 20]
+                    },
+                    {
+                        id: 10,
+                        descricao: [
+                            Element(
+                                'texto',
+                                'c) Determine, em notação vetorial, a força resultante sobre o corpo.'
+                            )
+                        ],
+                        imagem: Dinamica0202.Image05c,
+                        respostas: [-15, 20]
+                    }
+                ]
             }
         ]
     }

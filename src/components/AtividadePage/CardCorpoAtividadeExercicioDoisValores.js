@@ -36,7 +36,6 @@ const CardCorpoAtividadeExercicioDoisValores = ({ id, imagem, respostas }) => {
         }
 
         if (valor2 === respostas[1]) {
-            r2.current.disabled = true;
             img2a.current.hidden = false;
         } else {
             img2b.current.hidden = false;
@@ -66,7 +65,8 @@ const CardCorpoAtividadeExercicioDoisValores = ({ id, imagem, respostas }) => {
             <form autoComplete="off">
                 <input
                     className={`${styles.caixatxt} ${styles.p1}`}
-                    type="text"
+                    type="number"
+                    defaultValue={0}
                     ref={ref.r1}
                     id={`r${id}a1`}
                     maxLength={3}
@@ -74,7 +74,8 @@ const CardCorpoAtividadeExercicioDoisValores = ({ id, imagem, respostas }) => {
                 />
                 <input
                     className={`${styles.caixatxt} ${styles.p2}`}
-                    type="text"
+                    type="number"
+                    defaultValue={0}
                     ref={ref.r2}
                     id={`r${id}a2`}
                     maxLength={3}
@@ -107,10 +108,10 @@ const CardCorpoAtividadeExercicioDoisValores = ({ id, imagem, respostas }) => {
                 <img src={Certo} alt="Certo" height={20} />
             </span>
             <span ref={ref.img2a} className={styles.imagem2} hidden>
-                <img src={Errado} alt="Errado" height={20} />
+                <img src={Certo} alt="Certo" height={20} />
             </span>
             <span ref={ref.img1b} className={styles.imagem1} hidden>
-                <img src={Certo} alt="Certo" height={20} />
+                <img src={Errado} alt="Errado" height={20} />
             </span>
             <span ref={ref.img2b} className={styles.imagem2} hidden>
                 <img src={Errado} alt="Errado" height={20} />

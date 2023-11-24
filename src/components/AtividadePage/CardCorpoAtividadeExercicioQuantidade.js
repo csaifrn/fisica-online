@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react';
 import { Certo, Errado } from '../../assets';
-import '../../styles/exercicioQuantidade.module.css';
+import styles from '../../styles/exercicioQuantidade.module.css';
 
 const CardCorpoAtividadeExercicioQuantidade = ({ id, imagem, resposta }) => {
-    const [answer, setAnswer] = useState('');
+    const [answer, setAnswer] = useState(0);
     const refs = {
         r1: useRef(null),
         btnC: useRef(null),
@@ -41,7 +41,7 @@ const CardCorpoAtividadeExercicioQuantidade = ({ id, imagem, resposta }) => {
         const { r1, btnC, btnR, img1b } = refs;
         btnC.current.hidden = false;
         btnR.current.hidden = true;
-        setAnswer('');
+        setAnswer(0);
         r1.current.disabled = false;
         img1b.current.hidden = true;
     };
@@ -52,37 +52,42 @@ const CardCorpoAtividadeExercicioQuantidade = ({ id, imagem, resposta }) => {
             <form>
                 <input
                     autoComplete="off"
-                    className="caixatxt p1"
-                    type={'text'}
+                    className={`${styles.caixatxt} ${styles.p1}`}
+                    type="number"
+                    defaultValue={answer}
                     ref={refs.r1}
                     id={`r${id}`}
                     maxLength={3}
                     value={answer}
-                    onChange={e => setAnswer(e.target.value)}
+                    onChange={e => setAnswer(parseInt(e.target.value))}
                 />
                 <input
-                    className="button button1 pbtn"
+                    className={`button button1 ${styles.pbtn}`}
                     type={'button'}
                     ref={refs.btnC}
                     onClick={confirmar}
                     value="Confirmar"
                 />
                 <input
-                    className="button button2 pbtn"
+                    className={`button button2 ${styles.pbtn}`}
                     type={'button'}
                     ref={refs.btnR}
                     onClick={refazer}
                     value="Tente novamente"
                     hidden
                 />
-                <p className="mensagem pMensagem" ref={refs.acertou} hidden>
+                <p
+                    className={`mensagem ${styles.pMensagem}`}
+                    ref={refs.acertou}
+                    hidden
+                >
                     Parabéns!!
                 </p>
             </form>
-            <span ref={refs.img1a} className="imagem1" hidden>
+            <span ref={refs.img1a} className={styles.imagem1} hidden>
                 <img src={Certo} height={20} alt="certo" />
             </span>
-            <span ref={refs.img1b} className="imagem1" hidden>
+            <span ref={refs.img1b} className={styles.imagem1} hidden>
                 <img src={Errado} height={20} alt="errado" />
             </span>
         </div>

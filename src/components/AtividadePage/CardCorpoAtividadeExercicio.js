@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import '../../styles/exercicio.css';
 import CardCorpoAtividadeExercicioQuantidade from './CardCorpoAtividadeExercicioQuantidade';
 import CardCorpoAtividadeExercicioDicotomica from './CardCorpoAtividadeExercicioDicotomica';
@@ -40,56 +41,41 @@ const CardCorpoAtividadeExercicio = ({ content, tipo }) => {
         }
     };
 
+    const descricao = ({ tipo, dado }, index) => {
+        switch (tipo) {
+            case 'texto':
+                return (
+                    <p key={index} className="esp10">
+                        {dado}
+                    </p>
+                );
+            case 'imagem':
+                return (
+                    <img
+                        key={index}
+                        className="imagem"
+                        src={dado}
+                        alt="imagem"
+                    />
+                );
+            default:
+                return null;
+        }
+    };
+
     return (
         <div>
             <h1>{content.titulo}</h1>
-            {content.descricao.map(({ tipo, dado }, index) => {
-                switch (tipo) {
-                    case 'texto':
-                        return (
-                            <p key={index} className="esp10">
-                                {dado}
-                            </p>
-                        );
-                    case 'imagem':
-                        return (
-                            <img
-                                key={index}
-                                className="imagem"
-                                src={dado}
-                                alt="imagem"
-                            />
-                        );
-                    default:
-                        return null;
-                }
-            })}
-            {content.questoes ? <hr /> : choice(content)}
+            {content.descricao.map(descricao)}
+            {content.questoes ? '' : choice(content)}
             {content.questoes?.map(questao => {
                 return (
-                    questao.descricao.map(({ tipo, dado }, index) => {
-                        switch (tipo) {
-                            case 'texto':
-                                return (
-                                    <p key={index} className="esp10">
-                                        {dado}
-                                    </p>
-                                );
-                            case 'imagem':
-                                return (
-                                    <img
-                                        key={index}
-                                        className="imagem"
-                                        src={dado}
-                                        alt="imagem"
-                                    />
-                                );
-                            default:
-                                return null;
-                        }
-                    })
-                    choice(questao.iframe);
-                )
+                    <Fragment key={questao.id}>
+                        <hr />
+                        {questao.descricao.map(descricao)}
+                        {choice(questao)}
+                    </Fragment>
+                );
             })}
         </div>
     );

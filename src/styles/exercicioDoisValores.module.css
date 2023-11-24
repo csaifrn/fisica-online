@@ -17,6 +17,11 @@
     border: 3px solid #E9E9E9;
     background-color:rgba(236 242 248 / 20%);
 }
+
+.caixatxt::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
   
 /* ------ */
   
