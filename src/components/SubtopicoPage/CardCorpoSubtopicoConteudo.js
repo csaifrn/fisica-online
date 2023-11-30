@@ -1,7 +1,9 @@
 const CardCorpoSubtopicoConteudo = ({ content }) => (
     <div>
-        <h1>{content.titulo}</h1>
-        {content.descricao.map(({ tipo, dado }, index) => {
+        <h1>
+            {content.id}. {content.titulo}
+        </h1>
+        {content.conteudo.map(({ tipo, dado }, index) => {
             switch (tipo) {
                 case 'texto':
                     return (
@@ -36,7 +38,7 @@ const CardCorpoSubtopicoConteudo = ({ content }) => (
                     return (
                         <p
                             key={index}
-                            className="esp10 comentario2 verde round"
+                            className="esp10 comentario1 verde round"
                         >
                             {dado}
                         </p>
@@ -44,6 +46,24 @@ const CardCorpoSubtopicoConteudo = ({ content }) => (
                 case 'comentario azul':
                     return (
                         <p key={index} className="esp10 comentario2 azul round">
+                            {dado}
+                        </p>
+                    );
+                case 'comentario cinza':
+                    return (
+                        <p
+                            key={index}
+                            className="esp10 comentario1 cinza round"
+                        >
+                            {dado}
+                        </p>
+                    );
+                case 'comentario cinza2':
+                    return (
+                        <p
+                            key={index}
+                            className="esp10 comentario1 cinza2 round"
+                        >
                             {dado}
                         </p>
                     );

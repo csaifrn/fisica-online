@@ -28,6 +28,7 @@ const CardCorpoSubtopico = () => {
             </p>
             {conteudos?.conteudos.map(renderConteudo)}
             <br />
+            <AppNavEnd />
             <h1>Atividades</h1>
             <ul className="list">
                 {listas.map(lista => (
@@ -36,7 +37,6 @@ const CardCorpoSubtopico = () => {
                     </li>
                 ))}
             </ul>
-            <AppNavEnd />
         </div>
     );
 };

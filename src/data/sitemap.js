@@ -11,7 +11,7 @@ const dados = [
         id: 4,
         titulo: 'Aula 01',
         segmento: 'texto01',
-        pagina: { proxima: null, anterior: null },
+        pagina: { proxima: 13, anterior: null },
         parentPageId: 3
     },
     {
@@ -66,6 +66,61 @@ const dados = [
         },
         pagina: { proxima: null, anterior: 11 },
         parentPageId: 10
+    },
+    {
+        id: 13,
+        titulo: 'Aula 02',
+        segmento: 'texto02',
+        pagina: { proxima: 14, anterior: 4 },
+        parentPageId: 3
+    },
+    {
+        id: 14,
+        titulo: 'Aula 03',
+        segmento: 'texto03',
+        pagina: { proxima: 15, anterior: 13 },
+        parentPageId: 3
+    },
+    {
+        id: 15,
+        titulo: 'Aula 04',
+        segmento: 'texto04',
+        pagina: { proxima: null, anterior: 14 },
+        parentPageId: 3
+    },
+    {
+        id: 16,
+        titulo: 'Termodinâmica',
+        segmento: 'termodinamica',
+        parentPageId: 2
+    },
+    {
+        id: 17,
+        titulo: 'Aula 01',
+        segmento: 'texto01',
+        pagina: { proxima: 18, anterior: null },
+        parentPageId: 16
+    },
+    {
+        id: 18,
+        titulo: 'Aula 02',
+        segmento: 'texto02',
+        pagina: { proxima: 19, anterior: 17 },
+        parentPageId: 16
+    },
+    {
+        id: 19,
+        titulo: 'Aula 03',
+        segmento: 'texto03',
+        pagina: { proxima: 20, anterior: 18 },
+        parentPageId: 16
+    },
+    {
+        id: 20,
+        titulo: 'Aula 04',
+        segmento: 'texto04',
+        pagina: { proxima: null, anterior: 19 },
+        parentPageId: 16
     }
 ];
 

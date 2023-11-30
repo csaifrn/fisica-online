@@ -14,39 +14,39 @@ const CardCorpoTopico = () => {
             {
                 id: 1,
                 nome: '02. Calorimetria II',
-                link: 'http://napalmadamao.ifrn.edu.br/fisica/termologia/calorimetria/texto02/'
+                link: '/fisica/termologia/calorimetria/texto02/'
             },
             {
                 id: 2,
                 nome: '03. Calorimetria III',
-                link: 'http://napalmadamao.ifrn.edu.br/fisica/termologia/calorimetria/texto03/'
+                link: '/fisica/termologia/calorimetria/texto03/'
             },
             {
                 id: 3,
                 nome: '04. Calorimetria IV',
-                link: 'http://napalmadamao.ifrn.edu.br/fisica/termologia/calorimetria/texto04/'
+                link: '/fisica/termologia/calorimetria/texto04/'
             }
         ],
         [
             {
                 id: 4,
                 nome: '01. Gases (01)',
-                link: 'http://napalmadamao.ifrn.edu.br/fisica/termologia/termodinamica/texto01'
+                link: '/fisica/termologia/termodinamica/texto01'
             },
             {
                 id: 5,
                 nome: '02. Gases (02)',
-                link: 'http://napalmadamao.ifrn.edu.br/fisica/termologia/termodinamica/texto02'
+                link: '/fisica/termologia/termodinamica/texto02'
             },
             {
                 id: 6,
                 nome: '03. Trabalho realizado por um gás',
-                link: 'http://napalmadamao.ifrn.edu.br/fisica/termologia/termodinamica/texto03'
+                link: '/fisica/termologia/termodinamica/texto03'
             },
             {
                 id: 7,
                 nome: '04. Primeira Lei da Termodinâmica',
-                link: 'http://napalmadamao.ifrn.edu.br/fisica/termologia/termodinamica/texto04'
+                link: '/fisica/termologia/termodinamica/texto04'
             }
         ]
     ]);
