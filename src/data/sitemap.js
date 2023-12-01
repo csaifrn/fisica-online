@@ -44,7 +44,7 @@ const dados = [
     { id: 8, titulo: 'Dinâmica', segmento: 'dinamica', parentPageId: 7 },
     {
         id: 10,
-        titulo: 'Texto 02',
+        titulo: 'Dinâmica II',
         segmento: 'texto02',
         autor: {
             nome: 'Prof. Geraldo Felipe',

@@ -179,7 +179,7 @@ const notas_de_aula = [
     },
     {
         id: 10,
-        titulo: 'Dinâmica 02',
+        titulo: 'Texto 02',
         conteudos: [
             {
                 id: 1,
