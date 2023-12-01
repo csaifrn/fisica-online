@@ -11,7 +11,7 @@ const Element = (tipo, dado = null) => ({ tipo, dado });
 const notas_de_aula = [
     {
         id: 4,
-        titulo: 'Calorimetria 01',
+        titulo: 'Aula 01',
         conteudos: [
             {
                 id: 1,
@@ -333,7 +333,7 @@ const notas_de_aula = [
     },
     {
         id: 13,
-        titulo: 'Calorimetria 02',
+        titulo: 'Aula 02',
         conteudos: [
             {
                 id: 1,
@@ -422,7 +422,7 @@ const notas_de_aula = [
     },
     {
         id: 14,
-        titulo: 'Calorimetria 03',
+        titulo: 'Aula 03',
         conteudos: [
             {
                 id: 1,
@@ -530,7 +530,7 @@ const notas_de_aula = [
     },
     {
         id: 15,
-        titulo: 'Calorimetria 04',
+        titulo: 'Aula 04',
         conteudos: [
             {
                 id: 1,
@@ -611,7 +611,7 @@ const notas_de_aula = [
     },
     {
         id: 17,
-        titulo: 'Gases (1)',
+        titulo: 'Aula 01',
         conteudos: [
             {
                 id: 1,
@@ -727,7 +727,7 @@ const notas_de_aula = [
     },
     {
         id: 18,
-        titulo: 'Gases (2)',
+        titulo: 'Aula 02',
         conteudos: [
             {
                 id: 1,

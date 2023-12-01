@@ -9,7 +9,7 @@ const dados = [
     },
     {
         id: 4,
-        titulo: 'Aula 01',
+        titulo: 'Calorimetria I',
         segmento: 'texto01',
         autor: {
             nome: 'Prof. Geraldo Felipe',
@@ -77,7 +77,7 @@ const dados = [
     },
     {
         id: 13,
-        titulo: 'Aula 02',
+        titulo: 'Calorimetria II',
         segmento: 'texto02',
         autor: {
             nome: 'Prof. Geraldo Felipe',
@@ -88,7 +88,7 @@ const dados = [
     },
     {
         id: 14,
-        titulo: 'Aula 03',
+        titulo: 'Calorimetria III',
         segmento: 'texto03',
         autor: {
             nome: 'Prof. Geraldo Felipe',
@@ -99,7 +99,7 @@ const dados = [
     },
     {
         id: 15,
-        titulo: 'Aula 04',
+        titulo: 'Calorimetria IV',
         segmento: 'texto04',
         autor: {
             nome: 'Prof. Geraldo Felipe',
@@ -116,7 +116,7 @@ const dados = [
     },
     {
         id: 17,
-        titulo: 'Aula 01',
+        titulo: 'Gases (01)',
         segmento: 'texto01',
         autor: {
             nome: 'Prof. Geraldo Felipe',
@@ -127,7 +127,7 @@ const dados = [
     },
     {
         id: 18,
-        titulo: 'Aula 02',
+        titulo: 'Gases (02)',
         segmento: 'texto02',
         autor: {
             nome: 'Prof. Geraldo Felipe',
@@ -138,7 +138,7 @@ const dados = [
     },
     {
         id: 19,
-        titulo: 'Aula 03',
+        titulo: 'Trabalho realizado por um gás',
         segmento: 'texto03',
         autor: {
             nome: 'Prof. Geraldo Felipe',
@@ -149,7 +149,7 @@ const dados = [
     },
     {
         id: 20,
-        titulo: 'Aula 04',
+        titulo: 'Primeira Lei da Termodinâmica',
         segmento: 'texto04',
         autor: {
             nome: 'Prof. Geraldo Felipe',

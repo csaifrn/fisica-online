@@ -57,7 +57,8 @@ const PageLayout = () => {
             return '/' + linkSegments.join('/');
         },
 
-        children: () => sitemap.filter(node => node.parentPageId === page.id)
+        children: (id = page.id) =>
+            sitemap.filter(node => node.parentPageId === id)
     };
 
     const { pathname } = useLocation();

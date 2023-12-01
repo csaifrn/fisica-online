@@ -4,52 +4,26 @@ import { PageContext } from '../../contexts';
 
 const CardCorpoTopico = () => {
     const dados = useContext(PageContext);
-    const [notas_de_aula] = useState([
-        [
-            {
-                id: 0,
-                nome: '01. Calorimetria I',
-                link: '/fisica/termologia/calorimetria/texto01/'
-            },
-            {
-                id: 1,
-                nome: '02. Calorimetria II',
-                link: '/fisica/termologia/calorimetria/texto02/'
-            },
-            {
-                id: 2,
-                nome: '03. Calorimetria III',
-                link: '/fisica/termologia/calorimetria/texto03/'
-            },
-            {
-                id: 3,
-                nome: '04. Calorimetria IV',
-                link: '/fisica/termologia/calorimetria/texto04/'
-            }
-        ],
-        [
-            {
-                id: 4,
-                nome: '01. Gases (01)',
-                link: '/fisica/termologia/termodinamica/texto01'
-            },
-            {
-                id: 5,
-                nome: '02. Gases (02)',
-                link: '/fisica/termologia/termodinamica/texto02'
-            },
-            {
-                id: 6,
-                nome: '03. Trabalho realizado por um gás',
-                link: '/fisica/termologia/termodinamica/texto03'
-            },
-            {
-                id: 7,
-                nome: '04. Primeira Lei da Termodinâmica',
-                link: '/fisica/termologia/termodinamica/texto04'
-            }
-        ]
-    ]);
+
+    let subtopicos = dados.children();
+    subtopicos = subtopicos.map(subtopico => {
+        return dados.children(subtopico.id);
+    });
+
+    function d2(n) {
+        return n < 10 ? '0' + n : n;
+    }
+
+    const notas_de_aula = subtopicos.map(subtopico => {
+        return subtopico.map((texto, id) => {
+            return {
+                id: texto.id,
+                nome: `${d2(id + 1)}. ${texto.titulo}`,
+                link: dados.getLink(texto.id)
+            };
+        });
+    });
+
     const [slides] = useState([
         {
             id: 0,

@@ -22,7 +22,7 @@ const CardCorpoSubtopico = () => {
             <p className="esp10">
                 <b>
                     {dados.page.topico} - {dados.page.subtopico} -{' '}
-                    {dados.page.titulo}
+                    {conteudos?.titulo}
                 </b>
             </p>
             {conteudos?.conteudos.map(renderConteudo)}
