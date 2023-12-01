@@ -54,7 +54,6 @@ const CardCorpoAtividadeExercicioQuantidade = ({ id, imagem, resposta }) => {
                     autoComplete="off"
                     className={`${styles.caixatxt} ${styles.p1}`}
                     type="number"
-                    defaultValue={answer}
                     ref={refs.r1}
                     id={`r${id}`}
                     maxLength={3}

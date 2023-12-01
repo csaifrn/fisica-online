@@ -2,7 +2,8 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AppNavEnd from '../AppNavEnd';
 import CardCorpoSubtopicoConteudo from './CardCorpoSubtopicoConteudo';
-import PageContext from '../../contexts/PageContext';
+import CardCorpoSubtopicoRodape from './CardCorpoSubtopicoRodape';
+import { PageContext } from '../../contexts';
 import notas_de_aula from '../../data/notas_de_aula';
 
 const CardCorpoSubtopico = () => {
@@ -10,9 +11,7 @@ const CardCorpoSubtopico = () => {
 
     const conteudos = notas_de_aula.find(nota => nota.id === dados.page.id);
 
-    const listas = dados.sitemap.filter(
-        lista => lista.parentPageId === dados.page.id
-    );
+    const listas = dados.children();
 
     const renderConteudo = conteudo => (
         <CardCorpoSubtopicoConteudo key={conteudo.id} content={conteudo} />
@@ -29,14 +28,22 @@ const CardCorpoSubtopico = () => {
             {conteudos?.conteudos.map(renderConteudo)}
             <br />
             <AppNavEnd />
-            <h1>Atividades</h1>
-            <ul className="list">
-                {listas.map(lista => (
-                    <li key={lista.id}>
-                        <Link to={dados.getLink(lista.id)}>{lista.titulo}</Link>
-                    </li>
-                ))}
-            </ul>
+            {listas.length !== 0 && (
+                <>
+                    <h1>Atividades</h1>
+                    <ul className="list">
+                        {listas.map(lista => (
+                            <li key={lista.id}>
+                                <Link to={dados.getLink(lista.id)}>
+                                    {lista.titulo}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </>
+            )}
+            <hr />
+            <CardCorpoSubtopicoRodape />
         </div>
     );
 };

@@ -67,6 +67,12 @@ const CardCorpoSubtopicoConteudo = ({ content }) => (
                             {dado}
                         </p>
                     );
+                case 'cinza2':
+                    return (
+                        <p key={index} className="esp10 cinza2 round">
+                            {dado}
+                        </p>
+                    );
                 default:
                     return null;
             }

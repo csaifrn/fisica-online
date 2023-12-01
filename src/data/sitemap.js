@@ -11,6 +11,10 @@ const dados = [
         id: 4,
         titulo: 'Aula 01',
         segmento: 'texto01',
+        autor: {
+            nome: 'Prof. Geraldo Felipe',
+            data: '2023'
+        },
         pagina: { proxima: 13, anterior: null },
         parentPageId: 3
     },
@@ -42,6 +46,10 @@ const dados = [
         id: 10,
         titulo: 'Texto 02',
         segmento: 'texto02',
+        autor: {
+            nome: 'Prof. Geraldo Felipe',
+            data: '2023'
+        },
         pagina: { proxima: null, anterior: null },
         parentPageId: 8
     },
@@ -71,6 +79,10 @@ const dados = [
         id: 13,
         titulo: 'Aula 02',
         segmento: 'texto02',
+        autor: {
+            nome: 'Prof. Geraldo Felipe',
+            data: '2023'
+        },
         pagina: { proxima: 14, anterior: 4 },
         parentPageId: 3
     },
@@ -78,6 +90,10 @@ const dados = [
         id: 14,
         titulo: 'Aula 03',
         segmento: 'texto03',
+        autor: {
+            nome: 'Prof. Geraldo Felipe',
+            data: '2023'
+        },
         pagina: { proxima: 15, anterior: 13 },
         parentPageId: 3
     },
@@ -85,6 +101,10 @@ const dados = [
         id: 15,
         titulo: 'Aula 04',
         segmento: 'texto04',
+        autor: {
+            nome: 'Prof. Geraldo Felipe',
+            data: '2023'
+        },
         pagina: { proxima: null, anterior: 14 },
         parentPageId: 3
     },
@@ -98,6 +118,10 @@ const dados = [
         id: 17,
         titulo: 'Aula 01',
         segmento: 'texto01',
+        autor: {
+            nome: 'Prof. Geraldo Felipe',
+            data: '2023'
+        },
         pagina: { proxima: 18, anterior: null },
         parentPageId: 16
     },
@@ -105,6 +129,10 @@ const dados = [
         id: 18,
         titulo: 'Aula 02',
         segmento: 'texto02',
+        autor: {
+            nome: 'Prof. Geraldo Felipe',
+            data: '2023'
+        },
         pagina: { proxima: 19, anterior: 17 },
         parentPageId: 16
     },
@@ -112,6 +140,10 @@ const dados = [
         id: 19,
         titulo: 'Aula 03',
         segmento: 'texto03',
+        autor: {
+            nome: 'Prof. Geraldo Felipe',
+            data: '2023'
+        },
         pagina: { proxima: 20, anterior: 18 },
         parentPageId: 16
     },
@@ -119,6 +151,10 @@ const dados = [
         id: 20,
         titulo: 'Aula 04',
         segmento: 'texto04',
+        autor: {
+            nome: 'Prof. Geraldo Felipe',
+            data: '2023'
+        },
         pagina: { proxima: null, anterior: 19 },
         parentPageId: 16
     }

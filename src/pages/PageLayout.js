@@ -1,16 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AppNavBar, AppCard } from '../components';
 import { PageContext } from '../contexts';
 import sitemap from '../data/sitemap';
+import { useLocation } from 'react-router-dom';
 
 const PageLayout = () => {
     const [page, setPage] = useState({});
 
     const pageContext = {
-        _page: page,
-
         get page() {
-            return this._page;
+            return page;
         },
 
         set page(params) {
@@ -56,8 +55,19 @@ const PageLayout = () => {
             }
 
             return '/' + linkSegments.join('/');
-        }
+        },
+
+        children: () => sitemap.filter(node => node.parentPageId === page.id)
     };
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        pageContext.page = pathname
+            .split('/')
+            .filter(segmento => segmento !== '');
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     return (
         <PageContext.Provider value={pageContext}>

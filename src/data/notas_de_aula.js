@@ -2,6 +2,8 @@ import * as Calorimetria01 from '../assets/calorimetria01';
 import * as Calorimetria02 from '../assets/calorimetria02';
 import * as Calorimetria03 from '../assets/calorimetria03';
 import * as Calorimetria04 from '../assets/calorimetria04';
+import * as Termodinamica01 from '../assets/termodinamica01';
+import * as Termodinamica02 from '../assets/termodinamica02';
 import * as Dinamica02 from '../assets/dinamica02';
 
 const Element = (tipo, dado = null) => ({ tipo, dado });
@@ -156,7 +158,7 @@ const notas_de_aula = [
                         'texto',
                         'Considere que uma fonte libera 600 kcal mas apenas 300 kcal são aproveitadas. Calcule o rendimento desta fonte.'
                     ),
-                    Element('imagem', Calorimetria01.Image12),
+                    Element('imagem', Calorimetria01.Image13),
                     Element(
                         'texto',
                         'Observe que achamos um rendimento de 0,5. Porém, este resultando pode ser expressão em porcentagem, ou seja, pode ser expresso como 50%.'
@@ -166,7 +168,7 @@ const notas_de_aula = [
                         'texto',
                         'Na ilustração abaixo, temos uma panela em um fogão à gás, com rendimento em torno de 60% e uma panela em fogão à lenha, rústico, com rendimento abaixo de 10%.'
                     ),
-                    Element('imagem', Calorimetria01.Image13),
+                    Element('imagem', Calorimetria01.Image12),
                     Element(
                         'texto',
                         'Isso quer dizer que, no primeiro caso, 60% do calor liberado na queima do combustível é aproveitado e, no segundo caso, menos de 10 % do calor liberado é aproveitado.'
@@ -596,10 +598,6 @@ const notas_de_aula = [
                         '• Entre t1 e t2 o gelo está derretendo e a água esfriando.'
                     ),
                     Element(
-                        'tetxo',
-                        '• Entre t2 e t3 o gelo derreteu completamente e temos apenas duas massas de água com diferentes temperaturas.'
-                    ),
-                    Element(
                         'texto',
                         '• Entre t2 e t3 o gelo derreteu completamente e temos apenas duas massas de água com diferentes temperaturas.'
                     ),
@@ -607,6 +605,270 @@ const notas_de_aula = [
                         'texto',
                         '• A partir de t3 as duas massas de água estão em equilíbrio térmico. '
                     )
+                ]
+            }
+        ]
+    },
+    {
+        id: 17,
+        titulo: 'Gases (1)',
+        conteudos: [
+            {
+                id: 1,
+                titulo: 'Gás Ideal',
+                conteudo: [
+                    Element(
+                        'texto',
+                        'Já estudamos que, para um corpo no estado sólido, suas moléculas apresentam uma intensa força de coesão entre si. Dessa forma, essas moléculas apenas oscilam, rotacionam e vibram em torno de posições fixas. É devido a essa intensa força de coesão que um corpo sólido apresenta forma e volume bem definidos.'
+                    ),
+                    Element('linha'),
+                    Element(
+                        'texto',
+                        'No estado gasoso, a força de coesão entre as moléculas é muito pequena, fazendo com que um gás assuma inteiramente o volume do recipiente que o contém.'
+                    ),
+                    Element(
+                        'texto',
+                        'Suas moléculas se deslocam com um movimento desordenado, de origem térmica, com velocidades da ordem de centenas de metros por segundo. Estas moléculas, em um situação real, colidem umas com as outras e com as paredes do recipiente que o contém.'
+                    ),
+                    Element(
+                        'texto',
+                        'A ilustração didática abaixo representa algumas moléculas do gás e seus respectivos vetores velocidade.'
+                    ),
+                    Element('imagem', Termodinamica01.Image01),
+                    Element('linha'),
+                    Element(
+                        'texto',
+                        'Dizemos que um gás é <b>ideal</b> quando a probabilidade de interação entre suas moléculas é nula. Neste caso, as moléculas do gás interagem apenas com as paredes do recipiente que contém o gás.'
+                    ),
+                    Element(
+                        'comentario cinza',
+                        'Em um gás ideal, as moléculas se chocam elasticamente entre si e contra as paredes do recipiente. Logo, não há variação de energia cinética devido a estas colisões.'
+                    ),
+                    Element('imagem', Termodinamica01.Image02),
+                    Element(
+                        'cinza2',
+                        'Importante:\nUm gás real terá um comportamento semelhante ao de um gás ideal quando apresentar baixa densidade e elevada temperatura.'
+                    )
+                ]
+            },
+            {
+                id: 2,
+                titulo: 'Variáveis de Estado',
+                conteudo: [
+                    Element(
+                        'texto',
+                        'Para definir o estado no qual se encontra uma certa quantidade de gás vamos usar três parâmetros, chamados de variáveis de estado.'
+                    ),
+                    Element(
+                        'texto',
+                        'As variáveis de estado são <b>temperatura</b>, <b>volume</b> e <b>pressão</b>.'
+                    ),
+                    Element('linha'),
+                    Element('titulo', '2.1 Temperatura'),
+                    Element(
+                        'texto',
+                        'A temperatura é a grandeza física associada ao grau de agitação térmica das moléculas de um corpo.'
+                    ),
+                    Element(
+                        'texto',
+                        'Logo, quanto maior a temperatura, maior a energia cinética média das moléculas do gás.'
+                    ),
+                    Element(
+                        'texto',
+                        'A ilustração didática abaixo mostra duas situações, com algumas moléculas de um gás e seus respectivos vetores velocidade.'
+                    ),
+                    Element('imagem', Termodinamica01.Image04),
+                    Element('linha'),
+                    Element('titulo', '2.2 Volume'),
+                    Element(
+                        'texto',
+                        'Um gás ocupa todo o volume interno do recipiente que contém o gás.'
+                    ),
+                    Element(
+                        'texto',
+                        'Logo, quanto maior o volume interno de um recipiente, maior o volume do gás em seu interior.'
+                    ),
+                    Element('imagem', Termodinamica01.Image05),
+                    Element('linha'),
+                    Element('titulo', '2.3 Pressão'),
+                    Element(
+                        'texto',
+                        'Quando uma molécula de gás colide contra uma parede do recipiente que contém o gás, ela sofre uma variação em sua velocidade, conforme ilustra a figura abaixo.'
+                    ),
+                    Element(
+                        'texto',
+                        'Sabemos que, para ter uma variação de velocidade, precisa haver uma força atuando no corpo, e quem aplica essa força na molécula do gás é a parede do recipiente com a qual a molécula colidiu.'
+                    ),
+                    Element(
+                        'texto',
+                        'Pela 3º lei de Newton (Princípio da Ação e Reação), se a parede aplicou uma força na molécula, esta aplicou uma força de mesmo módulo, mesma direção e sentido contrário na parede.'
+                    ),
+                    Element(
+                        'texto',
+                        'Então, a força total aplicada pelo gás contra as paredes do recipiente, por unidade de área, é a pressão exercida pelo gás.'
+                    ),
+                    Element('imagem', Termodinamica01.Image03),
+                    Element('texto', 'Unidades usuais de pressão:'),
+                    Element('imagem', Termodinamica01.Image07)
+                ]
+            },
+            {
+                id: 3,
+                titulo: 'Número de mols',
+                conteudo: [
+                    Element(
+                        'texto',
+                        'Para definir a quantidade de gás em um recipiente, vamos utilizar uma unidade de medida chamada de mol, onde 1 mol de um dado gás representa 6,02 x 1023 moléculas do gás.'
+                    ),
+                    Element('imagem', Termodinamica01.Image06)
+                ]
+            }
+        ]
+    },
+    {
+        id: 18,
+        titulo: 'Gases (2)',
+        conteudos: [
+            {
+                id: 1,
+                titulo: 'Transformação Isométrica',
+                conteudo: [
+                    Element(
+                        'texto',
+                        'Uma certa massa de gás sofre uma transformação isométrica quando sua temperatura e pressão mudam, mas seu <b>volume permanece constante</b>.'
+                    ),
+                    Element(
+                        'texto',
+                        'Quando a temperatura de um gás aumenta, a velocidade de suas moléculas também aumenta. Logo, estas moléculas irão colidir com maior frequência e intensidade contra as paredes do recipiente, implicando em um aumento da pressão exercida pelo gás.'
+                    ),
+                    Element('imagem', Termodinamica02.Image08),
+                    Element(
+                        'texto',
+                        'Podemos concluir então que, para uma transformação isométrica, um aumento de temperatura provoca um aumento na pressão do gás.'
+                    ),
+                    Element(
+                        'texto',
+                        'Analogamente, uma diminuição de temperatura provoca uma diminuição na pressão exercida pelo gás.'
+                    ),
+                    Element('linha'),
+                    Element(
+                        'texto',
+                        'O gráfico abaixo mostra o comportamento da pressão de um gás ideal em função da temperatura, em graus celcius.'
+                    ),
+                    Element('imagem', Termodinamica02.Image01),
+                    Element(
+                        'texto',
+                        'Projetando este gráfico até o ponto no qual a pressão é de 0 N/m², encontramos a temperatura de - 273,15 <sup>0</sup>C.'
+                    ),
+                    Element('imagem', Termodinamica02.Image02),
+                    Element(
+                        'texto',
+                        'Esta é menor temperatura na qual se pode chegar, pois, para que a pressão seja nula, o grau de agitação térmica das moléculas do gás é também é nula.'
+                    ),
+                    Element(
+                        'texto',
+                        'A partir desta hipótese, é criada a escala Kelvin, onde 0 K equivale a - 273,15 <sup>0</sup>C.'
+                    ),
+                    Element('linha'),
+                    Element(
+                        'texto',
+                        'Abaixo temos o gráfico da pressão em função da temperatura, para um gás ideial, considerando a escala Kelvin.'
+                    ),
+                    Element('imagem', Termodinamica02.Image03),
+                    Element(
+                        'texto',
+                        'Em uma transformação isométrica a pressão do gás é proporcional à temperatura absoluta do gás.'
+                    ),
+                    Element('imagem', Termodinamica02.Image04)
+                ]
+            },
+            {
+                id: 2,
+                titulo: 'Transformação Isobárica',
+                conteudo: [
+                    Element(
+                        'texto',
+                        'Uma determinada massa de gás sofre uma transformação isobárica quando seu volume e sua temperatura variam, mas sua <b>pressão permanece constante.</b>'
+                    ),
+                    Element(
+                        'texto',
+                        'Esta transformação é possível utilizando-se o um recipiente com um êmbolo (“tampa” móvel), conforme ilustra a figura abaixo.'
+                    ),
+                    Element('imagem', Termodinamica02.Image05),
+                    Element(
+                        'texto',
+                        'O gráfico abaixo representa o volume de um gás em função da sua temperatura absoltua, em uma transformação isobárica.'
+                    ),
+                    Element('imagem', Termodinamica02.Image06),
+                    Element(
+                        'texto',
+                        'Em uma transformação isobárica, o volume do gás é proporcional à sua temperatura absoluta.'
+                    ),
+                    Element('imagem', Termodinamica02.Image07)
+                ]
+            },
+            {
+                id: 3,
+                titulo: 'Transformação Isotérmica',
+                conteudo: [
+                    Element(
+                        'texto',
+                        'Uma determinada de gás sofre uma transformação isotérmica quando sua pressão e seu volume mudam, mas sua <b>temperatura permanece constante</b>.'
+                    ),
+                    Element(
+                        'texto',
+                        'Nesse caso, com o aumento de volume e temperatura constante, aumenta a distância média que as moléculas do gás precisam percorrer entre uma colisão e outra, contra as paredes do recipiente, o que implica na diminuição da pressão exercida pelo gás.'
+                    ),
+                    Element(
+                        'texto',
+                        'De forma análoga, uma diminuição do volume produz um aumento da pressão exercida pelo gás.'
+                    ),
+                    Element(
+                        'texto',
+                        'O gráfico abaixo representa o volume de um gás em função da sua temperatura absoltua, em uma transformação isotérmica.'
+                    ),
+                    Element('imagem', Termodinamica02.Image09),
+                    Element(
+                        'texto',
+                        'Em uma transformação isotérmica, pressão e volume são inversamente proporcionais.'
+                    ),
+                    Element('imagem', Termodinamica02.Image10)
+                ]
+            },
+            {
+                id: 4,
+                titulo: 'Influência do número de mols',
+                conteudo: [
+                    Element(
+                        'texto',
+                        'A figura ilustra um recipiente contendo <b>n</b> mols de um gás, a uma temperatura <b>T</b>, pressão <b>P</b> (maior que a pressão atmosfera) e volume <b>V</b>.'
+                    ),
+                    Element('imagem', Termodinamica02.Image11),
+                    Element(
+                        'texto',
+                        'Se a válvula do recipiente for aberta e uma certa massa de gás sair lentamente, a temperatura e o volume do gás no interior do recipiente não serão alteradas.'
+                    ),
+                    Element(
+                        'texto',
+                        'Porém, a pressão irá diminuir, pois haverá uma quantidade menor de moléculas colidindo com as paredes internas do recipiente.'
+                    ),
+                    Element('imagem', Termodinamica02.Image12)
+                ]
+            },
+            {
+                id: 5,
+                titulo: 'Equação Geral dos Gases Ideais',
+                conteudo: [
+                    Element(
+                        'texto',
+                        'A partir da análise das transformações apresentas (isométrica, isobárica e isotérmica), podemos escrever uma lei geral para o comportamento de um gás ideal.'
+                    ),
+                    Element('imagem', Termodinamica02.Image13),
+                    Element(
+                        'texto',
+                        'Manipulando esta expressão, para dois estados de um gás ideal, temos a igualdade mostrada abaixo.'
+                    ),
+                    Element('imagem', Termodinamica02.Image14)
                 ]
             }
         ]
