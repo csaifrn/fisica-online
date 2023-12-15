@@ -1,8 +1,6 @@
 import * as Calorimetria0101 from '../assets/calorimetria01/lista01';
 import * as Dinamica0202 from '../assets/dinamica02/lista02';
 
-const Element = (tipo, dado) => ({ tipo, dado });
-
 const atividades = [
     {
         id: 6,
@@ -12,10 +10,10 @@ const atividades = [
                 id: 1,
                 titulo: 'Exercicio 01',
                 descricao: [
-                    Element(
-                        'texto',
-                        'Uma fonte térmica transfere 4,5 kcal em um intervalo de tempo de 0,5 min. Calcule a potência térmica desta fonte, em cal/s.'
-                    )
+                    {
+                        tag: 'texto',
+                        inner: 'Uma fonte térmica transfere 4,5 kcal em um intervalo de tempo de 0,5 min. Calcule a potência térmica desta fonte, em cal/s.'
+                    }
                 ],
                 imagem: Calorimetria0101.Image01,
                 resposta: '150'
@@ -24,10 +22,10 @@ const atividades = [
                 id: 2,
                 titulo: 'Exercicio 02',
                 descricao: [
-                    Element(
-                        'texto',
-                        'Uma fonte de potência térmica 600 kcal/h funcional durante 45 minutos. Calcule a quantidade de calor liberada durante este intervalo de tempo.'
-                    )
+                    {
+                        tag: 'texto',
+                        inner: 'Uma fonte de potência térmica 600 kcal/h funcional durante 45 minutos. Calcule a quantidade de calor liberada durante este intervalo de tempo.'
+                    }
                 ],
                 imagem: Calorimetria0101.Image02,
                 resposta: '450'
@@ -36,10 +34,10 @@ const atividades = [
                 id: 3,
                 titulo: 'Exercicio 03',
                 descricao: [
-                    Element(
-                        'texto',
-                        'Uma determinada fonte térmica apresenta potência térmica de 1200 cal/s. Determine o intervalo de tempo necessário para que esta fonte forneça 30 kcal.'
-                    )
+                    {
+                        tag: 'texto',
+                        inner: 'Uma determinada fonte térmica apresenta potência térmica de 1200 cal/s. Determine o intervalo de tempo necessário para que esta fonte forneça 30 kcal.'
+                    }
                 ],
                 imagem: Calorimetria0101.Image03,
                 resposta: '25'
@@ -48,14 +46,14 @@ const atividades = [
                 id: 4,
                 titulo: 'Exercicio 04',
                 descricao: [
-                    Element(
-                        'texto',
-                        'O corpo humano, em seu estado basal, cede calor para o ambiente a uma taxa média de aproximadamente 100 W (varia de pessoa para pessoa e das condições ambientes).'
-                    ),
-                    Element(
-                        'texto',
-                        'Nestas condições, qual o gasto calórico mínimo de uma pessoa, em um dia?'
-                    )
+                    {
+                        tag: 'texto',
+                        inner: 'O corpo humano, em seu estado basal, cede calor para o ambiente a uma taxa média de aproximadamente 100 W (varia de pessoa para pessoa e das condições ambientes.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Nestas condições, qual o gasto calórico mínimo de uma pessoa, em um dia?'
+                    }
                 ],
                 imagem: Calorimetria0101.Image04,
                 resposta: '2067'
@@ -64,12 +62,15 @@ const atividades = [
                 id: 5,
                 titulo: 'Exercicio 05',
                 descricao: [
-                    Element(
-                        'texto',
-                        'O gráfico abaixo mostra a quantidade de calor fornecida por uma fonte térmica em função do tempo.'
-                    ),
-                    Element('imagem', Calorimetria0101.Formula1),
-                    Element('texto', 'Calcule a potência térmica desta fonte.')
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra a quantidade de calor fornecida por uma fonte térmica em função do tempo.'
+                    },
+                    { tag: 'imagem', inner: Calorimetria0101.Formula1 },
+                    {
+                        tag: 'texto',
+                        inner: 'Calcule a potência térmica desta fonte.'
+                    }
                 ],
                 imagem: Calorimetria0101.Image05,
                 resposta: '3000'
@@ -78,15 +79,15 @@ const atividades = [
                 id: 6,
                 titulo: 'Exercicio 06',
                 descricao: [
-                    Element(
-                        'texto',
-                        'O gráfico abaixo mostra a quantidade de calor fornecida por uma fonte térmica em função do tempo.'
-                    ),
-                    Element('imagem', Calorimetria0101.Formula2),
-                    Element(
-                        'texto',
-                        'Calcule a quantidade de calor disponibilizada por esta fonte após um intervalo de tempo de 10min:30s.'
-                    )
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra a quantidade de calor fornecida por uma fonte térmica em função do tempo.'
+                    },
+                    { tag: 'imagem', inner: Calorimetria0101.Formula2 },
+                    {
+                        tag: 'texto',
+                        inner: 'Calcule a quantidade de calor disponibilizada por esta fonte após um intervalo de tempo de 10min:30s.'
+                    }
                 ],
                 imagem: Calorimetria0101.Image06,
                 resposta: '60'
@@ -101,10 +102,10 @@ const atividades = [
                 id: 0,
                 titulo: 'Exercicio 01',
                 descricao: [
-                    Element(
-                        'texto',
-                        'A força resultante sobre um corpo é a soma vetorial de todas as forças que atuam no corpo. A força resultante pode ser nula, mesmo que várias forças atuem sobre o corpo.'
-                    )
+                    {
+                        tag: 'texto',
+                        inner: 'A força resultante sobre um corpo é a soma vetorial de todas as forças que atuam no corpo. A força resultante pode ser nula, mesmo que várias forças atuem sobre o corpo.'
+                    }
                 ],
                 comentarios: [
                     'Ops! A afirmação é verdadeira!',
@@ -116,10 +117,10 @@ const atividades = [
                 id: 1,
                 titulo: 'Exercicio 02',
                 descricao: [
-                    Element(
-                        'texto',
-                        'Se a força resultante sobre um corpo é nula, então nenhuma força atua sobre o corpo.'
-                    )
+                    {
+                        tag: 'texto',
+                        inner: 'Se a força resultante sobre um corpo é nula, então nenhuma força atua sobre o corpo.'
+                    }
                 ],
                 comentarios: [
                     'Ops! A afirmação é falsa!',
@@ -131,10 +132,10 @@ const atividades = [
                 id: 2,
                 titulo: 'Exercicio 03',
                 descricao: [
-                    Element(
-                        'texto',
-                        'Se a força resultante sobre um corpo é nula, o corpo está em repouso.'
-                    )
+                    {
+                        tag: 'texto',
+                        inner: 'Se a força resultante sobre um corpo é nula, o corpo está em repouso.'
+                    }
                 ],
                 comentarios: [
                     'Ops! Erro clássico... ',
@@ -146,10 +147,10 @@ const atividades = [
                 id: 3,
                 titulo: 'Exercicio 04',
                 descricao: [
-                    Element(
-                        'texto',
-                        'Se um corpo se move com velocidade constante (MRU), então a força resultante sobre o corpo é nula.'
-                    )
+                    {
+                        tag: 'texto',
+                        inner: 'Se um corpo se move com velocidade constante (MRU), então a força resultante sobre o corpo é nula.'
+                    }
                 ],
                 comentarios: [
                     'Errado! Não é preciso a existência de uma força para ocorrer movimento!!!!!',
@@ -161,10 +162,10 @@ const atividades = [
                 id: 4,
                 titulo: 'Exercicio 05',
                 descricao: [
-                    Element(
-                        'texto',
-                        'Se um corpo está em movimento, certamente a força resultante é não nula.'
-                    )
+                    {
+                        tag: 'texto',
+                        inner: 'Se um corpo está em movimento, certamente a força resultante é não nula.'
+                    }
                 ],
                 comentarios: [
                     'Erro clássico... Leia o conteúdo novamente!',
@@ -182,11 +183,11 @@ const atividades = [
                 id: 0,
                 titulo: 'Exercicio 01',
                 descricao: [
-                    Element(
-                        'texto',
-                        'A figura mostra um corpo sujeito a ação de duas forças. Determine, em notação vetorial, a força resultante sobre o corpo.'
-                    ),
-                    Element('imagem', Dinamica0202.Formula1)
+                    {
+                        tag: 'texto',
+                        inner: 'A figura mostra um corpo sujeito a ação de duas forças. Determine, em notação vetorial, a força resultante sobre o corpo.'
+                    },
+                    { tag: 'imagem', inner: Dinamica0202.Formula1 }
                 ],
                 imagem: Dinamica0202.Image01,
                 respostas: [140, 0]
@@ -195,11 +196,11 @@ const atividades = [
                 id: 1,
                 titulo: 'Exercicio 02',
                 descricao: [
-                    Element(
-                        'texto',
-                        'A figura mostra um corpo sujeito a ação de duas forças. Determine, em notação vetorial, a força resultante sobre o corpo.'
-                    ),
-                    Element('imagem', Dinamica0202.Formula2)
+                    {
+                        tag: 'texto',
+                        inner: 'A figura mostra um corpo sujeito a ação de duas forças. Determine, em notação vetorial, a força resultante sobre o corpo.'
+                    },
+                    { tag: 'imagem', inner: Dinamica0202.Formula2 }
                 ],
                 imagem: Dinamica0202.Image02,
                 respostas: [20, 0]
@@ -208,11 +209,11 @@ const atividades = [
                 id: 2,
                 titulo: 'Exercicio 03',
                 descricao: [
-                    Element(
-                        'texto',
-                        'A figura mostra um corpo sujeito a ação de duas forças. Determine, em notação vetorial, a força resultante sobre o corpo.'
-                    ),
-                    Element('imagem', Dinamica0202.Formula3)
+                    {
+                        tag: 'texto',
+                        inner: 'A figura mostra um corpo sujeito a ação de duas forças. Determine, em notação vetorial, a força resultante sobre o corpo.'
+                    },
+                    { tag: 'imagem', inner: Dinamica0202.Formula3 }
                 ],
                 imagem: Dinamica0202.Image03,
                 respostas: [0, -25]
@@ -221,20 +222,20 @@ const atividades = [
                 id: 3,
                 titulo: 'Exercicio 04',
                 descricao: [
-                    Element(
-                        'texto',
-                        'A figura mostra um corpo sujeito a ação de três forças.'
-                    ),
-                    Element('imagem', Dinamica0202.Formula4)
+                    {
+                        tag: 'texto',
+                        inner: 'A figura mostra um corpo sujeito a ação de três forças.'
+                    },
+                    { tag: 'imagem', inner: Dinamica0202.Formula4 }
                 ],
                 questoes: [
                     {
                         id: 4,
                         descricao: [
-                            Element(
-                                'texto',
-                                'a) Determine, em notação vetorial, a força resultante sobre o corpo, apenas em relação ao eixo x.'
-                            )
+                            {
+                                tag: 'texto',
+                                inner: 'a) Determine, em notação vetorial, a força resultante sobre o corpo, apenas em relação ao eixo x.'
+                            }
                         ],
                         imagem: Dinamica0202.Image04a,
                         respostas: [60, 0]
@@ -242,10 +243,10 @@ const atividades = [
                     {
                         id: 5,
                         descricao: [
-                            Element(
-                                'texto',
-                                'b) Determine, em notação vetorial, a força resultante sobre o corpo, apenas em relação ao eixo y.'
-                            )
+                            {
+                                tag: 'texto',
+                                inner: 'b) Determine, em notação vetorial, a força resultante sobre o corpo, apenas em relação ao eixo y.'
+                            }
                         ],
                         imagem: Dinamica0202.Image04b,
                         respostas: [0, 0]
@@ -253,10 +254,10 @@ const atividades = [
                     {
                         id: 6,
                         descricao: [
-                            Element(
-                                'texto',
-                                'c) Determine, em notação vetorial, a força resultante sobre o corpo.'
-                            )
+                            {
+                                tag: 'texto',
+                                inner: 'c) Determine, em notação vetorial, a força resultante sobre o corpo.'
+                            }
                         ],
                         imagem: Dinamica0202.Image04c,
                         respostas: [60, 0]
@@ -267,20 +268,20 @@ const atividades = [
                 id: 7,
                 titulo: 'Exercicio 05',
                 descricao: [
-                    Element(
-                        'texto',
-                        'A figura mostra um corpo sujeito a ação de um conjunto de forças.'
-                    ),
-                    Element('imagem', Dinamica0202.Formula5)
+                    {
+                        tag: 'texto',
+                        inner: 'A figura mostra um corpo sujeito a ação de um conjunto de forças.'
+                    },
+                    { tag: 'imagem', inner: Dinamica0202.Formula5 }
                 ],
                 questoes: [
                     {
                         id: 8,
                         descricao: [
-                            Element(
-                                'texto',
-                                'a) Determine, em notação vetorial, a força resultante sobre o corpo, apenas em relação ao eixo x.'
-                            )
+                            {
+                                tag: 'texto',
+                                inner: 'a) Determine, em notação vetorial, a força resultante sobre o corpo, apenas em relação ao eixo x.'
+                            }
                         ],
                         imagem: Dinamica0202.Image05a,
                         respostas: [-15, 0]
@@ -288,10 +289,10 @@ const atividades = [
                     {
                         id: 9,
                         descricao: [
-                            Element(
-                                'texto',
-                                'b) Determine, em notação vetorial, a força resultante sobre o corpo, apenas em relação ao eixo y.'
-                            )
+                            {
+                                tag: 'texto',
+                                inner: 'b) Determine, em notação vetorial, a força resultante sobre o corpo, apenas em relação ao eixo y.'
+                            }
                         ],
                         imagem: Dinamica0202.Image05b,
                         respostas: [0, 20]
@@ -299,10 +300,10 @@ const atividades = [
                     {
                         id: 10,
                         descricao: [
-                            Element(
-                                'texto',
-                                'c) Determine, em notação vetorial, a força resultante sobre o corpo.'
-                            )
+                            {
+                                tag: 'texto',
+                                inner: 'c) Determine, em notação vetorial, a força resultante sobre o corpo.'
+                            }
                         ],
                         imagem: Dinamica0202.Image05c,
                         respostas: [-15, 20]

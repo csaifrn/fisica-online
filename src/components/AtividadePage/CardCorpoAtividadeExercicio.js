@@ -3,6 +3,7 @@ import '../../styles/exercicio.css';
 import CardCorpoAtividadeExercicioQuantidade from './CardCorpoAtividadeExercicioQuantidade';
 import CardCorpoAtividadeExercicioDicotomica from './CardCorpoAtividadeExercicioDicotomica';
 import CardCorpoAtividadeExercicioDoisValores from './CardCorpoAtividadeExercicioDoisValores';
+import { Alert, UncontrolledAlert } from 'reactstrap';
 
 /**
  * Renders a card for an exercise activity.
@@ -41,12 +42,12 @@ const CardCorpoAtividadeExercicio = ({ content, tipo }) => {
         }
     };
 
-    const descricao = ({ tipo, dado }, index) => {
-        switch (tipo) {
+    const descricao = ({ tag, inner }, index) => {
+        switch (tag) {
             case 'texto':
                 return (
                     <p key={index} className="esp10">
-                        {dado}
+                        {inner}
                     </p>
                 );
             case 'imagem':
@@ -54,12 +55,16 @@ const CardCorpoAtividadeExercicio = ({ content, tipo }) => {
                     <img
                         key={index}
                         className="imagem"
-                        src={dado}
+                        src={inner}
                         alt="imagem"
                     />
                 );
             default:
-                return null;
+                return (
+                    <UncontrolledAlert color="danger">
+                        Tag desconhecida
+                    </UncontrolledAlert>
+                );
         }
     };
 
