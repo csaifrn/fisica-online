@@ -1,4 +1,4 @@
-import CardCorpoSubtopico from '../components/SubtopicoPage';
+import { CardCorpoSubtopico } from '../components/SubtopicoPage';
 
 const SubtopicoPage = () => {
     return <CardCorpoSubtopico />;

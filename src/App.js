@@ -4,7 +4,8 @@ import {
     AtividadePage,
     TopicoPage,
     SubtopicoPage,
-    HomePage
+    HomePage,
+    DisciplinaPage
 } from './pages';
 
 function App() {
@@ -13,14 +14,15 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route index element={<HomePage />} />
-                    <Route path="/:disciplina/:topico" element={<PageLayout />}>
-                        <Route index element={<TopicoPage />} />
+                    <Route path="/:disciplina" element={<PageLayout />}>
+                        <Route index element={<DisciplinaPage />} />
+                        <Route path=":topico" element={<TopicoPage />} />
                         <Route
-                            path=":subtopico/:idTexto"
+                            path=":topico/:subtopico/:idTexto"
                             element={<SubtopicoPage />}
                         />
                         <Route
-                            path=":subtopico/:idTexto/:idAtividade"
+                            path=":topico/:subtopico/:idTexto/:idAtividade"
                             element={<AtividadePage />}
                         />
                     </Route>

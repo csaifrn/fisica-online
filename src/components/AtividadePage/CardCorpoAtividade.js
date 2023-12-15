@@ -33,7 +33,7 @@ const CardCorpoAtividade = () => {
             </button>
             <p className="esp10">
                 <b>
-                    {dados.page.topico} - {dados.page.subtopico} -{' '}
+                    {dados.page.topico} - {dados.page.texto} -{' '}
                     {dados.page.titulo}
                 </b>
             </p>

@@ -1,3 +1,3 @@
 import CardCorpoSubtopico from './CardCorpoSubtopico';
 
-export default CardCorpoSubtopico;
+export { CardCorpoSubtopico };
