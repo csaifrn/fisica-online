@@ -37,7 +37,7 @@ const dados = [
             nome: 'Geraldo Felipe',
             data: '2023'
         },
-        pagina: { proxima: null, anterior: 5 },
+        pagina: { proxima: 21, anterior: 5 },
         parentPageId: 4
     },
     { id: 7, titulo: 'Mecânica', segmento: 'mecanica', parentPageId: 1 },
@@ -157,6 +157,39 @@ const dados = [
         },
         pagina: { proxima: null, anterior: 19 },
         parentPageId: 16
+    },
+    {
+        id: 21,
+        titulo: 'Lista 03',
+        segmento: 'lista03',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: null, anterior: 6 },
+        parentPageId: 4
+    },
+    {
+        id: 22,
+        titulo: 'Lista 01',
+        segmento: 'lista01',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: 23, anterior: null },
+        parentPageId: 13
+    },
+    {
+        id: 23,
+        titulo: 'Lista 02',
+        segmento: 'lista02',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: null, anterior: 22 },
+        parentPageId: 13
     }
 ];
 

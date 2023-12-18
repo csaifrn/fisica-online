@@ -58,7 +58,8 @@ const CardCorpoAtividadeExercicioQuantidade = ({ id, imagem, resposta }) => {
                     id={`r${id}`}
                     maxLength={3}
                     value={answer}
-                    onChange={e => setAnswer(parseInt(e.target.value))}
+                    step={0.01}
+                    onChange={e => setAnswer(parseFloat(e.target.value))}
                 />
                 <input
                     className={`button button1 ${styles.pbtn}`}

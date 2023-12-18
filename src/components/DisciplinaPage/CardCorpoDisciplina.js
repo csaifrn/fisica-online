@@ -13,8 +13,6 @@ const CardCorpoDisciplina = () => {
         nome: topico.titulo
     }));
 
-    console.log(topicoLinks[0]);
-
     return (
         <div className="aula-body">
             <ul className="list">
