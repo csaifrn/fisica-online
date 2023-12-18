@@ -6,9 +6,6 @@ const CardCorpoDisciplina = () => {
     const dados = useContext(PageContext);
 
     const topicos = dados.children();
-    const subtopicos = topicos.map(subtopico => {
-        return dados.children(subtopico.id);
-    });
 
     const topicoLinks = topicos.map(topico => ({
         id: topico.id,
