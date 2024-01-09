@@ -155,7 +155,7 @@ const dados = [
             nome: 'Prof. Geraldo Felipe',
             data: '2023'
         },
-        pagina: { proxima: null, anterior: 19 },
+        pagina: { proxima: 29, anterior: 19 },
         parentPageId: 16
     },
     {
@@ -223,6 +223,39 @@ const dados = [
         },
         pagina: { proxima: null, anterior: 25 },
         parentPageId: 18
+    },
+    {
+        id: 27,
+        titulo: 'Lista 01',
+        segmento: 'lista01',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: 28, anterior: null },
+        parentPageId: 19
+    },
+    {
+        id: 28,
+        titulo: 'Lista 02',
+        segmento: 'lista02',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: null, anterior: 27 },
+        parentPageId: 19
+    },
+    {
+        id: 29,
+        titulo: 'Gases (03)',
+        segmento: 'texto05',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: null, anterior: 20 },
+        parentPageId: 16
     }
 ];
 

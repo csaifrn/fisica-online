@@ -4,6 +4,9 @@ import * as Calorimetria03 from '../assets/calorimetria03';
 import * as Calorimetria04 from '../assets/calorimetria04';
 import * as Termodinamica01 from '../assets/termodinamica01';
 import * as Termodinamica02 from '../assets/termodinamica02';
+import * as Termodinamica03 from '../assets/termodinamica03';
+import * as Termodinamica04 from '../assets/termodinamica04';
+import * as Termodinamica05 from '../assets/termodinamica05';
 import * as Dinamica02 from '../assets/dinamica02';
 
 const notas_de_aula = [
@@ -870,6 +873,324 @@ const notas_de_aula = [
                         inner: 'Manipulando esta expressão, para dois estados de um gás ideal, temos a igualdade mostrada abaixo.'
                     },
                     { tag: 'imagem', inner: Termodinamica02.Image14 }
+                ]
+            }
+        ]
+    },
+    {
+        id: 19,
+        titulo: 'Aula 03',
+        conteudos: [
+            {
+                id: 1,
+                titulo: 'Trabalho realizado por um gás',
+                conteudo: [
+                    {
+                        tag: 'texto',
+                        inner: 'No curso de termodinâmica vamos estudar o funcionamento básico das máquinas térmicas, começando com a máquina a vapor.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Na figura temos um protótipo de máquina térmica. Podemos identificar a caldeira, na qual água é aquecida até produzir vapor em alta pressão, e o pistão, cujo movimento é transmitido a roda.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica03.Image01 },
+                    { tag: 'linha' },
+                    {
+                        tag: 'texto',
+                        inner: 'Neste esquema simplificado, temos um cilindro, contendo um gás ideal, e um pistão.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica03.Image02 },
+                    {
+                        tag: 'texto',
+                        inner: 'O pistão é formado por uma haste e por um êmbolo, que pode se mover verticalmente sem atrito com o cilindro.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'No interior do cilindro temos um gás, supostamente ideal e sobre a parte externa do êmbolo atua a pressão atmosférica.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Neste exemplo, sobre a parte externa do êmbolo atua a pressão atmosférica.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Como o sistema está em equilíbrio, a pressão interna deve ser igual a pressão externa.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica03.Image03 },
+                    {
+                        tag: 'nota',
+                        inner: '<b>Observação</b>: nesta figura, representamos os vetores força atuando em cada 1 cm² de área de superfície. Lembre-se que a pressão é uma grandeza escalar, não sendo representada vetorialmente.'
+                    },
+                    { tag: 'linha' },
+                    {
+                        tag: 'texto',
+                        inner: 'Agora temos essa mesma estrutura, com um corpo de massa “m” sobre o êmbolo, também em condição de equilíbrio (ou seja, a pressão externa é igual à pressão interna).'
+                    },
+                    { tag: 'imagem', inner: Termodinamica03.Image04 },
+                    {
+                        tag: 'texto',
+                        inner: 'Fornecendo calor ao gás, sua temperatura tende a aumentar, aumentando também a pressão interna e consequentemente o seu volume.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica03.Image05 },
+                    {
+                        tag: 'texto',
+                        inner: 'Com o movimento do êmbolo, o volume do gás aumenta até o sistema atingir uma nova condição de equilíbrio, com a pressão interna igual à pressão externa.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Neste caso, podemos dizer que o gás sofreu uma transformação isobárica com aumento de temperatura e aumento de volume.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Lembrando que, em um transformação isobárica, o volume do gás é diretamente proporcional à sua temperatura.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica03.Image10 },
+                    { tag: 'linha' },
+                    {
+                        tag: 'texto',
+                        inner: 'Observe que o gás realizou um trabalho sobre o êmbolo, pois uma força de módulo <b>F</b> foi aplicada, pelo gás, ao longo do deslocamento <b>d</b>.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Demonstramos em sala que este trabalho pode ser calculado como sendo o produto entre a pressão do gás (supostamente constante) e a variação de volume do gás.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica03.Image06 },
+                    { tag: 'linha' },
+                    { tag: 'titulo', inner: 'Importante:' },
+                    { tag: 'imagem', inner: Termodinamica03.Image07 },
+                    {
+                        tag: 'texto',
+                        inner: '• Se o volume aumenta, o gás sofre uma expansão, a variação de volume é positiva e o trabalho é positivo.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: '• Se o volume diminui, o gás sofre uma compressão, a variação de volume é negativa e o trabalho é negativo.'
+                    },
+                    { tag: 'linha' },
+                    {
+                        tag: 'texto',
+                        inner: 'Observe que, quando o volume do gás aumenta, é o gás que realiza trabalho sobre o ambiente externo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica03.Image08 },
+                    {
+                        tag: 'texto',
+                        inner: 'E quando o volume do gás diminui, é o ambiente externo que realiza trabalho sobre o gás.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica03.Image09 },
+                    { tag: 'linha' },
+                    {
+                        tag: 'texto',
+                        inner: 'Um bom exemplo de quando um trabalho é realizado sobre o gás é quando uma pessoa empurra o pistão de uma bomba de encher pneu, comprimindo o gás.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Neste caso, é a pessoa (elemento externo) que realiza trabalho sobre o gás no interior do cilindro da bomba.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica03.Image11 }
+                ]
+            }
+        ]
+    },
+    {
+        id: 20,
+        titulo: 'Aula 04',
+        conteudos: [
+            {
+                id: 1,
+                titulo: 'Energia cinética de um gás ideal',
+                conteudo: [
+                    {
+                        tag: 'texto',
+                        inner: 'A energia cinética de um gás ideal é calculada como sendo a soma das energias cinéticas de todas as suas moléculas.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica04.Image11 },
+                    {
+                        tag: 'texto',
+                        inner: 'Considerando um conjunto de simplificações associadas a um gás ideal, é possível demonstrar que:'
+                    },
+                    { tag: 'imagem', inner: Termodinamica04.Image01 },
+                    {
+                        tag: 'texto',
+                        inner: 'Observe que esta energia cinética é diretamente proporcional à temperatura do gás.'
+                    },
+                    {
+                        tag: 'comentario verde',
+                        inner: 'Quanto maior a temperatura do gás, maior a energia cinética do gás.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Além disso, a energia cinética de um gás ideal não depende do tipo de gás, apenas o número de mols, da constante universal dos gases perfeitos e da sua temperatura absoluta.'
+                    }
+                ]
+            },
+            {
+                id: 2,
+                titulo: 'Energia Interna',
+                conteudo: [
+                    {
+                        tag: 'texto',
+                        inner: 'Em um gás, suas partículas (átomos ou moléculas) podem apresentar energia cinética de translação, energia cinética de rotação, energia cinética de vibração e energia potencial de ligação molecular.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica04.Image02 },
+                    {
+                        tag: 'texto',
+                        inner: 'A soma de todas essas energias é chamada de <b>energia interna</b> do gás.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Porém, para um gás ideal monoatômico, podemos considerar, para o cálculo da sua energia interna, apenas a energia cinética do gás.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Consequentemente, a energia interna de um gás ideal pode ser escrita conforme mostrado abaixo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica04.Image03 }
+                ]
+            },
+            {
+                id: 3,
+                titulo: 'Variação de Energia Interna',
+                conteudo: [
+                    {
+                        tag: 'texto',
+                        inner: 'A variação de energia interna de um gás ideal é a diferença entre a energia interna final e a energia interna inicial. Observe que esta variação pode ser calculada em função da variação de temperatura absoluta do gás.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica04.Image04 },
+                    {
+                        tag: 'texto',
+                        inner: 'Observe que a variação de energia interna é diretamente proporcional à variação de temperatura absoluta do gás.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica04.Image05 },
+                    {
+                        tag: 'texto',
+                        inner: 'Logo, se a temperatura do gás aumenta, sua energia interna aumenta, e se a temperatura do gás diminui, sua energia interna diminui, sempre na mesma proporção.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica04.Image06 },
+                    { tag: 'linha' },
+                    {
+                        tag: 'texto',
+                        inner: 'A energia interna de um gás ideal representa sua capacidade de realizar trabalho (basicamente, de "empurrar" o ambiente em seu entorno).'
+                    },
+                    { tag: 'imagem', inner: Termodinamica04.Image08 },
+                    {
+                        tag: 'texto',
+                        inner: 'Para seguir adiante, e entender o funcionamento das máquinas térmicas (motores que usam o poder calorífico dos combustíveis), precisamos entender a relação entre a quantidade de calor troca (recebido ou cedido), o trabalho realizado (pelo gás ou sobre o gás) e a variação de energia interna do gás.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica04.Image07 }
+                ]
+            },
+            {
+                id: 4,
+                titulo: 'Primeira Lei da Termodinâmica',
+                conteudo: [
+                    {
+                        tag: 'texto',
+                        inner: 'A partir destas relações, podemos apresentar a Primeira Lei da Termodinâmica.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica04.Image09 },
+                    {
+                        tag: 'texto',
+                        inner: 'Para interpretar a relação entre variação de energia, quantidade de calor trocado e trabalho realizado é precisa considerar os sinais algébricos para cada tipo de transformação.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Além disso, precisamos lembrar que em uma transformação isométrica não há variação de volume. Em uma transformação adiabática não troca de calor e em uma transformação isotérmica não há variação de energia.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica04.Image10 }
+                ]
+            }
+        ]
+    },
+    {
+        id: 29,
+        titulo: 'Aula 05',
+        conteudos: [
+            {
+                id: 1,
+                titulo: 'Transformação Adiabática e Primeira Lei da Termodinâmica',
+                conteudo: [
+                    {
+                        tag: 'titulo',
+                        inner: 'Exemplo 01'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Uma pessoa está enchendo um pneu com uma bomba manual, conforme ilustrado.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica05.Image01 },
+                    {
+                        tag: 'texto',
+                        inner: 'Supondo que a pressão no interior do pneu é muito maior que a pressão atmosférica, a pessoa terá que realizar um trabalho sobre o gás (ar no interior do bomba), comprimindo este gás, até que a pressão no interior da bomba seja maior que a pressão do ar no interior do pneu.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica05.Image02 },
+                    {
+                        tag: 'texto',
+                        inner: 'Podemos adotar, com boa aproximação, que esta compressão foi muito rápida e não houve tempo para uma troca de calor entre o ar no interior da bomba e o ambiente externo.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Logo, essa foi uma transformação adiabática na qual a quantidade de calor trocada é nula, o trabalho é negativo (compressão), a energia interna aumenta e a temperatura do ar, no interior da bomba, também aumenta.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica05.Image03 },
+                    { tag: 'linha' },
+                    { tag: 'titulo', inner: 'Exemplo 02' },
+                    {
+                        tag: 'nota',
+                        inner: '<i>• Como uma simplificação didática vamos supor que, no interior de um aerossol, há um gás ideal. Na verdade, é um processo um pouco diferente, que só iremos detalhar mais à frente.</i>'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Ao utilizar um desodorante (ou qualquer produto aerossol), percebemos que o gás sai da válvula com temperatura menor que a temperatura ambiente (o gás sai frio).'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Neste processo, o gás que sai da válvula, ao passar para um ambiente de menor pressão, se expando muito rapidamente, de forma que podemos considerar que esta expansão é adiabática, com trabalho realizado pelo gás (expansão) e diminuição da sua energia interna.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica05.Image04 },
+                    {
+                        tag: 'texto',
+                        inner: '<b>Observação</b>: o recipiente também esfria, pois o gás em seu interior sofre um processo análogo a uma expansão, com a saída de parte do gás.'
+                    }
+                ]
+            },
+            {
+                id: 2,
+                titulo: 'Transformação Isométrica e Primeira Lei da Termodinâmica',
+                conteudo: [
+                    {
+                        tag: 'texto',
+                        inner: 'A figura ilustra uma situação na qual um botijão de gás de cozinha está próximo, acidentalmente, de uma fonte de calor, com um incêndio ou uma fogueira (algo que não deve acontecer).'
+                    },
+                    { tag: 'imagem', inner: Termodinamica05.Image05 },
+                    {
+                        tag: 'texto',
+                        inner: 'Neste caso, o gás no interior do botijão (como simplificação didática, supostamente um gás ideal) irá receber calor do ambiente e sua energia interna irá aumentar, em uma transformação isométrica.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica05.Image06 },
+                    {
+                        tag: 'texto',
+                        inner: 'Para evitar a explosão do botijão, devido ao aumento da pressão, um dispositivo na válvula deste recipiente derrete (é feito de resina), permitindo o vazamento do gás e diminuindo a pressão interna.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica05.Image07 }
+                ]
+            },
+            {
+                id: 3,
+                titulo: 'Transformação Isotérmica e Primeira Lei da Termodinâmica',
+                conteudo: [
+                    {
+                        tag: 'texto',
+                        inner: 'Considere um gás, inicialmente a temperatura ambiente (300 K) que é comprimido, passando do estado A para o estado B, em uma transformação adiabática. Neste caso, sua temperatura aumenta, digamos, para 400 K.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Em seguida, este gás perde calor, até entrar em equilíbrio com ambiente novamente (voltando para 300 K), passando do estado B para o estado C.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica05.Image08 },
+                    {
+                        tag: 'texto',
+                        inner: 'Neste processo, a temperatura inicial e final do gás é a mesma. Logo, podemos considerar que a transformação A->C foi isotérmica (o volume diminuiu e a pressão aumentou), e a variação de energia interna do gás foi nula.'
+                    }
                 ]
             }
         ]

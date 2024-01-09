@@ -30,16 +30,18 @@ const CardCorpoSubtopico = () => {
             <AppNavEnd />
             {listas.length !== 0 && (
                 <>
-                    <h1>Atividades</h1>
-                    <ul className="list">
-                        {listas.map(lista => (
-                            <li key={lista.id}>
-                                <Link to={dados.getLink(lista.id)}>
-                                    {lista.titulo}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+                    <h1 className="topico">Atividades</h1>
+                    <div className="paragrafo">
+                        <ul className="list">
+                            {listas.map(lista => (
+                                <li key={lista.id}>
+                                    <Link to={dados.getLink(lista.id)}>
+                                        {lista.titulo}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </>
             )}
             <hr />

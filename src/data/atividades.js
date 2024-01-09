@@ -894,6 +894,18 @@ const atividades = [
         ]
     },
     {
+        id: 27,
+        exercicios: [
+            {
+                id: 0,
+                titulo: 'Exercicio 01',
+                imagem: Dinamica0202.Image01,
+                estiloVars: 'vetores',
+                resposta: [0, 0]
+            }
+        ]
+    },
+    {
         id: 12,
         exercicios: [
             {
