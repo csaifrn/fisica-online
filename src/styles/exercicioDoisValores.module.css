@@ -25,36 +25,6 @@
   
 /* ------ */
   
-.imagem1{
+.imagem{
     position:absolute;
-    left:120px;
-    top:10px;
-}
-  
-.imagem2{
-    position:absolute;
-    left:260px;
-    top:10px;
-}
-  
-/* ------ */
-
-.p1 {
-    left:75px;
-    top:35px;
-}
-
-.p2 {
-    left:215px;
-    top:35px;
-}
-
-.pbtn {
-    left:60px;
-    top:90px;
-}
-
-.pMensagem {
-    left:110px;
-    top:80px;
 }

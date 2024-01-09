@@ -8,7 +8,6 @@ import * as Dinamica0202 from '../assets/dinamica02/lista02';
 const atividades = [
     {
         id: 5,
-        tipo: 'quantidade',
         exercicios: [
             {
                 id: 1,
@@ -24,6 +23,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0101.Image01,
+                estiloVars: 'comum',
                 resposta: 3.8
             },
             {
@@ -36,6 +36,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0101.Image02,
+                estiloVars: 'comum',
                 resposta: 4.8
             },
             {
@@ -52,6 +53,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0101.Image03,
+                estiloVars: 'comum',
                 resposta: 2400
             },
             {
@@ -68,6 +70,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0101.Image04,
+                estiloVars: 'comum',
                 resposta: 8.7
             },
             {
@@ -92,13 +95,13 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0101.Image05,
-                resposta: 5
+                estiloVars: 'cientifica',
+                resposta: [8, 3]
             }
         ]
     },
     {
         id: 6,
-        tipo: 'quantidade',
         exercicios: [
             {
                 id: 1,
@@ -110,6 +113,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0102.Image01,
+                estiloVars: 'comum',
                 resposta: 150
             },
             {
@@ -122,6 +126,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0102.Image02,
+                estiloVars: 'comum',
                 resposta: 450
             },
             {
@@ -134,6 +139,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0102.Image03,
+                estiloVars: 'comum',
                 resposta: 25
             },
             {
@@ -150,6 +156,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0102.Image04,
+                estiloVars: 'comum',
                 resposta: 2067
             },
             {
@@ -167,6 +174,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0102.Image05,
+                estiloVars: 'comum',
                 resposta: 3000
             },
             {
@@ -184,13 +192,13 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0102.Image06,
+                estiloVars: 'comum',
                 resposta: 60
             }
         ]
     },
     {
         id: 21,
-        tipo: 'quantidade',
         exercicios: [
             {
                 id: 1,
@@ -210,7 +218,8 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0103.Image01,
-                resposta: 1.56
+                estiloVars: 'cientifica',
+                resposta: [1.56, 5]
             },
             {
                 id: 2,
@@ -230,6 +239,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0103.Image02,
+                estiloVars: 'comum',
                 resposta: 2400
             },
             {
@@ -250,7 +260,8 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0103.Image03,
-                resposta: 9.3
+                estiloVars: 'cientifica',
+                resposta: [9.3, 4]
             },
             {
                 id: 4,
@@ -266,13 +277,13 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0103.Image04,
+                estiloVars: 'comum',
                 resposta: 20
             }
         ]
     },
     {
         id: 22,
-        tipo: 'quantidade',
         exercicios: [
             {
                 id: 1,
@@ -288,6 +299,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0201.Image01,
+                estiloVars: 'comum',
                 resposta: 50
             },
             {
@@ -304,7 +316,8 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0201.Image02,
-                resposta: -1.8
+                estiloVars: 'cientifica',
+                resposta: [-1.8, 5]
             },
             {
                 id: 3,
@@ -320,6 +333,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0201.Image03,
+                estiloVars: 'comum',
                 resposta: 3
             },
             {
@@ -336,6 +350,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0201.Image04,
+                estiloVars: 'comum',
                 resposta: 2.5
             },
             {
@@ -356,13 +371,13 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0201.Image05,
+                estiloVars: 'comum',
                 resposta: 46.6
             }
         ]
     },
     {
         id: 23,
-        tipo: 'quantidade',
         exercicios: [
             {
                 id: 1,
@@ -382,6 +397,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0202.Image01,
+                estiloVars: 'comum',
                 resposta: 0.2
             },
             {
@@ -402,6 +418,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0202.Image02,
+                estiloVars: 'comum',
                 resposta: 0.2
             },
             {
@@ -422,6 +439,7 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0202.Image03,
+                estiloVars: 'comum',
                 resposta: 0.2
             },
             {
@@ -449,13 +467,13 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0202.Image04a,
+                estiloVars: 'comum',
                 resposta: 0.2
             }
         ]
     },
     {
         id: 11,
-        tipo: 'dicotomica',
         exercicios: [
             {
                 id: 0,
@@ -536,7 +554,6 @@ const atividades = [
     },
     {
         id: 12,
-        tipo: 'dois valores',
         exercicios: [
             {
                 id: 0,
@@ -549,7 +566,8 @@ const atividades = [
                     { tag: 'imagem', inner: Dinamica0202.Formula1 }
                 ],
                 imagem: Dinamica0202.Image01,
-                respostas: [140, 0]
+                estiloVars: 'vetores',
+                resposta: [140, 0]
             },
             {
                 id: 1,
@@ -562,7 +580,8 @@ const atividades = [
                     { tag: 'imagem', inner: Dinamica0202.Formula2 }
                 ],
                 imagem: Dinamica0202.Image02,
-                respostas: [20, 0]
+                estiloVars: 'vetores',
+                resposta: [20, 0]
             },
             {
                 id: 2,
@@ -575,7 +594,8 @@ const atividades = [
                     { tag: 'imagem', inner: Dinamica0202.Formula3 }
                 ],
                 imagem: Dinamica0202.Image03,
-                respostas: [0, -25]
+                estiloVars: 'vetores',
+                resposta: [0, -25]
             },
             {
                 id: 3,
@@ -597,6 +617,7 @@ const atividades = [
                             }
                         ],
                         imagem: Dinamica0202.Image04a,
+                        estiloVars: 'vetores',
                         respostas: [60, 0]
                     },
                     {
@@ -608,6 +629,7 @@ const atividades = [
                             }
                         ],
                         imagem: Dinamica0202.Image04b,
+                        estiloVars: 'vetores',
                         respostas: [0, 0]
                     },
                     {
@@ -619,7 +641,8 @@ const atividades = [
                             }
                         ],
                         imagem: Dinamica0202.Image04c,
-                        respostas: [60, 0]
+                        estiloVars: 'vetores',
+                        resposta: [60, 0]
                     }
                 ]
             },
@@ -643,7 +666,8 @@ const atividades = [
                             }
                         ],
                         imagem: Dinamica0202.Image05a,
-                        respostas: [-15, 0]
+                        estiloVars: 'vetores',
+                        resposta: [-15, 0]
                     },
                     {
                         id: 9,
@@ -654,7 +678,8 @@ const atividades = [
                             }
                         ],
                         imagem: Dinamica0202.Image05b,
-                        respostas: [0, 20]
+                        estiloVars: 'vetores',
+                        resposta: [0, 20]
                     },
                     {
                         id: 10,
@@ -665,7 +690,8 @@ const atividades = [
                             }
                         ],
                         imagem: Dinamica0202.Image05c,
-                        respostas: [-15, 20]
+                        estiloVars: 'vetores',
+                        resposta: [-15, 20]
                     }
                 ]
             }
@@ -688,15 +714,12 @@ atividades['dinamica'] = [
                 titulo: 'Exercicio 01',
                 descricao: [
                     {
-                        tipo: 'texto',
                         data: 'Um corpo de massa 40 kg está em repouso sobre uma mesa, conforme mostrado na figura.'
                     },
                     {
-                        tipo: 'imagem',
                         data: 'link para a figura'
                     },
                     {
-                        tipo: 'lista',
                         data: [
                             'Determine o módulo da força resultante sobre o corpo.',
                             'Determine o módulo da força peso do corpo.',

@@ -3,7 +3,7 @@ import '../../styles/exercicio.css';
 import CardCorpoAtividadeExercicioQuantidade from './CardCorpoAtividadeExercicioQuantidade';
 import CardCorpoAtividadeExercicioDicotomica from './CardCorpoAtividadeExercicioDicotomica';
 import CardCorpoAtividadeExercicioDoisValores from './CardCorpoAtividadeExercicioDoisValores';
-import { Alert, UncontrolledAlert } from 'reactstrap';
+import { UncontrolledAlert } from 'reactstrap';
 
 /**
  * Renders a card for an exercise activity.
@@ -11,30 +11,32 @@ import { Alert, UncontrolledAlert } from 'reactstrap';
  * @param {Object} content - The content of the card.
  * @returns {JSX.Element} - The rendered card component.
  */
-const CardCorpoAtividadeExercicio = ({ content, tipo }) => {
+const CardCorpoAtividadeExercicio = ({ content }) => {
     const choice = iframe => {
-        switch (tipo) {
-            case 'quantidade':
+        switch (typeof iframe.resposta) {
+            case 'number':
                 return (
                     <CardCorpoAtividadeExercicioQuantidade
                         id={iframe.id}
                         imagem={iframe.imagem}
+                        estiloVars={iframe.estiloVars}
                         resposta={iframe.resposta}
                     />
                 );
-            case 'dicotomica':
+            case 'boolean':
                 return (
                     <CardCorpoAtividadeExercicioDicotomica
                         resposta={iframe.resposta}
                         comentarios={iframe.comentarios}
                     />
                 );
-            case 'dois valores':
+            case 'object':
                 return (
                     <CardCorpoAtividadeExercicioDoisValores
                         id={iframe.id}
                         imagem={iframe.imagem}
-                        respostas={iframe.respostas}
+                        estiloVars={iframe.estiloVars}
+                        resposta={iframe.resposta}
                     />
                 );
             default:
@@ -46,9 +48,11 @@ const CardCorpoAtividadeExercicio = ({ content, tipo }) => {
         switch (tag) {
             case 'texto':
                 return (
-                    <p key={index} className="esp10">
-                        {inner}
-                    </p>
+                    <p
+                        key={index}
+                        className="esp10"
+                        dangerouslySetInnerHTML={{ __html: inner }}
+                    ></p>
                 );
             case 'imagem':
                 return (

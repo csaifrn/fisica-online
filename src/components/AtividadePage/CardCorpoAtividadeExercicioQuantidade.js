@@ -2,8 +2,30 @@ import { useRef, useState } from 'react';
 import { Certo, Errado } from '../../assets';
 import styles from '../../styles/exercicioQuantidade.module.css';
 
-const CardCorpoAtividadeExercicioQuantidade = ({ id, imagem, resposta }) => {
-    const [answer, setAnswer] = useState(0);
+const posicoes = {
+    comum: {
+        x1: 118,
+        y1: 22,
+        xbtn: 60,
+        ybtn: 90,
+        xM: 110,
+        yM: 60,
+        x1a() {
+            return this.x1 + 170;
+        },
+        y1a() {
+            return this.y1 + 10;
+        }
+    }
+};
+
+const CardCorpoAtividadeExercicioQuantidade = ({
+    id,
+    imagem,
+    resposta,
+    estiloVars
+}) => {
+    const [answer, setAnswer] = useState('');
     const refs = {
         r1: useRef(null),
         btnC: useRef(null),
@@ -11,6 +33,28 @@ const CardCorpoAtividadeExercicioQuantidade = ({ id, imagem, resposta }) => {
         acertou: useRef(null),
         img1a: useRef(null),
         img1b: useRef(null)
+    };
+
+    const p = posicoes[estiloVars];
+
+    const estiloCaixa = {
+        top: `${p.y1}px`,
+        left: `${p.x1}px`
+    };
+
+    const estiloBotao = {
+        top: `${p.ybtn}px`,
+        left: `${p.xbtn}px`
+    };
+
+    const estiloMensagem = {
+        top: `${p.yM}px`,
+        left: `${p.xM}px`
+    };
+
+    const estiloImagem = {
+        top: `${p.y1a()}px`,
+        left: `${p.x1a()}px`
     };
 
     /**
@@ -41,7 +85,7 @@ const CardCorpoAtividadeExercicioQuantidade = ({ id, imagem, resposta }) => {
         const { r1, btnC, btnR, img1b } = refs;
         btnC.current.hidden = false;
         btnR.current.hidden = true;
-        setAnswer(0);
+        setAnswer('');
         r1.current.disabled = false;
         img1b.current.hidden = true;
     };
@@ -52,24 +96,28 @@ const CardCorpoAtividadeExercicioQuantidade = ({ id, imagem, resposta }) => {
             <form>
                 <input
                     autoComplete="off"
-                    className={`${styles.caixatxt} ${styles.p1}`}
+                    className={styles.caixatxt}
+                    style={estiloCaixa}
                     type="number"
                     ref={refs.r1}
                     id={`r${id}`}
                     maxLength={3}
+                    placeholder="0"
                     value={answer}
                     step={0.01}
                     onChange={e => setAnswer(parseFloat(e.target.value))}
                 />
                 <input
-                    className={`button button1 ${styles.pbtn}`}
+                    className="button button1"
+                    style={estiloBotao}
                     type={'button'}
                     ref={refs.btnC}
                     onClick={confirmar}
                     value="Confirmar"
                 />
                 <input
-                    className={`button button2 ${styles.pbtn}`}
+                    className="button button2"
+                    style={estiloBotao}
                     type={'button'}
                     ref={refs.btnR}
                     onClick={refazer}
@@ -77,17 +125,28 @@ const CardCorpoAtividadeExercicioQuantidade = ({ id, imagem, resposta }) => {
                     hidden
                 />
                 <p
-                    className={`mensagem ${styles.pMensagem}`}
+                    className="mensagem"
+                    style={estiloMensagem}
                     ref={refs.acertou}
                     hidden
                 >
                     Parabéns!!
                 </p>
             </form>
-            <span ref={refs.img1a} className={styles.imagem1} hidden>
+            <span
+                ref={refs.img1a}
+                className={styles.imagem}
+                style={estiloImagem}
+                hidden
+            >
                 <img src={Certo} height={20} alt="certo" />
             </span>
-            <span ref={refs.img1b} className={styles.imagem1} hidden>
+            <span
+                ref={refs.img1b}
+                className={styles.imagem}
+                style={estiloImagem}
+                hidden
+            >
                 <img src={Errado} height={20} alt="errado" />
             </span>
         </div>

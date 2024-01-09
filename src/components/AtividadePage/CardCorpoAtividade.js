@@ -15,11 +15,7 @@ const CardCorpoAtividade = () => {
     );
 
     const renderExercicio = exercicio => (
-        <CardCorpoAtividadeExercicio
-            key={exercicio.id}
-            content={exercicio}
-            tipo={atividade?.tipo}
-        />
+        <CardCorpoAtividadeExercicio key={exercicio.id} content={exercicio} />
     );
 
     const linkNotaDeAula = () => {
