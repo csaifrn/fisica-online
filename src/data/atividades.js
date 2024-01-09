@@ -3,6 +3,9 @@ import * as Calorimetria0102 from '../assets/calorimetria01/lista02';
 import * as Calorimetria0103 from '../assets/calorimetria01/lista03';
 import * as Calorimetria0201 from '../assets/calorimetria02/lista01';
 import * as Calorimetria0202 from '../assets/calorimetria02/lista02';
+import * as Termodinamica0201 from '../assets/termodinamica02/lista01';
+import * as Termodinamica0202 from '../assets/termodinamica02/lista02';
+import * as Termodinamica0203 from '../assets/termodinamica02/lista03';
 import * as Dinamica0202 from '../assets/dinamica02/lista02';
 
 const atividades = [
@@ -91,7 +94,7 @@ const atividades = [
                     },
                     {
                         tag: 'imagem',
-                        inner: Calorimetria0101.Formula1
+                        inner: Calorimetria0101.Figura1
                     }
                 ],
                 imagem: Calorimetria0101.Image05,
@@ -167,7 +170,7 @@ const atividades = [
                         tag: 'texto',
                         inner: 'O gráfico abaixo mostra a quantidade de calor fornecida por uma fonte térmica em função do tempo.'
                     },
-                    { tag: 'imagem', inner: Calorimetria0102.Formula1 },
+                    { tag: 'imagem', inner: Calorimetria0102.Figura1 },
                     {
                         tag: 'texto',
                         inner: 'Calcule a potência térmica desta fonte.'
@@ -185,7 +188,7 @@ const atividades = [
                         tag: 'texto',
                         inner: 'O gráfico abaixo mostra a quantidade de calor fornecida por uma fonte térmica em função do tempo.'
                     },
-                    { tag: 'imagem', inner: Calorimetria0102.Formula2 },
+                    { tag: 'imagem', inner: Calorimetria0102.Figura2 },
                     {
                         tag: 'texto',
                         inner: 'Calcule a quantidade de calor disponibilizada por esta fonte após um intervalo de tempo de 10min:30s.'
@@ -210,7 +213,7 @@ const atividades = [
                     },
                     {
                         tag: 'imagem',
-                        inner: Calorimetria0103.Formula1
+                        inner: Calorimetria0103.Figura1
                     },
                     {
                         tag: 'texto',
@@ -231,7 +234,7 @@ const atividades = [
                     },
                     {
                         tag: 'imagem',
-                        inner: Calorimetria0103.Formula2
+                        inner: Calorimetria0103.Figura2
                     },
                     {
                         tag: 'texto',
@@ -252,7 +255,7 @@ const atividades = [
                     },
                     {
                         tag: 'imagem',
-                        inner: Calorimetria0103.Formula3
+                        inner: Calorimetria0103.Figura3
                     },
                     {
                         tag: 'texto',
@@ -389,7 +392,7 @@ const atividades = [
                     },
                     {
                         tag: 'imagem',
-                        inner: Calorimetria0202.Formula1
+                        inner: Calorimetria0202.Figura1
                     },
                     {
                         tag: 'texto',
@@ -410,7 +413,7 @@ const atividades = [
                     },
                     {
                         tag: 'imagem',
-                        inner: Calorimetria0202.Formula2
+                        inner: Calorimetria0202.Figura2
                     },
                     {
                         tag: 'texto',
@@ -456,7 +459,7 @@ const atividades = [
                     },
                     {
                         tag: 'imagem',
-                        inner: Calorimetria0202.Formula3
+                        inner: Calorimetria0202.Figura3
                     },
                     {
                         tag: 'linha'
@@ -553,6 +556,344 @@ const atividades = [
         ]
     },
     {
+        id: 24,
+        exercicios: [
+            {
+                id: 0,
+                titulo: 'Exercicio 01',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Um gás ideal, no interior de um recipiente indeformável, apresenta pressão de 2 atm e temperatura de 350 K. Calcule a pressão no recipiente caso a temperatura aumente para 400 K.'
+                    }
+                ],
+                imagem: Termodinamica0201.Image01,
+                estiloVars: 'comum',
+                resposta: 2.3
+            },
+            {
+                id: 1,
+                titulo: 'Exercicio 02',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Um gás ideal, no interior de um recipiente indeformável, apresenta pressão de 4 atm e temperatura de 400 K. Calcule qual deve ser a temperatura do gás para que a pressão interna no recipiente seja de 5 atm.'
+                    }
+                ],
+                imagem: Termodinamica0201.Image02,
+                estiloVars: 'comum',
+                resposta: 500
+            },
+            {
+                id: 2,
+                titulo: 'Exercicio 03',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Um compressor de refrigerador industrial contém gás ideal a uma temperatura de 340 K, volume V e pressão 2,5 atm. O volume interno do compressor aumenta em 25 % mantendo constante sua pressão. Calcule a temperatura do gás nesta nova situação.'
+                    }
+                ],
+                imagem: Termodinamica0201.Image03,
+                estiloVars: 'comum',
+                resposta: 425
+            },
+            {
+                id: 3,
+                titulo: 'Exercicio 04',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Um pistão, presente em um motor à combustão, contém certa massa de gás ideal a uma temperatura de 300 K em um volume 500 cm³. Considerando que o volume máximo do pistão é de 600 cm³, qual deve ser a máxima temperatura do gás em seu interior, supondo uma transformação isobárica?'
+                    }
+                ],
+                imagem: Termodinamica0201.Image04,
+                estiloVars: 'comum',
+                resposta: 360
+            },
+            {
+                id: 4,
+                titulo: 'Exercicio 05',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'A figura mostra um ilustração didática na qual um gás ideal sofre uma transformação isotérmica, ao receber calor do ambiente.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0201.Figura1 },
+                    {
+                        tag: 'texto',
+                        inner: 'Sendo P1 = P e V1 = V e V2 = 4V, calcule a pressão P2 em função da pressão P1.'
+                    }
+                ],
+                imagem: Termodinamica0201.Image05,
+                estiloVars: 'comum',
+                resposta: 2.3
+            }
+        ]
+    },
+    {
+        id: 25,
+        exercicios: [
+            {
+                id: 0,
+                titulo: 'Exercicio 01',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Um corpo de massa 40 kg está em repouso sobre uma mesa, conforme mostrado na figura. Determine o módulo da força resultante sobre o corpo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0202.Figura1 },
+                    {
+                        tag: 'texto',
+                        inner: 'Sabendo V<sub>A</sub> = 5 L, calcule o volume V<sub>B</sub>.'
+                    }
+                ],
+                imagem: Termodinamica0202.Image01,
+                estiloVars: 'comum',
+                resposta: 2
+            },
+            {
+                id: 1,
+                titulo: 'Exercicio 02',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da pressão de um gás ideal em função da sua temperatura entre dois estados, A e B. A massa do gás permanece constante durante este processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0202.Figura2 },
+                    {
+                        tag: 'texto',
+                        inner: 'Sabendo V<sub>A</sub> = 5 L, calcule o volume V<sub>B</sub>.'
+                    }
+                ],
+                imagem: Termodinamica0202.Image02,
+                estiloVars: 'comum',
+                resposta: 1.5
+            },
+            {
+                id: 2,
+                titulo: 'Exercicio 03',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da pressão de um gás ideal em função da sua temperatura. Neste caso, o gás sofre a transformação A -> B e em seguida a transformação B - > C. A massa do gás permanece constante durante este processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0202.Figura3 }
+                ],
+                questoes: [
+                    {
+                        id: 0,
+                        descricao: [
+                            {
+                                tag: 'texto',
+                                inner: 'a) Calcule o volume <b>V<sub>B</sub></b> em função do volume <b>V<sub>A</sub>.</b>'
+                            }
+                        ],
+                        imagem: Termodinamica0202.Image03,
+                        estiloVars: 'comum',
+                        resposta: 6
+                    },
+                    {
+                        id: 1,
+                        descricao: [
+                            {
+                                tag: 'texto',
+                                inner: 'b) Calcule o volume <b>V<sub>C</sub></b> em função do volume <b>V<sub>B</sub>.</b>'
+                            }
+                        ],
+                        imagem: Termodinamica0202.Image04,
+                        estiloVars: 'comum',
+                        resposta: 0.5
+                    }
+                ]
+            },
+            {
+                id: 3,
+                titulo: 'Exercicio 04',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da pressão de um gás ideal em função do seu volume, durante uma transformação isotérmica. A massa do gás permanece constante durante este processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0202.Figura4 },
+                    {
+                        tag: 'texto',
+                        inner: 'Sabendo que no estado A a pressão do gás é <b>P</b>, calcule a pressão no estado B.'
+                    }
+                ],
+                imagem: Termodinamica0202.Image05,
+                estiloVars: 'comum',
+                resposta: 0.25
+            },
+            {
+                id: 4,
+                titulo: 'Exercicio 05',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da pressão de um gás ideal em função da sua temperatura. A massa do gás permanece constante durante este processo.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'No estado A a temperatura do gás é de 400 K.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0202.Figura5 }
+                ],
+                questoes: [
+                    {
+                        id: 0,
+                        descricao: [
+                            {
+                                tag: 'texto',
+                                inner: 'a) Calcule sua temperatura no estado B.'
+                            }
+                        ],
+                        imagem: Termodinamica0202.Image06,
+                        estiloVars: 'comum',
+                        resposta: 0.5
+                    },
+                    {
+                        id: 1,
+                        descricao: [
+                            {
+                                tag: 'texto',
+                                inner: 'b) Calcule a temperatura do gás no estado C.'
+                            }
+                        ],
+                        imagem: Termodinamica0202.Image07,
+                        estiloVars: 'comum',
+                        resposta: 800
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 26,
+        exercicios: [
+            {
+                id: 0,
+                titulo: 'Exercicio 01',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da pressão de um gás ideal em função da sua temperatura entre dois estados, A e B. A massa do gás permanece constante durante este processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0203.Figura1 },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) A transformação A -> B é isotérmica.',
+                    'b) Na transformação A -> B o volume do gás aumenta.',
+                    'c) Na transformação A -> B o volume do permanece constante.',
+                    'd) Na transformação A -> B o volume do gás diminui.',
+                    'e) O gás está sofrendo uma compressão.'
+                ],
+                resposta: [true, false, false, true, true]
+            },
+            {
+                id: 1,
+                titulo: 'Exercicio 02',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da pressão de um gás ideal em função da sua temperatura entre dois estados, A e B. A massa do gás permanece constante durante este processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0203.Figura2 },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) O gás sofre uma transformação isométrica com diminuição de temperatura e aumento de volume.',
+                    'b) O gás está cedendo calor para o ambiente, seu volume diminui e sua pressão permanece constante.',
+                    'c) O volume diminui na mesma proporção da diminuição da temperatura.',
+                    'd) O gás sofre uma transformação isobárica com diminuição de temperatura e aumento de volume.',
+                    'e) O gás sofre uma transformação isobárica com diminuição de temperatura e diminuição de volume.'
+                ],
+                resposta: [false, true, true, false, true]
+            },
+            {
+                id: 2,
+                titulo: 'Exercicio 03',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da pressão de um gás ideal em função da sua temperatura. Neste caso, o gás sofre a transformação A -> B e em seguida a transformação B - > C. A massa do gás permanece constante durante este processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0203.Figura3 },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) a) A transformação A -> B ocorre com aumento de temperatura e diminuição de volume. Neste caso, o gás sofre uma compressão isobárica.',
+                    'b) A transformação B -> C ocorre com aumento de temperatura, aumento de volume e diminuição de pressão.',
+                    'c) A transformação A -> B ocorre com aumento de temperatura e aumento de volume. Neste caso, o gás sofre uma expansão isobárica.',
+                    'd) A temperatura no estado C é menor que a temperatura no estado A.',
+                    'e) A transformação B -> C ocorre com diminuição de pressão e aumento de volume, na mesma proporção. Neste caso, o gás sofre uma expansão isotérmica.'
+                ],
+                resposta: [false, false, true, false, true]
+            },
+            {
+                id: 3,
+                titulo: 'Exercicio 04',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Um corpo tem capacidade de 2000 J de trabalho. Se o corpo tem uma velocidade inicial de 10 m/s, determine o trabalho realizado pelo corpo na velocidade 20 m/s.'
+                    },
+                    {
+                        tag: 'imagem',
+                        inner: Termodinamica0203.Figura4
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) A temperatura do gás aumentou, sua pressão diminui e seu volume aumentou.',
+                    'b) A energia cinética média das moléculas do gás não sofreu alteração.',
+                    'c) O gás sofre uma expansão isotérmica com diminuição de pressão.',
+                    'd) O gás sofre uma expansão isobárica com diminuição de temperatura.',
+                    'e) O gás está recebendo calor de uma fonte externa.'
+                ],
+                resposta: [false, false, true, false, false]
+            },
+            {
+                id: 4,
+                titulo: 'Exercicio 05',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Um determinada massa de gás sofre a transformação A -> B e, em seguida, a tranformação B -> C, conforme ilustrado no gráfico abaixo.'
+                    },
+                    {
+                        tag: 'imagem',
+                        inner: Termodinamica0203.Figura5
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) A transformação A -> B é uma expansão isobárica com aumento de temperatura.',
+                    'b) A transformação B -> C é uma expansão isotérmica pois o volume aumenta na mesma proporção da diminuição da pressão.',
+                    'c) A transformação A -> B é uma expansão isobárica com diminuição de temperatura.',
+                    'd) A transformação B -> C é uma expansão com diminuição de pressão e diminuição de temperatura.',
+                    'e) A transformação B -> C é uma expansão isotérmica pois o volume e a pressão aumentam.'
+                ],
+                resposta: [true, true, false, false, false]
+            }
+        ]
+    },
+    {
         id: 12,
         exercicios: [
             {
@@ -563,7 +904,7 @@ const atividades = [
                         tag: 'texto',
                         inner: 'A figura mostra um corpo sujeito a ação de duas forças. Determine, em notação vetorial, a força resultante sobre o corpo.'
                     },
-                    { tag: 'imagem', inner: Dinamica0202.Formula1 }
+                    { tag: 'imagem', inner: Dinamica0202.Figura1 }
                 ],
                 imagem: Dinamica0202.Image01,
                 estiloVars: 'vetores',
@@ -577,7 +918,7 @@ const atividades = [
                         tag: 'texto',
                         inner: 'A figura mostra um corpo sujeito a ação de duas forças. Determine, em notação vetorial, a força resultante sobre o corpo.'
                     },
-                    { tag: 'imagem', inner: Dinamica0202.Formula2 }
+                    { tag: 'imagem', inner: Dinamica0202.Figura2 }
                 ],
                 imagem: Dinamica0202.Image02,
                 estiloVars: 'vetores',
@@ -591,7 +932,7 @@ const atividades = [
                         tag: 'texto',
                         inner: 'A figura mostra um corpo sujeito a ação de duas forças. Determine, em notação vetorial, a força resultante sobre o corpo.'
                     },
-                    { tag: 'imagem', inner: Dinamica0202.Formula3 }
+                    { tag: 'imagem', inner: Dinamica0202.Figura3 }
                 ],
                 imagem: Dinamica0202.Image03,
                 estiloVars: 'vetores',
@@ -605,7 +946,7 @@ const atividades = [
                         tag: 'texto',
                         inner: 'A figura mostra um corpo sujeito a ação de três forças.'
                     },
-                    { tag: 'imagem', inner: Dinamica0202.Formula4 }
+                    { tag: 'imagem', inner: Dinamica0202.Figura4 }
                 ],
                 questoes: [
                     {
@@ -654,7 +995,7 @@ const atividades = [
                         tag: 'texto',
                         inner: 'A figura mostra um corpo sujeito a ação de um conjunto de forças.'
                     },
-                    { tag: 'imagem', inner: Dinamica0202.Formula5 }
+                    { tag: 'imagem', inner: Dinamica0202.Figura5 }
                 ],
                 questoes: [
                     {

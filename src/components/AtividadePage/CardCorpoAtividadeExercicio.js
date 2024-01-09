@@ -4,6 +4,7 @@ import CardCorpoAtividadeExercicioQuantidade from './CardCorpoAtividadeExercicio
 import CardCorpoAtividadeExercicioDicotomica from './CardCorpoAtividadeExercicioDicotomica';
 import CardCorpoAtividadeExercicioDoisValores from './CardCorpoAtividadeExercicioDoisValores';
 import { UncontrolledAlert } from 'reactstrap';
+import CardCorpoAtividadeExercicioSelecionar from './CardCorpoAtividadeExercicioSelecionar';
 
 /**
  * Renders a card for an exercise activity.
@@ -13,34 +14,47 @@ import { UncontrolledAlert } from 'reactstrap';
  */
 const CardCorpoAtividadeExercicio = ({ content }) => {
     const choice = iframe => {
-        switch (typeof iframe.resposta) {
-            case 'number':
-                return (
-                    <CardCorpoAtividadeExercicioQuantidade
-                        id={iframe.id}
-                        imagem={iframe.imagem}
-                        estiloVars={iframe.estiloVars}
-                        resposta={iframe.resposta}
-                    />
-                );
-            case 'boolean':
-                return (
-                    <CardCorpoAtividadeExercicioDicotomica
-                        resposta={iframe.resposta}
-                        comentarios={iframe.comentarios}
-                    />
-                );
-            case 'object':
-                return (
-                    <CardCorpoAtividadeExercicioDoisValores
-                        id={iframe.id}
-                        imagem={iframe.imagem}
-                        estiloVars={iframe.estiloVars}
-                        resposta={iframe.resposta}
-                    />
-                );
-            default:
-                return null;
+        if (typeof iframe.resposta === 'number') {
+            return (
+                <CardCorpoAtividadeExercicioQuantidade
+                    id={iframe.id}
+                    imagem={iframe.imagem}
+                    estiloVars={iframe.estiloVars}
+                    resposta={iframe.resposta}
+                />
+            );
+        } else if (typeof iframe.resposta === 'boolean') {
+            return (
+                <CardCorpoAtividadeExercicioDicotomica
+                    resposta={iframe.resposta}
+                    comentarios={iframe.comentarios}
+                />
+            );
+        } else if (
+            typeof iframe.resposta === 'object' &&
+            iframe.resposta.length === 2
+        ) {
+            return (
+                <CardCorpoAtividadeExercicioDoisValores
+                    id={iframe.id}
+                    imagem={iframe.imagem}
+                    estiloVars={iframe.estiloVars}
+                    resposta={iframe.resposta}
+                />
+            );
+        } else if (
+            typeof iframe.resposta === 'object' &&
+            iframe.resposta.length > 2
+        ) {
+            return (
+                <CardCorpoAtividadeExercicioSelecionar
+                    id={iframe.id}
+                    label={iframe.label}
+                    resposta={iframe.resposta}
+                />
+            );
+        } else {
+            return null;
         }
     };
 

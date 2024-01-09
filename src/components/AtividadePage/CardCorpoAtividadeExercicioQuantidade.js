@@ -4,8 +4,8 @@ import styles from '../../styles/exercicioQuantidade.module.css';
 
 const posicoes = {
     comum: {
-        x1: 118,
-        y1: 22,
+        x1: 120,
+        y1: 25,
         xbtn: 60,
         ybtn: 90,
         xM: 110,

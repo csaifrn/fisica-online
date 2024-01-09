@@ -190,6 +190,39 @@ const dados = [
         },
         pagina: { proxima: null, anterior: 22 },
         parentPageId: 13
+    },
+    {
+        id: 24,
+        titulo: 'Lista 01',
+        segmento: 'lista01',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: 25, anterior: null },
+        parentPageId: 18
+    },
+    {
+        id: 25,
+        titulo: 'Lista 02',
+        segmento: 'lista02',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: 26, anterior: 24 },
+        parentPageId: 18
+    },
+    {
+        id: 26,
+        titulo: 'Lista 03',
+        segmento: 'lista03',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: null, anterior: 25 },
+        parentPageId: 18
     }
 ];
 

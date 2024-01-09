@@ -1,0 +1,31 @@
+.alternativa {
+    font-family: "Open Sans", sans-serif;	
+    margin: 20px 15px;
+    font-size: 17px;
+    line-height: 1.4;
+    text-align: justify;
+    user-select: none;
+}
+  
+.saida{	
+    margin-top:0;	
+    border: none;   	
+    font-weight: bold;
+    background: transparent;	
+    padding: 5px 10px;	
+    width:180px;
+    font-size: 18px;
+    text-align: left;	
+    color:#008080;
+}
+  
+.selecao{
+    width:25px;
+    height:25px;
+    margin-top:0;
+    position:relative;
+    top:5px;
+    left:-5px;
+    margin-left:10px;
+    padding-right:20px;
+}  
