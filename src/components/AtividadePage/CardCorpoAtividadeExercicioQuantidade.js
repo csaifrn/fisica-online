@@ -16,6 +16,20 @@ const posicoes = {
         y1a() {
             return this.y1 + 10;
         }
+    },
+    comum2: {
+        x1: 100,
+        y1: 25,
+        xbtn: 60,
+        ybtn: 90,
+        xM: 110,
+        yM: 60,
+        x1a() {
+            return this.x1 + 180;
+        },
+        y1a() {
+            return this.y1 + 0;
+        }
     }
 };
 

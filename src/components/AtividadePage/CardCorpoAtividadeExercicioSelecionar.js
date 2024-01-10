@@ -43,7 +43,7 @@ const CardCorpoAtividadeExercicioSelecionar = ({ id, label, resposta }) => {
                 <span></span>
             </p>
             <input
-                className="btnConfirmar"
+                className="btnQ5"
                 type="button"
                 value="Confirmar"
                 onClick={validar}

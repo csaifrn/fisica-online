@@ -248,7 +248,7 @@ const dados = [
     },
     {
         id: 29,
-        titulo: 'Gases (03)',
+        titulo: 'Primeira Lei da Termodinâmica (2)',
         segmento: 'texto05',
         autor: {
             nome: 'Geraldo Felipe',
@@ -256,6 +256,28 @@ const dados = [
         },
         pagina: { proxima: null, anterior: 20 },
         parentPageId: 16
+    },
+    {
+        id: 30,
+        titulo: 'Lista 01',
+        segmento: 'lista01',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: 31, anterior: null },
+        parentPageId: 15
+    },
+    {
+        id: 31,
+        titulo: 'Lista 02',
+        segmento: 'lista02',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: null, anterior: 30 },
+        parentPageId: 15
     }
 ];
 

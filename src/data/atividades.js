@@ -3,6 +3,8 @@ import * as Calorimetria0102 from '../assets/calorimetria01/lista02';
 import * as Calorimetria0103 from '../assets/calorimetria01/lista03';
 import * as Calorimetria0201 from '../assets/calorimetria02/lista01';
 import * as Calorimetria0202 from '../assets/calorimetria02/lista02';
+import * as Calorimetria0401 from '../assets/calorimetria04/lista01';
+import * as Calorimetria0402 from '../assets/calorimetria04/lista02';
 import * as Termodinamica0201 from '../assets/termodinamica02/lista01';
 import * as Termodinamica0202 from '../assets/termodinamica02/lista02';
 import * as Termodinamica0203 from '../assets/termodinamica02/lista03';
@@ -16,7 +18,7 @@ const atividades = [
         exercicios: [
             {
                 id: 1,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         tag: 'texto',
@@ -33,7 +35,7 @@ const atividades = [
             },
             {
                 id: 2,
-                titulo: 'Exercicio 02',
+                titulo: 'Exercício 02',
                 descricao: [
                     {
                         tag: 'texto',
@@ -46,7 +48,7 @@ const atividades = [
             },
             {
                 id: 3,
-                titulo: 'Exercicio 03',
+                titulo: 'Exercício 03',
                 descricao: [
                     {
                         tag: 'texto',
@@ -63,7 +65,7 @@ const atividades = [
             },
             {
                 id: 4,
-                titulo: 'Exercicio 04',
+                titulo: 'Exercício 04',
                 descricao: [
                     {
                         tag: 'texto',
@@ -80,7 +82,7 @@ const atividades = [
             },
             {
                 id: 5,
-                titulo: 'Exercicio 05',
+                titulo: 'Exercício 05',
                 descricao: [
                     {
                         tag: 'texto',
@@ -110,7 +112,7 @@ const atividades = [
         exercicios: [
             {
                 id: 1,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         tag: 'texto',
@@ -123,7 +125,7 @@ const atividades = [
             },
             {
                 id: 2,
-                titulo: 'Exercicio 02',
+                titulo: 'Exercício 02',
                 descricao: [
                     {
                         tag: 'texto',
@@ -136,7 +138,7 @@ const atividades = [
             },
             {
                 id: 3,
-                titulo: 'Exercicio 03',
+                titulo: 'Exercício 03',
                 descricao: [
                     {
                         tag: 'texto',
@@ -149,7 +151,7 @@ const atividades = [
             },
             {
                 id: 4,
-                titulo: 'Exercicio 04',
+                titulo: 'Exercício 04',
                 descricao: [
                     {
                         tag: 'texto',
@@ -166,7 +168,7 @@ const atividades = [
             },
             {
                 id: 5,
-                titulo: 'Exercicio 05',
+                titulo: 'Exercício 05',
                 descricao: [
                     {
                         tag: 'texto',
@@ -184,7 +186,7 @@ const atividades = [
             },
             {
                 id: 6,
-                titulo: 'Exercicio 06',
+                titulo: 'Exercício 06',
                 descricao: [
                     {
                         tag: 'texto',
@@ -207,7 +209,7 @@ const atividades = [
         exercicios: [
             {
                 id: 1,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         tag: 'texto',
@@ -228,7 +230,7 @@ const atividades = [
             },
             {
                 id: 2,
-                titulo: 'Exercicio 02',
+                titulo: 'Exercício 02',
                 descricao: [
                     {
                         tag: 'texto',
@@ -249,7 +251,7 @@ const atividades = [
             },
             {
                 id: 3,
-                titulo: 'Exercicio 03',
+                titulo: 'Exercício 03',
                 descricao: [
                     {
                         tag: 'texto',
@@ -270,7 +272,7 @@ const atividades = [
             },
             {
                 id: 4,
-                titulo: 'Exercicio 04',
+                titulo: 'Exercício 04',
                 descricao: [
                     {
                         tag: 'texto',
@@ -292,7 +294,7 @@ const atividades = [
         exercicios: [
             {
                 id: 1,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         tag: 'texto',
@@ -309,7 +311,7 @@ const atividades = [
             },
             {
                 id: 2,
-                titulo: 'Exercicio 02',
+                titulo: 'Exercício 02',
                 descricao: [
                     {
                         tag: 'texto',
@@ -326,7 +328,7 @@ const atividades = [
             },
             {
                 id: 3,
-                titulo: 'Exercicio 03',
+                titulo: 'Exercício 03',
                 descricao: [
                     {
                         tag: 'texto',
@@ -343,7 +345,7 @@ const atividades = [
             },
             {
                 id: 4,
-                titulo: 'Exercicio 04',
+                titulo: 'Exercício 04',
                 descricao: [
                     {
                         tag: 'texto',
@@ -360,7 +362,7 @@ const atividades = [
             },
             {
                 id: 5,
-                titulo: 'Exercicio 05',
+                titulo: 'Exercício 05',
                 descricao: [
                     {
                         tag: 'texto',
@@ -386,7 +388,7 @@ const atividades = [
         exercicios: [
             {
                 id: 1,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         tag: 'texto',
@@ -402,12 +404,12 @@ const atividades = [
                     }
                 ],
                 imagem: Calorimetria0202.Image01,
-                estiloVars: 'comum',
+                estiloVars: 'comum2',
                 resposta: 0.2
             },
             {
                 id: 2,
-                titulo: 'Exercicio 02',
+                titulo: 'Exercício 02',
                 descricao: [
                     {
                         tag: 'texto',
@@ -428,7 +430,7 @@ const atividades = [
             },
             {
                 id: 3,
-                titulo: 'Exercicio 03',
+                titulo: 'Exercício 03',
                 descricao: [
                     {
                         tag: 'texto',
@@ -449,7 +451,7 @@ const atividades = [
             },
             {
                 id: 4,
-                titulo: 'Exercicio 04',
+                titulo: 'Exercício 04',
                 descricao: [
                     {
                         tag: 'texto',
@@ -462,18 +464,34 @@ const atividades = [
                     {
                         tag: 'imagem',
                         inner: Calorimetria0202.Figura3
-                    },
-                    {
-                        tag: 'linha'
-                    },
-                    {
-                        tag: 'texto',
-                        inner: 'Calcule o calor específico da substância da qual o corpo A é constituído.'
                     }
                 ],
-                imagem: Calorimetria0202.Image04a,
-                estiloVars: 'comum',
-                resposta: 0.2
+                questoes: [
+                    {
+                        id: 0,
+                        descricao: [
+                            {
+                                tag: 'texto',
+                                inner: 'Calcule o calor específico da substância da qual o corpo A é constituído.'
+                            }
+                        ],
+                        imagem: Calorimetria0202.Image04a,
+                        estiloVars: 'comum2',
+                        resposta: 0.2
+                    },
+                    {
+                        id: 1,
+                        descricao: [
+                            {
+                                tag: 'texto',
+                                inner: 'Calcule o calor específico da substância da qual o corpo B é constituído.'
+                            }
+                        ],
+                        imagem: Calorimetria0202.Image04a,
+                        estiloVars: 'comum2',
+                        resposta: 0.2
+                    }
+                ]
             }
         ]
     },
@@ -482,7 +500,7 @@ const atividades = [
         exercicios: [
             {
                 id: 0,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         tag: 'texto',
@@ -497,7 +515,7 @@ const atividades = [
             },
             {
                 id: 1,
-                titulo: 'Exercicio 02',
+                titulo: 'Exercício 02',
                 descricao: [
                     {
                         tag: 'texto',
@@ -512,7 +530,7 @@ const atividades = [
             },
             {
                 id: 2,
-                titulo: 'Exercicio 03',
+                titulo: 'Exercício 03',
                 descricao: [
                     {
                         tag: 'texto',
@@ -527,7 +545,7 @@ const atividades = [
             },
             {
                 id: 3,
-                titulo: 'Exercicio 04',
+                titulo: 'Exercício 04',
                 descricao: [
                     {
                         tag: 'texto',
@@ -542,7 +560,7 @@ const atividades = [
             },
             {
                 id: 4,
-                titulo: 'Exercicio 05',
+                titulo: 'Exercício 05',
                 descricao: [
                     {
                         tag: 'texto',
@@ -562,7 +580,7 @@ const atividades = [
         exercicios: [
             {
                 id: 0,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         tag: 'texto',
@@ -575,7 +593,7 @@ const atividades = [
             },
             {
                 id: 1,
-                titulo: 'Exercicio 02',
+                titulo: 'Exercício 02',
                 descricao: [
                     {
                         tag: 'texto',
@@ -588,7 +606,7 @@ const atividades = [
             },
             {
                 id: 2,
-                titulo: 'Exercicio 03',
+                titulo: 'Exercício 03',
                 descricao: [
                     {
                         tag: 'texto',
@@ -601,7 +619,7 @@ const atividades = [
             },
             {
                 id: 3,
-                titulo: 'Exercicio 04',
+                titulo: 'Exercício 04',
                 descricao: [
                     {
                         tag: 'texto',
@@ -614,7 +632,7 @@ const atividades = [
             },
             {
                 id: 4,
-                titulo: 'Exercicio 05',
+                titulo: 'Exercício 05',
                 descricao: [
                     {
                         tag: 'texto',
@@ -637,7 +655,7 @@ const atividades = [
         exercicios: [
             {
                 id: 0,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         tag: 'texto',
@@ -655,7 +673,7 @@ const atividades = [
             },
             {
                 id: 1,
-                titulo: 'Exercicio 02',
+                titulo: 'Exercício 02',
                 descricao: [
                     {
                         tag: 'texto',
@@ -673,7 +691,7 @@ const atividades = [
             },
             {
                 id: 2,
-                titulo: 'Exercicio 03',
+                titulo: 'Exercício 03',
                 descricao: [
                     {
                         tag: 'texto',
@@ -710,7 +728,7 @@ const atividades = [
             },
             {
                 id: 3,
-                titulo: 'Exercicio 04',
+                titulo: 'Exercício 04',
                 descricao: [
                     {
                         tag: 'texto',
@@ -728,7 +746,7 @@ const atividades = [
             },
             {
                 id: 4,
-                titulo: 'Exercicio 05',
+                titulo: 'Exercício 05',
                 descricao: [
                     {
                         tag: 'texto',
@@ -774,7 +792,7 @@ const atividades = [
         exercicios: [
             {
                 id: 0,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         tag: 'texto',
@@ -797,7 +815,7 @@ const atividades = [
             },
             {
                 id: 1,
-                titulo: 'Exercicio 02',
+                titulo: 'Exercício 02',
                 descricao: [
                     {
                         tag: 'texto',
@@ -820,7 +838,7 @@ const atividades = [
             },
             {
                 id: 2,
-                titulo: 'Exercicio 03',
+                titulo: 'Exercício 03',
                 descricao: [
                     {
                         tag: 'texto',
@@ -843,7 +861,7 @@ const atividades = [
             },
             {
                 id: 3,
-                titulo: 'Exercicio 04',
+                titulo: 'Exercício 04',
                 descricao: [
                     {
                         tag: 'texto',
@@ -869,7 +887,7 @@ const atividades = [
             },
             {
                 id: 4,
-                titulo: 'Exercicio 05',
+                titulo: 'Exercício 05',
                 descricao: [
                     {
                         tag: 'texto',
@@ -900,7 +918,7 @@ const atividades = [
         exercicios: [
             {
                 id: 0,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         tag: 'texto',
@@ -914,7 +932,7 @@ const atividades = [
             },
             {
                 id: 1,
-                titulo: 'Exercicio 02',
+                titulo: 'Exercício 02',
                 descricao: [
                     {
                         tag: 'texto',
@@ -928,7 +946,7 @@ const atividades = [
             },
             {
                 id: 2,
-                titulo: 'Exercicio 03',
+                titulo: 'Exercício 03',
                 descricao: [
                     {
                         tag: 'texto',
@@ -942,7 +960,7 @@ const atividades = [
             },
             {
                 id: 3,
-                titulo: 'Exercicio 04',
+                titulo: 'Exercício 04',
                 descricao: [
                     {
                         tag: 'texto',
@@ -979,7 +997,7 @@ const atividades = [
             },
             {
                 id: 4,
-                titulo: 'Exercicio 05',
+                titulo: 'Exercício 05',
                 descricao: [
                     {
                         tag: 'texto',
@@ -1002,7 +1020,7 @@ const atividades = [
         exercicios: [
             {
                 id: 0,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         tag: 'texto',
@@ -1025,7 +1043,7 @@ const atividades = [
             },
             {
                 id: 1,
-                titulo: 'Exercicio 02',
+                titulo: 'Exercício 02',
                 descricao: [
                     {
                         tag: 'texto',
@@ -1048,7 +1066,7 @@ const atividades = [
             },
             {
                 id: 2,
-                titulo: 'Exercicio 03',
+                titulo: 'Exercício 03',
                 descricao: [
                     {
                         tag: 'texto',
@@ -1071,7 +1089,7 @@ const atividades = [
             },
             {
                 id: 3,
-                titulo: 'Exercicio 04',
+                titulo: 'Exercício 04',
                 descricao: [
                     {
                         tag: 'texto',
@@ -1094,7 +1112,7 @@ const atividades = [
             },
             {
                 id: 4,
-                titulo: 'Exercicio 05',
+                titulo: 'Exercício 05',
                 descricao: [
                     {
                         tag: 'texto',
@@ -1118,11 +1136,217 @@ const atividades = [
         ]
     },
     {
+        id: 30,
+        exercicios: [
+            {
+                id: 0,
+                titulo: 'Exercício 01',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, apenas as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) Calor é uma grandeza física associada ao grau de agitação térmica das moléculas do corpo.',
+                    'b) Dois corpos A e B, com diferentes temperaturas, se postos em contato térmico, trocam temperatura entre si.',
+                    'c) A temperatura de um corpo é uma grandeza física associada ao grau de agitação térmica das moléculas do corpo.',
+                    'd) Calor é um conceito físico associado a quão quente ou frio está um corpo.',
+                    'e) Calor é energia térmica que flui entre dois corpos que estão a diferentes temperaturas.'
+                ],
+                resposta: [false, false, true, false, true]
+            },
+            {
+                id: 1,
+                titulo: 'Exercício 02',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Uma pessoa segura uma copo de vidro contendo água bem gelada.'
+                    },
+                    { tag: 'imagem', inner: Calorimetria0401.Figura1 },
+                    {
+                        tag: 'texto',
+                        inner: 'Neste caso, é correto afirmar que:'
+                    }
+                ],
+                label: [
+                    'a) a pessoa perde temperatura para o copo.',
+                    'b) há um fluxo de calor do copo para a mão da pessoa.',
+                    'c) há transferência de frio do copo para a mão da pessoa.',
+                    'd) há um fluxo de calor da mão da pessoa para o copo.',
+                    'e) há um fluxo de temperatura da mão da pessoa para o copo.'
+                ],
+                resposta: [false, false, false, true, false]
+            },
+            {
+                id: 2,
+                titulo: 'Exercício 03',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Uma pessoa põe um ovo cozido, ainda quente, em uma vasilha com água fria.'
+                    },
+                    { tag: 'imagem', inner: Calorimetria0401.Figura2 },
+                    {
+                        tag: 'texto',
+                        inner: 'Para esse sistema, são feitas 5 afirmações. Selecione apenas as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) O ovo irá perder temperatura e a água irá ganhar temperatura.',
+                    'b) A energia cinética média das moléculas do ovo irá diminuir, enquanto a energia cinética média das moléculas da água irá aumentar, até que o equilíbrio térmico seja atingido.',
+                    'c) Haverá uma transferência de temperatura do ovo para a água.',
+                    'd) Haverá uma transferência de frio da água para o ovo.',
+                    'e) Haverá uma transferência de calor do ovo para a água, até que o equilíbrio térmico seja atingido.'
+                ],
+                resposta: [false, true, false, false, true]
+            },
+            {
+                id: 3,
+                titulo: 'Exercício 04',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Considere dois copos idênticos, A e B. O copo A tem 100 ml de água e o corpo B tem 300 ml de água. A temperatura da água é de 25 °C em ambos os copos.'
+                    },
+                    { tag: 'imagem', inner: Calorimetria0401.Figura3 },
+                    {
+                        tag: 'texto',
+                        inner: 'Para esse sistema, são feitas 5 afirmações. Selecione apenas as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) O grau de agitação das moléculas de água é maior no copo B.',
+                    'b) A energia cinética média das moléculas da água é maior no copo B.',
+                    'c) A quantidade de moléculas é maior no copo B.',
+                    'd) As moléculas apresentam a mesma energia cinética média, em ambos os copos.',
+                    'e) Misturando lentamente estes volumes de água, obtemos 400 ml de água a uma temperatura de 25 °C.'
+                ],
+                resposta: [false, false, true, true, true]
+            }
+        ]
+    },
+    {
+        id: 31,
+        exercicios: [
+            {
+                id: 0,
+                titulo: 'Exercício 01',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as opções abaixo, apenas as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) Se um corpo tem capacidade térmica de 500 cal/°C, então ele precisa receber 500 cal para que sua temperatura aumenta 1 °C.',
+                    'b) Se um corpo tem capacidade térmica de 230 cal/°C, então ele precisa ceder 230 cal para que sua temperatura diminua 1 °C.',
+                    'c) Quanto maior a capacidade térmica de um corpo, maior a quantidade de energia necessária para variar sua temperatura em 1 °C.',
+                    'd) Quanto menor a capacidade térmica de um corpo, menor a quantidade de energia necessária para variar sua temperatura em 1 °C.',
+                    'e) Podemos entender que, quanto menor a capacidade térmica de um corpo, mais “difícil” variar sua temperatura.'
+                ],
+                resposta: [true, true, true, true, false]
+            },
+            {
+                id: 1,
+                titulo: 'Exercício 02',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Considere dois corpos A e B. O corpo A tem capacidade térmica 800 cal/°C e o corpo B tem capacidade térmica 500 cal/° C.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Sobre o comportamento térmico destes dois corpos são feitas 5 afirmações. Selecione apenas as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) Se uma mesma quantidade de calor é fornecida aos dois corpos, o corpo A apresenta menor variação de temperatura.',
+                    'b) Se os dois corpos cedem uma mesma quantidade de calor para o ambiente, o corpo B apresenta menor variação de temperatura.',
+                    'c) Se o corpo A recebe 1000 cal de fonte térmica, sua temperatura aumenta 0,8 °C.',
+                    'd) Se o corpo B recebe 1000 cal de fonte térmica, sua temperatura aumenta 2 °C.',
+                    'e) Se o corpo B recebe 1000 cal de fonte térmica, sua temperatura aumenta 0,5 °C.'
+                ],
+                resposta: [true, false, false, true, false]
+            },
+            {
+                id: 2,
+                titulo: 'Exercício 03',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da temperatura de dois corpos, A e B, em função do tempo, considerando que os corpos recebem calor de uma fonte térmica de potência útil constante.'
+                    },
+                    { tag: 'imagem', inner: Calorimetria0402.Figura1 },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, apenas as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) Os corpos recebem a mesma quantidade de calor e o corpo A apresenta maior variação de temperatura.',
+                    'b) Os corpos apresentam a mesma variação de temperatura e o corpo B recebe maior quantidade de calor.',
+                    'c) Os corpos apresentam a mesma variação de temperatura e recebem a mesma quantidade de calor.',
+                    'd) O corpo A apresenta maior capacidade térmica que o corpo B.',
+                    'e) Os corpos apresentam a mesma capacidade térmica.'
+                ],
+                resposta: [false, false, true, false, true]
+            },
+            {
+                id: 3,
+                titulo: 'Exercício 04',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da temperatura de dois corpos, A e B, em função do tempo, considerando que os corpos recebem calor de uma fonte térmica de potência útil constante.'
+                    },
+                    { tag: 'imagem', inner: Calorimetria0402.Figura2 },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, apenas as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) Os corpos recebem a mesma quantidade de calor e o corpo A apresenta maior variação de temperatura.',
+                    'b) Os corpos apresentam a mesma variação de temperatura e o corpo B recebe maior quantidade de calor.',
+                    'c) Os corpos apresentam a mesma variação de temperatura e recebem a mesma quantidade de calor.',
+                    'd) O corpo A apresenta menor capacidade térmica que o corpo B.',
+                    'e) Os corpos apresentam a mesma capacidade térmica, pois recebem a mesma quantidade de calor.'
+                ],
+                resposta: [true, false, false, true, false]
+            },
+            {
+                id: 4,
+                titulo: 'Exercício 05',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'A figura ilustra a interação térmica entre dois corpos A e B.'
+                    },
+                    { tag: 'imagem', inner: Calorimetria0402.Figura3 },
+                    {
+                        tag: 'texto',
+                        inner: 'Analise a figura e, entre as afirmações abaixo, selecione apenas as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) A capacidade térmica do corpo B é maior que a capacidade térmica do corpo A.',
+                    'b) Os corpos A e B trocam a mesma quantidade de calor.',
+                    'c) A variação de temperatura do corpo A é maior que a variação de temperatura do corpo B.',
+                    'd) A figura está errada, pois a quantidade de temperatura que o corpo A perde é menor que a quantidade de temperatura que o corpo B ganha, e deveria ser igual.',
+                    'e) A capacidade térmica do corpo A é maior que a capacidade térmica do corpo B.'
+                ],
+                resposta: [false, true, false, false, true]
+            }
+        ]
+    },
+    {
         id: 12,
         exercicios: [
             {
                 id: 0,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         tag: 'texto',
@@ -1136,7 +1360,7 @@ const atividades = [
             },
             {
                 id: 1,
-                titulo: 'Exercicio 02',
+                titulo: 'Exercício 02',
                 descricao: [
                     {
                         tag: 'texto',
@@ -1150,7 +1374,7 @@ const atividades = [
             },
             {
                 id: 2,
-                titulo: 'Exercicio 03',
+                titulo: 'Exercício 03',
                 descricao: [
                     {
                         tag: 'texto',
@@ -1164,7 +1388,7 @@ const atividades = [
             },
             {
                 id: 3,
-                titulo: 'Exercicio 04',
+                titulo: 'Exercício 04',
                 descricao: [
                     {
                         tag: 'texto',
@@ -1213,7 +1437,7 @@ const atividades = [
             },
             {
                 id: 7,
-                titulo: 'Exercicio 05',
+                titulo: 'Exercício 05',
                 descricao: [
                     {
                         tag: 'texto',
@@ -1276,7 +1500,7 @@ atividades['dinamica'] = [
         exercicios: [
             {
                 id: 0,
-                titulo: 'Exercicio 01',
+                titulo: 'Exercício 01',
                 descricao: [
                     {
                         data: 'Um corpo de massa 40 kg está em repouso sobre uma mesa, conforme mostrado na figura.'
