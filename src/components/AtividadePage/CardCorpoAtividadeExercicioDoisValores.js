@@ -25,6 +25,28 @@ const posicoes = {
             return this.y2 - 5;
         }
     },
+    cientifica2: {
+        x1: 90,
+        y1: 40,
+        x2: 200,
+        y2: 25,
+        xbtn: 60,
+        ybtn: 100,
+        xM: 110,
+        yM: 80,
+        x1a() {
+            return this.x1 + 60;
+        },
+        y1a() {
+            return this.y1 - 10;
+        },
+        x2a() {
+            return this.x2 + 50;
+        },
+        y2a() {
+            return this.y2 - 10;
+        }
+    },
     vetores: {
         x1: 75,
         y1: 35,
@@ -155,8 +177,9 @@ const CardCorpoAtividadeExercicioDoisValores = ({
                     placeholder="0"
                     id={`r${id}a1`}
                     maxLength={3}
+                    step="any"
                     value={valor1}
-                    onChange={e => setValor1(parseInt(e.target.value))}
+                    onChange={e => setValor1(parseFloat(e.target.value))}
                 />
                 <input
                     className={styles.caixatxt}
@@ -166,8 +189,9 @@ const CardCorpoAtividadeExercicioDoisValores = ({
                     placeholder="0"
                     id={`r${id}a2`}
                     maxLength={3}
+                    step="any"
                     value={valor2}
-                    onChange={e => setValor2(parseInt(e.target.value))}
+                    onChange={e => setValor2(parseFloat(e.target.value))}
                 />
                 <input
                     className="button button1"

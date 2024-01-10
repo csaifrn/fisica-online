@@ -104,7 +104,7 @@ const CardCorpoAtividadeExercicioQuantidade = ({
                     maxLength={3}
                     placeholder="0"
                     value={answer}
-                    step={0.01}
+                    step="any"
                     onChange={e => setAnswer(parseFloat(e.target.value))}
                 />
                 <input

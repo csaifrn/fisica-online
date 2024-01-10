@@ -6,6 +6,8 @@ import * as Calorimetria0202 from '../assets/calorimetria02/lista02';
 import * as Termodinamica0201 from '../assets/termodinamica02/lista01';
 import * as Termodinamica0202 from '../assets/termodinamica02/lista02';
 import * as Termodinamica0203 from '../assets/termodinamica02/lista03';
+import * as Termodinamica0301 from '../assets/termodinamica03/lista01';
+import * as Termodinamica0302 from '../assets/termodinamica03/lista02';
 import * as Dinamica0202 from '../assets/dinamica02/lista02';
 
 const atividades = [
@@ -899,9 +901,219 @@ const atividades = [
             {
                 id: 0,
                 titulo: 'Exercicio 01',
-                imagem: Dinamica0202.Image01,
-                estiloVars: 'vetores',
-                resposta: [0, 0]
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico mostra o comportamento da pressão de um gás ideal em função do seu volume, em uma transformação <b>A -&gt; B</b>. Calcule o trabalho realizado neste processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0301.Figura1 }
+                ],
+                imagem: Termodinamica0301.Image01,
+                estiloVars: 'cientifica2',
+                resposta: [7.5, 5]
+            },
+            {
+                id: 1,
+                titulo: 'Exercicio 02',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico mostra o comportamento da pressão de um gás ideal em função do seu volume, em uma transformação <b>A -&gt; B</b>. Calcule o trabalho realizado neste processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0301.Figura2 }
+                ],
+                imagem: Termodinamica0301.Image02,
+                estiloVars: 'cientifica2',
+                resposta: [-1, 6]
+            },
+            {
+                id: 2,
+                titulo: 'Exercicio 03',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico mostra o comportamento da pressão de um gás ideal em função do seu volume, em uma transformação <b>A -&gt; B</b>. Calcule o trabalho realizado neste processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0301.Figura3 }
+                ],
+                imagem: Termodinamica0301.Image03,
+                estiloVars: 'comum',
+                resposta: 0
+            },
+            {
+                id: 3,
+                titulo: 'Exercicio 04',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico mostra o comportamento da pressão de um gás ideal em função da sua temperatura, em uma transformação <b>A -&gt; B</b>.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0301.Figura4 }
+                ],
+                questoes: [
+                    {
+                        id: 0,
+                        descricao: [
+                            {
+                                tag: 'texto',
+                                inner: 'a) Sabendo que no estado A o volume do gás é de 0,25 m³, calcule a variação de volume entre os estados A e B.'
+                            }
+                        ],
+                        imagem: Termodinamica0301.Image04,
+                        estiloVars: 'comum',
+                        resposta: 0
+                    },
+                    {
+                        id: 1,
+                        descricao: [
+                            {
+                                tag: 'texto',
+                                inner: 'b) Calcule o trabalho realizado neste processo.'
+                            }
+                        ],
+                        imagem: Termodinamica0301.Image05,
+                        estiloVars: 'comum',
+                        resposta: 0
+                    }
+                ]
+            },
+            {
+                id: 4,
+                titulo: 'Exercicio 05',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico mostra o comportamento da pressão de um gás ideal em função do seu volume, para as transformações <b>A -&gt; B</b>,  <b>B -&gt; C</b>,  <b>C -&gt; D</b> e  <b>D -&gt; A</b>.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0301.Figura5 },
+                    {
+                        tag: 'texto',
+                        inner: 'Calcule o trabalho realizado em cada uma dessas transformações.'
+                    }
+                ],
+                imagem: Termodinamica0301.Image06,
+                estiloVars: 'comum',
+                resposta: 0
+            }
+        ]
+    },
+    {
+        id: 28,
+        exercicios: [
+            {
+                id: 0,
+                titulo: 'Exercicio 01',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da pressão de um gás ideal em função do seu volume, entre dois estados, A e B. A massa do gás permanece constante durante este processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0302.Figura1 },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) O gás sofre uma expansão isobárica.',
+                    'b) O gás realiza trabalho sobre o ambiente externo.',
+                    'c) Na transformação A->B o trabalho é positivo.',
+                    'd) A temperatura do gás diminuiu.',
+                    'e) A temperatura do gás aumentou.'
+                ],
+                resposta: [true, true, true, false, true]
+            },
+            {
+                id: 1,
+                titulo: 'Exercicio 02',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da pressão de um gás ideal em função do seu volume, entre dois estados, A e B. A massa do gás permanece constante durante este processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0302.Figura2 },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) O gás sofre uma compressão isobárica.',
+                    'b) O gás realiza trabalho sobre o ambiente externo.',
+                    'c) O gás sofre uma expansão isobárica.',
+                    'd) Um trabalho é realizado sobre o gás.',
+                    'e) O gás cedeu calor para o ambiente.'
+                ],
+                resposta: [true, false, false, true, true]
+            },
+            {
+                id: 2,
+                titulo: 'Exercicio 03',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da pressão de um gás ideal em função do seu volume, entre dois estados, A e B. A massa do gás permanece constante durante este processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0302.Figura3 },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) O gás sofre uma expansão isobárica, realizando um trabalho sobre o ambiente externo.',
+                    'b) O gás sofre uma compressão isobárica, e o ambiente externo realiza um trabalho sobre o gás.',
+                    'c) O gás sofre uma expansão isobárica, e o ambiente externo realiza um trabalho sobre o gás.',
+                    'd) O trabalho realizado nesta transformação é nulo.',
+                    'e) A temperatura do gás aumentou e o gás recebeu calor do ambiente.'
+                ],
+                resposta: [false, false, false, true, true]
+            },
+            {
+                id: 3,
+                titulo: 'Exercicio 04',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra o comportamento da pressão de um gás ideal em função da sua temperatura, entre dois estados, A e B. A massa do gás permanece constante durante este processo.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0302.Figura4 },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) Nesta transformação o trabalho é nulo e o gás recebe calor do ambiente.',
+                    'b) Nesta transformação o trabalho é positivo e o gás recebe calor do ambiente.',
+                    'c) Nesta transformação o trabalho é negativo e o gás cede calor do ambiente.',
+                    'd) É uma transformação isométrica.',
+                    'e) É uma transformação isobárica.'
+                ],
+                resposta: [true, false, false, true, false]
+            },
+            {
+                id: 4,
+                titulo: 'Exercicio 05',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico representa o comportamento da pressão de um gás ideal em função do seu volume, em quatro transformações.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0302.Figura5 },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) Em módulo, W(B->C) = W(D->A).',
+                    'b) Em módulo, W(B->C) > W(D->A).',
+                    'c) Nas transformações A -> B e C -> D o trabalho é nulo, pois a transformação é isométrica.',
+                    'd) Na transformação A -> B o trabalho é positivo e na transformação C -> D o trabalho é negativo.',
+                    'e) Na transformação B -> C o trabalho é positivo, pois o volume aumenta, e na transformação D -> A o trabalho é negativo, pois o volume diminui.'
+                ],
+                resposta: [false, true, true, false, true]
             }
         ]
     },
