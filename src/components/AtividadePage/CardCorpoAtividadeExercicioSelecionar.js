@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import '../../styles/exercicioSelecionar.css';
+import style from '../../styles/exercicioSelecionar.module.css';
 
 const CardCorpoAtividadeExercicioSelecionar = ({ id, label, resposta }) => {
     const refs = [
@@ -28,7 +28,7 @@ const CardCorpoAtividadeExercicioSelecionar = ({ id, label, resposta }) => {
                 <p className="esp10" key={index}>
                     <label>
                         <input
-                            className="selecao"
+                            className={style.selecao}
                             type="checkbox"
                             id={`r${id}o${index}`}
                             ref={refs[index]}
@@ -49,7 +49,7 @@ const CardCorpoAtividadeExercicioSelecionar = ({ id, label, resposta }) => {
                 onClick={validar}
             />
             <input
-                className="saida"
+                className={style.saida}
                 type="text"
                 id="textoCorrecao"
                 size={4}

@@ -2,25 +2,20 @@
   
 .caixatxt {
     position:absolute;	
-    width: 55px;
+    width:55px;
     height:40px;
-    font-size:25px;	
+    font-size:25px;
     font-family: "Open Sans", sans-serif;
     font-weight:700;
-    text-align:center;	
+    text-align:center;
     color:#34495e;
     border: 2px solid #008CBA;
-    border-radius: 5px;
+    border-radius:5px;
 }
 
 .caixatxt:focus {	
     border: 3px solid #E9E9E9;
     background-color:rgba(236 242 248 / 20%);
-}
-
-.caixatxt::-webkit-inner-spin-button {
-    appearance: none;
-    margin: 0;
 }
   
 /* ------ */
