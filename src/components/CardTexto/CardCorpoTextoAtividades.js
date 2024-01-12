@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useQuery } from '../../hooks';
 
-const CardCorpoSubtopicoAtividades = ({ itens }) => {
+const CardCorpoTextoAtividades = ({ itens }) => {
     const query = useQuery();
 
     return (
@@ -22,4 +22,4 @@ const CardCorpoSubtopicoAtividades = ({ itens }) => {
     );
 };
 
-export default CardCorpoSubtopicoAtividades;
+export default CardCorpoTextoAtividades;

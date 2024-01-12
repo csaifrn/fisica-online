@@ -1,6 +1,6 @@
 import { usePageData } from '../../hooks';
 
-const CardCorpoSubtopicoRodape = () => {
+const CardCorpoTextoRodape = () => {
     const dados = usePageData();
 
     return (
@@ -17,4 +17,4 @@ const CardCorpoSubtopicoRodape = () => {
     );
 };
 
-export default CardCorpoSubtopicoRodape;
+export default CardCorpoTextoRodape;

@@ -1,5 +1,5 @@
 import { UncontrolledAlert } from 'reactstrap';
-const AppElement = ({ tag, inner }) => {
+const AppCardElement = ({ tag, inner }) => {
     switch (tag) {
         case 'texto':
             return (
@@ -69,4 +69,4 @@ const AppElement = ({ tag, inner }) => {
     }
 };
 
-export default AppElement;
+export default AppCardElement;

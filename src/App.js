@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { PageLayout, HomePage } from './pages';
 import {
-    PageLayout,
-    AtividadePage,
-    TopicoPage,
-    SubtopicoPage,
-    HomePage,
-    DisciplinaPage
-} from './pages';
+    CardCorpoAtividade,
+    CardCorpoTopico,
+    CardCorpoTexto,
+    CardCorpoDisciplina
+} from './components';
 
 function App() {
     return (
@@ -15,15 +14,15 @@ function App() {
                 <Routes>
                     <Route index element={<HomePage />} />
                     <Route path="/:disciplina" element={<PageLayout />}>
-                        <Route index element={<DisciplinaPage />} />
-                        <Route path=":topico" element={<TopicoPage />} />
+                        <Route index element={<CardCorpoDisciplina />} />
+                        <Route path=":topico" element={<CardCorpoTopico />} />
                         <Route
                             path=":topico/:subtopico/:idTexto"
-                            element={<SubtopicoPage />}
+                            element={<CardCorpoTexto />}
                         />
                         <Route
                             path=":topico/:subtopico/:idTexto/:idAtividade"
-                            element={<AtividadePage />}
+                            element={<CardCorpoAtividade />}
                         />
                     </Route>
                 </Routes>

@@ -1,11 +1,11 @@
 import AppNavEnd from '../AppNavEnd';
-import CardCorpoSubtopicoRodape from './CardCorpoSubtopicoRodape';
-import CardCorpoSubtopicoConteudoLista from './CardCorpoSubtopicoConteudoLista';
-import CardCorpoSubtopicoAtividades from './CardCorpoSubtopicoAtividades';
+import CardCorpoTextoRodape from './CardCorpoTextoRodape';
+import CardCorpoTextoConteudoLista from './CardCorpoTextoConteudoLista';
+import CardCorpoTextoAtividades from './CardCorpoTextoAtividades';
 import textos from '../../data/textos';
 import { useDocumentTitle, usePageData, useQuery } from '../../hooks';
 
-const CardCorpoSubtopico = () => {
+const CardCorpoTexto = () => {
     const dados = usePageData();
     const query = useQuery(dados.id);
     useDocumentTitle(dados.titulo);
@@ -21,16 +21,14 @@ const CardCorpoSubtopico = () => {
                     {dados.topico} - {dados.subtopico} - {conteudos.titulo}
                 </b>
             </p>
-            <CardCorpoSubtopicoConteudoLista itens={conteudos.conteudos} />
+            <CardCorpoTextoConteudoLista itens={conteudos.conteudos} />
             <br />
             <AppNavEnd />
-            {listas.length ? (
-                <CardCorpoSubtopicoAtividades itens={listas} />
-            ) : null}
+            {listas.length ? <CardCorpoTextoAtividades itens={listas} /> : null}
             <hr />
-            <CardCorpoSubtopicoRodape />
+            <CardCorpoTextoRodape />
         </div>
     );
 };
 
-export default CardCorpoSubtopico;
+export default CardCorpoTexto;

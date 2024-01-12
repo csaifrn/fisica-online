@@ -1,6 +1,6 @@
 import AppCardElement from '../AppCardElement';
 
-const CardCorpoSubtopicoConteudoItem = ({ content }) => (
+const CardCorpoTextoConteudoItem = ({ content }) => (
     <div>
         <h1>
             {content.id}. {content.titulo}
@@ -11,4 +11,4 @@ const CardCorpoSubtopicoConteudoItem = ({ content }) => (
     </div>
 );
 
-export default CardCorpoSubtopicoConteudoItem;
+export default CardCorpoTextoConteudoItem;
