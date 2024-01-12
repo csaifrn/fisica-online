@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
 import AppNavEnd from '../AppNavEnd';
 import CardCorpoSubtopicoRodape from './CardCorpoSubtopicoRodape';
+import CardCorpoSubtopicoConteudoLista from './CardCorpoSubtopicoConteudoLista';
+import CardCorpoSubtopicoAtividades from './CardCorpoSubtopicoAtividades';
 import notas_de_aula from '../../data/notas_de_aula';
 import { usePageData, useQuery } from '../../hooks';
-import CardCorpoSubtopicoConteudoLista from './CardCorpoSubtopicoConteudoLista';
 
 const CardCorpoSubtopico = () => {
     const dados = usePageData();
@@ -23,22 +23,9 @@ const CardCorpoSubtopico = () => {
             <CardCorpoSubtopicoConteudoLista itens={conteudos.conteudos} />
             <br />
             <AppNavEnd />
-            {listas.length !== 0 && (
-                <>
-                    <h1 className="topico">Atividades</h1>
-                    <div className="paragrafo">
-                        <ul className="list">
-                            {listas.map(lista => (
-                                <li key={lista.id}>
-                                    <Link to={query({ link: lista.id })}>
-                                        {lista.titulo}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </>
-            )}
+            {listas.length ? (
+                <CardCorpoSubtopicoAtividades itens={listas} />
+            ) : null}
             <hr />
             <CardCorpoSubtopicoRodape />
         </div>

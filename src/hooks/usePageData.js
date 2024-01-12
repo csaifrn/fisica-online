@@ -4,8 +4,6 @@ import sitemap from '../data/sitemap';
 const usePageData = () => {
     const { pathname } = useLocation();
 
-    window.scrollTo(0, 0);
-
     const paramIds = ['disciplina', 'topico', 'subtopico', 'texto', 'lista'];
 
     let currentNode = {};
