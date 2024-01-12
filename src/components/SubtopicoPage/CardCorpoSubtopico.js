@@ -2,14 +2,14 @@ import AppNavEnd from '../AppNavEnd';
 import CardCorpoSubtopicoRodape from './CardCorpoSubtopicoRodape';
 import CardCorpoSubtopicoConteudoLista from './CardCorpoSubtopicoConteudoLista';
 import CardCorpoSubtopicoAtividades from './CardCorpoSubtopicoAtividades';
-import notas_de_aula from '../../data/notas_de_aula';
+import textos from '../../data/textos';
 import { usePageData, useQuery } from '../../hooks';
 
 const CardCorpoSubtopico = () => {
     const dados = usePageData();
     const query = useQuery(dados.id);
 
-    const conteudos = notas_de_aula.find(nota => nota.id === dados.id);
+    const conteudos = textos.find(nota => nota.id === dados.id);
 
     const listas = query({ relative: 'children' });
 

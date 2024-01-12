@@ -7,8 +7,6 @@ function useNavigate() {
 
     return id => {
         navigate(query({ link: id }));
-
-        window.scrollTo(0, 0);
     };
 }
 

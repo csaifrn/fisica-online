@@ -7,8 +7,8 @@ const AppNavBar = () => {
     const query = useQuery(dados.id);
 
     const linkTopico = () => {
-        const id = query({ segment: 'topico' }).id;
-        navigate(id);
+        const topico = query({ relative: 'parents' })[1];
+        navigate(topico.id);
     };
 
     const linkSaibaMais = () => {};

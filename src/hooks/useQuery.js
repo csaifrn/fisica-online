@@ -8,11 +8,11 @@ function useQuery(idInitial = null) {
             return data;
         },
         parents(data) {
-            const parents = [];
-            let currentNode = { ...data };
+            const parents = [data];
+            let currentNode = data;
             while (currentNode.parentPageId) {
-                parents.unshift(currentNode);
                 currentNode = findNode(currentNode.parentPageId);
+                parents.unshift(currentNode);
             }
             return parents;
         },

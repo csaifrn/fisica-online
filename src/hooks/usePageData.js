@@ -10,13 +10,16 @@ const usePageData = () => {
     const urlSegments = pathname.split('/').filter(el => el !== '');
     const titles = {};
 
-    while (urlSegments.length > 0) {
-        const segment = urlSegments.shift();
-        currentNode = sitemap.find(
-            node =>
-                node.segmento === segment &&
-                node.parentPageId === currentNode.id
+    function findNode(segment, id) {
+        return sitemap.find(
+            node => node.segmento === segment && node.parentPageId === id
         );
+    }
+
+    while (true) {
+        const segmento = urlSegments.shift();
+        currentNode = findNode(segmento, currentNode.id);
+        if (urlSegments.length < 1) break;
         titles[paramIds.shift()] = currentNode.titulo;
     }
 

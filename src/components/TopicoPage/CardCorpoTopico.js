@@ -1,25 +1,26 @@
-import { Fragment, useState, useContext } from 'react';
+import { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { PageContext } from '../../contexts';
+import { usePageData, useQuery } from '../../hooks';
 
 const CardCorpoTopico = () => {
-    const dados = useContext(PageContext);
+    const dados = usePageData();
+    const query = useQuery();
 
-    let subtopicos = dados.children();
+    let subtopicos = query({ relative: 'children', id: dados.id });
     subtopicos = subtopicos.map(subtopico => {
-        return dados.children(subtopico.id);
+        return query({ relative: 'children', id: subtopico.id });
     });
 
     function d2(n) {
         return n < 10 ? '0' + n : n;
     }
 
-    const notas_de_aula = subtopicos.map(subtopico => {
+    const textos = subtopicos.map(subtopico => {
         return subtopico.map((texto, id) => {
             return {
                 id: texto.id,
                 nome: `${d2(id + 1)}. ${texto.titulo}`,
-                link: dados.getLink(texto.id)
+                link: query({ link: texto.id })
             };
         });
     });
@@ -51,20 +52,20 @@ const CardCorpoTopico = () => {
         <div className="aula-body">
             <p>
                 <b>
-                    {dados.page.titulo} - <small>IFRN/CNAT (2023)</small>
+                    {dados.titulo} - <small>IFRN/CNAT (2023)</small>
                 </b>
             </p>
             <hr />
             <p className="tamanho3">Notas de Aula</p>
             <ul className="list">
-                {notas_de_aula.map((subtopico, id) => (
+                {textos.map((subtopico, id) => (
                     <Fragment key={id}>
                         {subtopico.map(nota => (
                             <li key={nota.id}>
                                 <Link to={nota.link}>{nota.nome}</Link>
                             </li>
                         ))}
-                        {id !== notas_de_aula.length - 1 && <hr />}
+                        {id !== textos.length - 1 && <hr />}
                     </Fragment>
                 ))}
             </ul>

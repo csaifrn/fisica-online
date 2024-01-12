@@ -1,6 +1,6 @@
 import usePageData from './usePageData';
-import useDocumentTitle from './useDocumentTitle';
 import useQuery from './useQuery';
 import useNavigate from './useNavigate';
+import useDocumentTitle from './useDocumentTitle';
 
-export { usePageData, useDocumentTitle, useQuery, useNavigate };
+export { usePageData, useQuery, useNavigate, useDocumentTitle };

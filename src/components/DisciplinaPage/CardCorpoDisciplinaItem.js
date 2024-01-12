@@ -1,16 +1,17 @@
-import { useContext } from 'react';
-import { PageContext } from '../../contexts';
+import { useQuery } from '../../hooks';
 
 const CardCorpoDisciplinaItem = ({ id, nome, link }) => {
-    const dados = useContext(PageContext);
+    const query = useQuery();
     //const [isOpen, setIsOpen] = useState(false);
 
-    const subtopicos = dados.children(id);
+    const subtopicos = query({ relative: 'children', id });
 
     const subtopicosLinks = subtopicos.map(subtopico => {
         return {
             id: subtopico.id,
-            link: dados.getLink(dados.children(subtopico.id)[0].id),
+            link: query({
+                link: query({ relative: 'children', id: subtopico.id })[0].id
+            }),
             nome: subtopico.titulo
         };
     });

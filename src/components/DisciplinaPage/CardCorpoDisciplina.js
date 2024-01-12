@@ -3,9 +3,9 @@ import { usePageData, useQuery } from '../../hooks';
 
 const CardCorpoDisciplina = () => {
     const dados = usePageData();
-    const query = useQuery();
+    const query = useQuery(dados.id);
 
-    const topicos = dados.children();
+    const topicos = query({ relative: 'children' });
 
     const topicoLinks = topicos.map(topico => ({
         id: topico.id,
