@@ -278,6 +278,28 @@ const dados = [
         },
         pagina: { proxima: null, anterior: 30 },
         parentPageId: 15
+    },
+    {
+        id: 32,
+        titulo: 'Lista 01',
+        segmento: 'lista01',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: 33, anterior: null },
+        parentPageId: 20
+    },
+    {
+        id: 33,
+        titulo: 'Lista 02',
+        segmento: 'lista02',
+        autor: {
+            nome: 'Geraldo Felipe',
+            data: '2023'
+        },
+        pagina: { proxima: null, anterior: 32 },
+        parentPageId: 20
     }
 ];
 

@@ -10,6 +10,8 @@ import * as Termodinamica0202 from '../assets/termodinamica02/lista02';
 import * as Termodinamica0203 from '../assets/termodinamica02/lista03';
 import * as Termodinamica0301 from '../assets/termodinamica03/lista01';
 import * as Termodinamica0302 from '../assets/termodinamica03/lista02';
+import * as Termodinamica0401 from '../assets/termodinamica04/lista01';
+import * as Termodinamica0402 from '../assets/termodinamica04/lista02';
 import * as Dinamica0202 from '../assets/dinamica02/lista02';
 
 const atividades = [
@@ -1338,6 +1340,231 @@ const atividades = [
                     'e) A capacidade térmica do corpo A é maior que a capacidade térmica do corpo B.'
                 ],
                 resposta: [false, true, false, false, true]
+            }
+        ]
+    },
+    {
+        id: 32,
+        exercicios: [
+            {
+                id: 0,
+                titulo: 'Exercício 01',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Uma certa massa de gás ideal realiza 500 J de trabalho e recebe 300 J de calor do ambiente. Calcule a varição de energia interna do gás.'
+                    }
+                ],
+                imagem: Termodinamica0401.Image01,
+                estiloVars: 'comum',
+                resposta: -200
+            },
+            {
+                id: 1,
+                titulo: 'Exercício 02',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Uma certa massa de gás ideal cede 150 J de calor para o ambiente enquanto realiza um trabalho de 400 J. Calcule a varição de energia interna do gás.'
+                    }
+                ],
+                imagem: Termodinamica0401.Image02,
+                estiloVars: 'comum',
+                resposta: -550
+            },
+            {
+                id: 2,
+                titulo: 'Exercício 03',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Uma certa massa de gás ideal recebe 600 J de calor do ambiente enquanto realiza um trabalho de 200 J. Calcule a varição de energia interna do gás.'
+                    }
+                ],
+                imagem: Termodinamica0401.Image03,
+                estiloVars: 'comum',
+                resposta: 400
+            },
+            {
+                id: 3,
+                titulo: 'Exercício 04',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Um trabalho de 1500 J é realizado sobre um gás ideal. Em seguida esse gás cede 800 J de calor para o ambiente. Calcule a varição de energia interna do gás.'
+                    }
+                ],
+                imagem: Termodinamica0401.Image04,
+                estiloVars: 'comum',
+                resposta: 700
+            },
+            {
+                id: 4,
+                titulo: 'Exercício 05',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Um compressor realiza um trabalho de 1200 J sobre um gás ideal, em uma transformação adiabática. Calcule a varição de energia interna do gás.'
+                    }
+                ],
+                imagem: Termodinamica0401.Image05,
+                estiloVars: 'comum',
+                resposta: 1200
+            },
+            {
+                id: 5,
+                titulo: 'Exercício 06',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Um compressor realiza um trabalho de 1200 J sobre um gás ideal, em uma transformação isobárica. Calcule a variável de energia interna do gás.'
+                    }
+                ],
+                imagem: Termodinamica0401.Image06,
+                estiloVars: 'comum',
+                resposta: -325
+            },
+            {
+                id: 6,
+                titulo: 'Exercício 07',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Um gás sofre uma transformação isotérmica na qual realiza um trabalho de 475 J.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Calcule a quantidade de calor trocada pelo gás neste processo.'
+                    }
+                ],
+                imagem: Termodinamica0401.Image07,
+                estiloVars: 'comum',
+                resposta: 475
+            },
+            {
+                id: 7,
+                titulo: 'Exercício 08',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Um compressor realiza um trabalho de 4000 J sobre um gás, em uma transformação adiabática. Em seguida, esse gás cede 2200 J de calor para o ambiente, em uma transformação isométrica.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Calcule a variação de energia interna do gás.'
+                    }
+                ],
+                imagem: Termodinamica0401.Image08,
+                estiloVars: 'comum',
+                resposta: 1800
+            }
+        ]
+    },
+    {
+        id: 33,
+        exercicios: [
+            {
+                id: 0,
+                titulo: 'Exercício 01',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Uma certa massa de gás ideal realiza 500 J de trabalho e recebe 300 J de calor do ambiente.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione apenas as afirmações corretas.'
+                    }
+                ],
+                label: [
+                    'a) Ele cedeu 300 J e recebeu 500 J.',
+                    'b) A energia interna aumentou.',
+                    'c) O trabalho é positivo.',
+                    'd) O calor é positivo.',
+                    'e) A energia interna diminuiu.'
+                ],
+                resposta: [false, false, true, true, true]
+            },
+            {
+                id: 1,
+                titulo: 'Exercício 02',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Sobre uma certa massa de gás ideal é realizado um trabalho de 500 J em um processo no qual o gás cede 300 J de calor para ambiente.'
+                    },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) Ele cedeu 300 J e recebeu 500 J.',
+                    'b) A energia interna aumentou.',
+                    'c) O trabalho é positivo.',
+                    'd) O calor é positivo.',
+                    'e) A energia interna diminuiu.'
+                ],
+                resposta: [true, true, false, false, false]
+            },
+            {
+                id: 2,
+                titulo: 'Exercício 03',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) Em uma transformação isométrica, o trabalho é nulo.',
+                    'b) Em uma transformação adiabática, a variação de energia é nula.',
+                    'c) Em uma transformação isobárica o trabalho é sempre realizado pelo gás.',
+                    'd) Em um transformação adiabática, na qual um trabalho W foi realizado, a variação de energia interna é - W.',
+                    'e) Em uma transformação isotérmica, a variação de energia é nula.'
+                ],
+                resposta: [true, false, false, true, true]
+            },
+            {
+                id: 3,
+                titulo: 'Exercício 04',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) Se um trabalho é realizado sobre um gás e este cede calor para o ambiente, necessariamente sua energia interna diminui.',
+                    'b) Se o gás realiza trabalho e cede calor para o ambiente, necessariamente sua energia interna diminui.',
+                    'c) Se um trabalho é realizado sobre um gás trabalho e este cede calor para o ambiente, necessariamente a variação de sua energia interna é nula.',
+                    'd) Se um gás recebe calor do ambiente e um trabalho é realizado sobre ele, sua energia interna aumenta.',
+                    'e) Se um trabalho é realizado sobre um gás trabalho e este cede calor para o ambiente, necessariamente a variação de sua energia interna é positiva.'
+                ],
+                resposta: [false, true, false, true, false]
+            },
+            {
+                id: 4,
+                titulo: 'Exercício 05',
+                descricao: [
+                    {
+                        tag: 'texto',
+                        inner: 'O gráfico abaixo mostra a transformação ocorrida em um gás ideal.'
+                    },
+                    { tag: 'imagem', inner: Termodinamica0402.Figura1 },
+                    {
+                        tag: 'texto',
+                        inner: 'Selecione, entre as afirmações abaixo, as que estão corretas.'
+                    }
+                ],
+                label: [
+                    'a) A transformação é isotérmica.',
+                    'b) A variação de energia interna é nula.',
+                    'c) Como o volume do gás aumenta, o trabalho é realizado pelo gás e o gás recebe calor do ambiente.',
+                    'd) A energia interna do gás é nula.',
+                    'e) A energia interna do gás não varia.'
+                ],
+                resposta: [true, true, true, false, true]
             }
         ]
     },
