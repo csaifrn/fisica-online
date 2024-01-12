@@ -1407,7 +1407,7 @@ const atividades = [
                         ],
                         imagem: Dinamica0202.Image04a,
                         estiloVars: 'vetores',
-                        respostas: [60, 0]
+                        resposta: [60, 0]
                     },
                     {
                         id: 5,
@@ -1419,7 +1419,7 @@ const atividades = [
                         ],
                         imagem: Dinamica0202.Image04b,
                         estiloVars: 'vetores',
-                        respostas: [0, 0]
+                        resposta: [0, 0]
                     },
                     {
                         id: 6,

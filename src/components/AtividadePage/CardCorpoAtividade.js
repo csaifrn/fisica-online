@@ -28,7 +28,7 @@ const CardCorpoAtividade = () => {
                     {dados.topico} - {dados.texto} - {dados.titulo}
                 </b>
             </p>
-            {atividade?.exercicios.map(renderExercicio)}
+            {atividade.exercicios.map(renderExercicio)}
             <br />
             <AppNavEnd />
             <hr />

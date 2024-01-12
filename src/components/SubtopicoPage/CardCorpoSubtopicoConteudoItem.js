@@ -1,5 +1,4 @@
-import { UncontrolledAlert } from 'reactstrap';
-import AppElement from '../AppElement';
+import AppCardElement from '../AppCardElement';
 
 const CardCorpoSubtopicoConteudoItem = ({ content }) => (
     <div>
@@ -7,7 +6,7 @@ const CardCorpoSubtopicoConteudoItem = ({ content }) => (
             {content.id}. {content.titulo}
         </h1>
         {content.conteudo.map((element, index) => (
-            <AppElement key={index} {...element} />
+            <AppCardElement key={index} {...element} />
         ))}
     </div>
 );
