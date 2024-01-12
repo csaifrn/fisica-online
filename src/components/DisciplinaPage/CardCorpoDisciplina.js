@@ -1,9 +1,10 @@
 import CardCorpoDisciplinaItem from './CardCorpoDisciplinaItem';
-import { usePageData, useQuery } from '../../hooks';
+import { useDocumentTitle, usePageData, useQuery } from '../../hooks';
 
 const CardCorpoDisciplina = () => {
     const dados = usePageData();
     const query = useQuery(dados.id);
+    useDocumentTitle(dados.titulo);
 
     const topicos = query({ relative: 'children' });
 

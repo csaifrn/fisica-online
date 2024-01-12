@@ -2,11 +2,12 @@ import CardCorpoAtividadeExercicio from './CardCorpoAtividadeExercicio';
 import CardCorpoAtividadeRodape from './CardCorpoAtividadeRodape';
 import AppNavEnd from '../AppNavEnd';
 import atividades from '../../data/atividades';
-import { usePageData, useNavigate } from '../../hooks';
+import { usePageData, useNavigate, useDocumentTitle } from '../../hooks';
 
 const CardCorpoAtividade = () => {
     const dados = usePageData();
     const navigate = useNavigate();
+    useDocumentTitle(dados.texto + ' | ' + dados.titulo);
 
     const atividade = atividades.find(atividade => atividade.id === dados.id);
 

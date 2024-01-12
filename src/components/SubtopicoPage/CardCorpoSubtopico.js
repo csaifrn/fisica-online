@@ -3,11 +3,12 @@ import CardCorpoSubtopicoRodape from './CardCorpoSubtopicoRodape';
 import CardCorpoSubtopicoConteudoLista from './CardCorpoSubtopicoConteudoLista';
 import CardCorpoSubtopicoAtividades from './CardCorpoSubtopicoAtividades';
 import textos from '../../data/textos';
-import { usePageData, useQuery } from '../../hooks';
+import { useDocumentTitle, usePageData, useQuery } from '../../hooks';
 
 const CardCorpoSubtopico = () => {
     const dados = usePageData();
     const query = useQuery(dados.id);
+    useDocumentTitle(dados.titulo);
 
     const conteudos = textos.find(nota => nota.id === dados.id);
 

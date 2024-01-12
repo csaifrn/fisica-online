@@ -1,10 +1,11 @@
 import { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { usePageData, useQuery } from '../../hooks';
+import { useDocumentTitle, usePageData, useQuery } from '../../hooks';
 
 const CardCorpoTopico = () => {
     const dados = usePageData();
     const query = useQuery();
+    useDocumentTitle(dados.titulo);
 
     let subtopicos = query({ relative: 'children', id: dados.id });
     subtopicos = subtopicos.map(subtopico => {

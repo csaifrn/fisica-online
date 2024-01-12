@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Navbar } from 'reactstrap';
+import { useDocumentTitle } from '../hooks';
 
 const HomePage = () => {
+    useDocumentTitle('Na palma da mão | Home');
     return (
         <>
             <Navbar expand="lg" container>
