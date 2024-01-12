@@ -1,15 +1,15 @@
-import { useContext } from 'react';
-import { PageContext } from '../../contexts';
 import CardCorpoDisciplinaItem from './CardCorpoDisciplinaItem';
+import { usePageData, useQuery } from '../../hooks';
 
 const CardCorpoDisciplina = () => {
-    const dados = useContext(PageContext);
+    const dados = usePageData();
+    const query = useQuery();
 
     const topicos = dados.children();
 
     const topicoLinks = topicos.map(topico => ({
         id: topico.id,
-        link: dados.getLink(topico.id),
+        link: query({ link: topico.id }),
         nome: topico.titulo
     }));
 

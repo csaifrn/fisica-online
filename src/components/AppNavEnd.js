@@ -1,9 +1,7 @@
-import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { PageContext } from '../contexts';
+import { usePageData, useNavigate } from '../hooks';
 
 const AppNavEnd = () => {
-    const dados = useContext(PageContext);
+    const dados = usePageData();
     const navigate = useNavigate();
 
     const scrollToTop = () => {
@@ -11,17 +9,17 @@ const AppNavEnd = () => {
     };
 
     const anteriorPagina = () => {
-        navigate(dados.getLink(dados.page.pagina.anterior));
+        navigate(dados.pagina.anterior);
     };
 
     const proximaPagina = () => {
-        navigate(dados.getLink(dados.page.pagina.proxima));
+        navigate(dados.pagina.proxima);
     };
 
     return (
-        dados.page.pagina && (
+        dados.pagina && (
             <nav className="nav-fim-aula">
-                {dados.page.pagina.anterior !== null && (
+                {dados.pagina.anterior !== null && (
                     <span
                         tabIndex={0}
                         className="seta seta-anterior"
@@ -33,7 +31,7 @@ const AppNavEnd = () => {
                     className="seta seta-top"
                     onClick={scrollToTop}
                 ></span>
-                {dados.page.pagina.proxima !== null && (
+                {dados.pagina.proxima !== null && (
                     <span
                         tabIndex={0}
                         className="seta seta-prox"

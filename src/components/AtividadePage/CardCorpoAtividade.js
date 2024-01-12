@@ -1,25 +1,21 @@
-import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import CardCorpoAtividadeExercicio from './CardCorpoAtividadeExercicio';
 import CardCorpoAtividadeRodape from './CardCorpoAtividadeRodape';
 import AppNavEnd from '../AppNavEnd';
-import { PageContext } from '../../contexts';
 import atividades from '../../data/atividades';
+import { usePageData, useNavigate } from '../../hooks';
 
 const CardCorpoAtividade = () => {
-    const dados = useContext(PageContext);
+    const dados = usePageData();
     const navigate = useNavigate();
 
-    const atividade = atividades.find(
-        atividade => atividade.id === dados.page.id
-    );
+    const atividade = atividades.find(atividade => atividade.id === dados.id);
 
     const renderExercicio = exercicio => (
         <CardCorpoAtividadeExercicio key={exercicio.id} content={exercicio} />
     );
 
     const linkNotaDeAula = () => {
-        navigate(dados.getLink(dados.page.parentPageId));
+        navigate(dados.parentPageId);
     };
 
     return (
@@ -29,8 +25,7 @@ const CardCorpoAtividade = () => {
             </button>
             <p className="esp10">
                 <b>
-                    {dados.page.topico} - {dados.page.texto} -{' '}
-                    {dados.page.titulo}
+                    {dados.topico} - {dados.texto} - {dados.titulo}
                 </b>
             </p>
             {atividade?.exercicios.map(renderExercicio)}

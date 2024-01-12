@@ -1,31 +1,26 @@
-import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AppNavEnd from '../AppNavEnd';
-import CardCorpoSubtopicoConteudo from './CardCorpoSubtopicoConteudo';
 import CardCorpoSubtopicoRodape from './CardCorpoSubtopicoRodape';
-import { PageContext } from '../../contexts';
 import notas_de_aula from '../../data/notas_de_aula';
+import { usePageData, useQuery } from '../../hooks';
+import CardCorpoSubtopicoConteudoLista from './CardCorpoSubtopicoConteudoLista';
 
 const CardCorpoSubtopico = () => {
-    const dados = useContext(PageContext);
+    const dados = usePageData();
+    const query = useQuery(dados.id);
 
-    const conteudos = notas_de_aula.find(nota => nota.id === dados.page.id);
+    const conteudos = notas_de_aula.find(nota => nota.id === dados.id);
 
-    const listas = dados.children();
-
-    const renderConteudo = conteudo => (
-        <CardCorpoSubtopicoConteudo key={conteudo.id} content={conteudo} />
-    );
+    const listas = query({ relative: 'children' });
 
     return (
         <div className="aula-body">
             <p className="esp10">
                 <b>
-                    {dados.page.topico} - {dados.page.subtopico} -{' '}
-                    {conteudos?.titulo}
+                    {dados.topico} - {dados.subtopico} - {conteudos.titulo}
                 </b>
             </p>
-            {conteudos?.conteudos.map(renderConteudo)}
+            <CardCorpoSubtopicoConteudoLista itens={conteudos.conteudos} />
             <br />
             <AppNavEnd />
             {listas.length !== 0 && (
@@ -35,7 +30,7 @@ const CardCorpoSubtopico = () => {
                         <ul className="list">
                             {listas.map(lista => (
                                 <li key={lista.id}>
-                                    <Link to={dados.getLink(lista.id)}>
+                                    <Link to={query({ link: lista.id })}>
                                         {lista.titulo}
                                     </Link>
                                 </li>

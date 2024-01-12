@@ -1,20 +1,14 @@
-import { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Navbar } from 'reactstrap';
-import { PageContext } from '../contexts/';
+import { usePageData, useNavigate, useQuery } from '../hooks';
 
 const AppNavBar = () => {
-    const dados = useContext(PageContext);
+    const dados = usePageData();
     const navigate = useNavigate();
+    const query = useQuery(dados.id);
 
     const linkTopico = () => {
-        let id = dados.page.parentPageId;
-        let node = {};
-        while (node.titulo !== dados.page.topico) {
-            node = dados.sitemap.find(node => node.id === id);
-            id = node.parentPageId;
-        }
-        navigate(dados.getLink(node.id));
+        const id = query({ segment: 'topico' }).id;
+        navigate(id);
     };
 
     const linkSaibaMais = () => {};
@@ -22,9 +16,9 @@ const AppNavBar = () => {
     return (
         <Navbar expand="lg" container>
             <div className="d-flex">
-                {dados.page.topico && (
+                {dados.topico && (
                     <button className="outline-btn-hover" onClick={linkTopico}>
-                        {dados.page.topico}
+                        {dados.topico}
                     </button>
                 )}
                 <button className="outline-btn-hover" onClick={linkSaibaMais}>

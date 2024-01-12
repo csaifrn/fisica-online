@@ -1,18 +1,16 @@
-import { useContext } from 'react';
-import { PageContext } from '../../contexts';
+import { usePageData } from '../../hooks';
 
 const CardCorpoSubtopicoRodape = () => {
-    const dados = useContext(PageContext);
+    const dados = usePageData();
 
     return (
         <div>
             <p className="esp10 tamanho1">
                 <b>Créditos</b>
             </p>
-            {dados.page.autor && (
+            {dados.autor && (
                 <p className="esp10 tamanho1">
-                    {dados.page.autor.nome} / IFRN-CNAT ({dados.page.autor.data}
-                    )
+                    {dados.autor.nome} / IFRN-CNAT ({dados.autor.data})
                 </p>
             )}
         </div>
